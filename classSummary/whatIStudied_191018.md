@@ -1,4 +1,5 @@
-# Java What I studied
+# What I studied today.
+Date : 2019-10-17
 
 ## 환경설정 
 1. 크롬 설치
@@ -22,8 +23,7 @@
                * C:\Program Files\Java\jdk1.8.0_201
                * 근데 여기서는 "C:\Program Files\Java\jdk1.8.0_201\bin"  
                 &nbsp;&nbsp;bin까지 함
-                * 원래라면 [제타위키 환경변수설정](https://zetawiki.com/wiki/윈도우_JAVA_HOME_환경변수_설정)
-            2. 
+                * 보통 [제타위키 환경변수설정](https://zetawiki.com/wiki/윈도우_JAVA_HOME_환경변수_설정)대로 함.
 3. VSCODE 설치
     1. 설치
     2. extension 설치
@@ -67,16 +67,16 @@
     * 보호된 운영체제 파일 숨기기(권장) **해제**
     * 숨김 파일, 폴더 및 드라이브 표시 **선택**
     * 알려진 파일 형식의 파일 확장자 숨기기 **해제**
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
    
 
 
 
 # Java
 ## 자바 가상머신(JVM-Java Vitual Machine)
-<br>
+<br/>
 
 ## 자바 바이트 코드를 실행하는자바 가상 기계
 * 각자 다른 플랫폼(운영체제)에도 동일한 자바 실행 환경을 제공
@@ -84,17 +84,17 @@
 * 자바 가상 기계 자체는 플랫폼에 종속적
     * 자바 가상 기계 개발 및 공급은 오라클 외 IBM, MS, Google등 다양한 회사에서 제작 공급
 * 메모리관리기능(Garbage Collection)
-<br>
-<br>
+<br/>
+<br/>
 
 ### 자바 프로그램 수행 절차  
 컴파일러(javac.exe)가 소스코드(.java)를 바이트코드(.class)로 생성한다.
-<br>
+<br/>
 
 ### /** 주석 */ HTML 문서화 주석처리  
 `JAVADOC hello.java`
-<br>
-<br>
+<br/>
+<br/>
 
 ## java code 예제 
 * 자바는 대소문자 구분 
@@ -129,9 +129,9 @@ public class Hello {
 }
 
 ```
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 
 ## Eclipse Tips
 ### 들여쓰기
@@ -141,14 +141,14 @@ public class Hello {
 * 들여쓰기 칸 수 설정법
   * window -> preference -> General -> Editor -> Text Editor -> displayed tab width -> 숫자 바꾸기
   * preference -> java -> Code Style -> Formatter -> edit -> Indentation -> Tab size 
-<br>
-<br>  
+<br/>
+<br/>  
 
 ### 소스파일 이름 바꾸기
 다음 방법으로 해야 알아서 소스코드도 바뀐다. 
 * 소스코드에서 우클릭 -> Refactor -> 이름 바꾸기 -> finish
-<br>
-<br>
+<br/>
+<br/>
 
 ### System.out.println() 자동완성
 `sysout`타이핑 후 `ctrl`+`space` 
@@ -158,13 +158,13 @@ public class Hello {
     // 아래처럼 변한다.
     System.out.println()
 ```
-<br>
-<br>  
+<br/>
+<br/>  
 
 ### 드래그된 코드 블럭 위아래로 옮기기 
 `alt` + `arrow키`
-<br>
-<br>
+<br/>
+<br/>
 
 ### 자바프로그램의 기본구조
 ```java
@@ -191,7 +191,7 @@ public class Hello { // class
 }
 
 ```
-<br>
+<br/>
 
 ### 변수 예제
 ```java
@@ -252,9 +252,9 @@ public class Test {
 ```
 
 
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 
 ## 정리
 1. JDK 설치
@@ -269,9 +269,9 @@ public class Test {
     1. Oracle은 11g 사용할 것임
 
 
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 
 ### 궁금증
 * 자바 바이트코드 실행과정은 어떻게 되나? class 
