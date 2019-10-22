@@ -1,5 +1,5 @@
 # What I studied today.
-Date : 2019-10-17
+Date : 2019-10-18
 
 ## 환경설정 
 1. 크롬 설치
