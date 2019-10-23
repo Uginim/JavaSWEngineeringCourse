@@ -46,9 +46,9 @@ while(true) {
 
 ## 논리연산자
 논리연산자는 피연산자의 조건을 결합해서 true와 false를 조사
-* boolean 타입에만 사용  
-  
-| a | b | `!`a | a `&&` b | a`||`b | a`^`b |
+* boolean 타입에만 사용
+
+| a | b | `!`a | a `&&` b | a`||`b | a`^`b | 
 |---|---|---:|---:|---:|---:|
 |false | false | true | false | false | false|
 |false | true | true | false | true | true|
