@@ -168,18 +168,12 @@ public class Calculator {
 ```
 #### 풀이)
 ```java
-/**
- * 2019.10.23 Java SW Engineering Course
- * Distinguish condition of credit card issue 
- * @author Hyeonuk
- *
- */
 public class Issuer {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int annualIncome = 0;
 		char creditRating= ' ';
-		boolean existingCustomer = false;
+		boolean isExistingCustomer = false;
 		String tmp;
 		while (true) {
 			System.out.println("카드 발급 대상자 판별");
@@ -189,16 +183,22 @@ public class Issuer {
 			
 			System.out.println("2) 신용등급을 입력하세요(A~C) :");
 			tmp = scan.nextLine();
-			creditRating =  tmp.charAt(0);
-					
-			System.out.println("3) 기존고객여부(yes, no)");
-			tmp = scan.nextLine();
-			if(tmp.equals("yes"))
-				existingCustomer = true;
-			else if(tmp.equals("no"))
-				existingCustomer = false;
-			
-			if(annualIncome>=5000 && creditRating =='A' && existingCustomer) {
+			tmp = tmp.toUpperCase();//
+			creditRating =  tmp.charAt(0);			
+			while(true) {
+				System.out.println("3) 기존고객여부(yes, no)");
+				tmp = scan.nextLine();
+				if(tmp.equalsIgnoreCase("yes")) {
+					isExistingCustomer = true;
+					break;
+				} else if(tmp.equalsIgnoreCase("no")) {
+					isExistingCustomer = false;
+					break;
+				} else {
+					System.out.println("yes or no만 입력하세요!");
+				}
+			}
+			if(annualIncome>=5000 && creditRating =='A' && isExistingCustomer) {
 				System.out.println("카드발급조건 만족!!");
 			} else {
 				System.out.println("카드발급조건을 만족하지 않습니다.!!");
@@ -214,6 +214,132 @@ public class Issuer {
 }
 
 ```
+* String.equalsIgnoreCase()
+* String.toUpper()  
+### 문제)  은행 예금, 출금, 잔액 계산
+```
+문제) 은행 예금, 출금, 잔액 계산
+
+------------------------------------
+1.예금 | 2.출금 | 3.잔액 | 4.종료
+------------------------------------
+선택>1
+예금액>>1000
+
+선택>2
+출금액>>500
+
+선택>1
+예금액>>2000
+
+선택>3
+잔액>>250	0
+
+선택>4
+프로그램종료!!
+```
+#### 풀이)
+* 내 소스
+```java
+import java.util.Scanner;
+/**
+ * 2019.10.23 Java SW Engineering Course
+ * Make Banking service
+ * @author Hyeonuk
+ *
+ */
+public class Banking {
+
+	public static void main(String[] args) {
+		int menu=-1;
+		int balance = 0;int money;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("------------------------------------\r\n" + 
+				"1.예금 | 2.출금 | 3.잔액 | 4.종료\r\n" + 
+				"------------------------------------");
+		outer: while(true){
+			
+			System.out.print("선택>");
+			String tmp = scan.nextLine();
+			menu = Integer.parseInt(tmp);
+			switch(menu) {
+			case 1:
+				System.out.print("예금액>>");
+				tmp = scan.nextLine();
+				money = Integer.parseInt(tmp);
+				balance += money;
+				break;
+			case 2:
+				System.out.print("출금액>>");
+				tmp = scan.nextLine();
+				money = Integer.parseInt(tmp);
+				if(balance<money) {
+					System.out.println("잔액부족!");
+					break;
+				}
+				balance -= money;
+				break;
+			case 3:
+				System.out.println("잔액>>"+balance);
+				break;
+			case 4:
+				System.out.println("프로그램종료!");
+				break outer;
+			default:
+				System.out.print("------------------------------------\r\n" + 
+						"1.예금 | 2.출금 | 3.잔액 | 4.종료\r\n" + 
+						"------------------------------------");
+			}
+			System.out.println();
+			
+		}
+		
+
+	}
+
+}
+```
+* 선생님 소스
+```java
+public class BankExam {
+	public static void main(String[] args) {
+		// 1) 변수선언
+		int balance = 0; //잔액
+		boolean flag = true;
+		System.out.println("----------------------------------");
+		System.out.println("1)예금 | 2)출금 | 3)잔액 | 4)종료 ");
+		System.out.println("----------------------------------");
+		
+		Scanner scanner = new Scanner(System.in);
+		while(flag) {
+			System.out.print("선택> ");
+			String tmp = scanner.nextLine();
+			
+			switch (tmp) {
+			case "1":
+				System.out.print("예금액>>");
+//				tmp = scanner.nextLine();
+//				int money = Integer.parseInt(tmp);
+				balance += Integer.parseInt(scanner.nextLine());
+				break;
+			case "2":		
+				System.out.print("출금액>>");
+				balance -= Integer.parseInt(scanner.nextLine());
+				break;
+			case "3":				
+				System.out.println("잔액>> "+balance);
+				break;
+			case "4":
+				flag =false;				
+				break;
+			}
+			
+		}
+		System.out.println("프로그램 종료!");
+	}
+}
+```
+<br/>
 
 ## 메모
 * char타입의 초기값은 `' '`(공백)을 준다.
