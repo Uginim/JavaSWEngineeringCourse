@@ -46,14 +46,22 @@ while(true) {
 
 ## 논리연산자
 논리연산자는 피연산자의 조건을 결합해서 true와 false를 조사
+<<<<<<< HEAD
 * boolean 타입에만 사용
 
 | a | b | `!`a | a `&&` b | a`||`b | a`^`b |
+=======
+* boolean 타입에만 사용  
+
+  
+| a | b |`!`a|a `&&` b|a`||`b|a`^`b|
+>>>>>>> doc: Add an outline to readme
 |---|---|---:|---:|---:|---:|
 |false | false | true | false | false | false|
 |false | true | true | false | true | true|
 |true | false | false | false | true | true|
 |true | true | false | true | true | false|
+
 
 * 우선순위가 헷갈리면
     * 괄호를 쓰면 우선순위를 명시적으로 정할 수 있다.

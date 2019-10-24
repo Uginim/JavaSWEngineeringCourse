@@ -1,7 +1,7 @@
 # What I studied today.
 Date : 2019-10-18
 
-## 환경설정 
+## 수업 환경 설정 
 1. 크롬 설치
    1. 다행이다 ie안써서
 2. 자바 설치
@@ -54,12 +54,33 @@ Date : 2019-10-18
             4. JSP Files-> encoding -> ISO 10646/UTF-8
         2. 글꼴 및 폰트 변경
             1. General -> Appearance -> colors and font -> basic -> text font -> edit
-
-
     3. 프로젝트 생성
        1. FILE -> New -> JavaProject -> 프로젝트 이름지정 -> next or finish
        2. src 우클릭 -> new -> class -> 클래스이름
           1. main method 제너레이터 체크하면 Main method가 자동으로 생성된다. 
+6. 오라클 설치 (2019-10-24에 추가됨)
+    1. oracle download -> 11g -> 맨 밑에 express edition 가운데것 다운로드
+7. Tomcat 설치 (2019-10-24에 추가됨)
+    1. tomcat home -> download tomcat9 -> 밑에 windows service installer
+    2. configuration
+       1. HTTP/1.1 Connector : `9080`
+       2. AJP/1.3 Connector Port : `9009`
+       3. username : `admin`
+       4. password : `admin1234`
+    3. 톰캣 설치경로 
+       1. jvm경로는 jdk경로로 설정
+       2. "D:\JAVASTUDY\tomcat9"
+    4. 서버 포트 바꾸기
+       1. tomcat9/conf/server.xml
+    5. 서버외부에서 접속이 되지 않을 시
+       1. windows7인 경우
+       2. 시작 -> 고급 보안이 포함된 windows 방화벽 -> 좌측 인바운드 규칙 -> 우측 새 규칙 -> 포트 -> 특정 로컬 포트에 `9080` 입력 -> "계속" 다음 -> 이름 지정 -> 마침
+8. Notepad++ 설치 
+
+
+
+
+
 
 
 
