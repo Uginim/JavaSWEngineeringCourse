@@ -325,7 +325,6 @@ public class Sum_Avg {
  * 2019.10.22 Java SW Engineering Course
  * Draw star pyramid * 
  * @author Hyeonuk
- *
  */
 
 public class Pyramid {

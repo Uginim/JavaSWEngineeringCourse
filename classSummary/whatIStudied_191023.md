@@ -65,7 +65,11 @@ while(true) {
 `조건식1 || 조건식2` 조건식 1이 true이면 조건식2의 진리갑과 상관없이 결과가 무조건 true
     * `&`하나짜리 AND연산이 있나?? 비트연산자임
         * 쇼트서킷 없이 앞 뒤 둘다 계산
-        * 참고해보기 [JAVA 비트연산자(|, &)와 논리연산자(||, &&)의 차이](https://it-jin-developer.tistory.com/9)
+            * 참고해보기 - [JAVA 비트연산자(|, &)와 논리연산자(||, &&)의 차이](https://it-jin-developer.tistory.com/9)
+                * 위 내용 중 오류
+                    * `& | ^` 연산자는 boolean연산시에는 *비트연산자*가 아님
+                    * *boolean logical operator*라고 함 - [15.22.2. Boolean Logical Operators &, ^, and |)](https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.22.2) 
+        
 <br/>
 <br/>
 
@@ -234,7 +238,7 @@ public class Issuer {
 예금액>>2000
 
 선택>3
-잔액>>250	0
+잔액>>250	
 
 선택>4
 프로그램종료!!
