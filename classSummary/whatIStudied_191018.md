@@ -2,8 +2,7 @@
 Date : 2019-10-18
 
 ## 수업 환경 설정 
-1. 크롬 설치
-   1. 다행이다 ie안써서
+1. 크롬 설치   
 2. 자바 설치
     1. Oracle -> Download -> Java -> jdk -> Java SE 8u231
     2. D:\\JAVASTUDY\download 경로 생성
@@ -20,17 +19,22 @@ Date : 2019-10-18
             * 윗칸 : 사용자만
             * 밑칸 : 모든사용자(시스템)
             1. (시스템)환경변수 JAVA_HOME 만들기 
-               * C:\Program Files\Java\jdk1.8.0_201
-               * 근데 여기서는 "C:\Program Files\Java\jdk1.8.0_201\bin"  
+                * "C:\Program Files\Java\jdk1.8.0_201\bin"  
                 &nbsp;&nbsp;bin까지 함
-                * 보통 [제타위키 환경변수설정](https://zetawiki.com/wiki/윈도우_JAVA_HOME_환경변수_설정)대로 함.
+                * 보통 [제타위키 환경변수설정](https://zetawiki.com/wiki/윈도우_JAVA_HOME_환경변수_설정)대로 ""C:\Program Files\Java\jdk1.8.0_201"까지 함.
 3. VSCODE 설치
     1. 설치
     2. extension 설치
+        * 설치 방법
+            1. `ctrl` + `shift` + `X` 
+            2. 필요한 패키지 명 검색
+            3. `install`
         1. live server 
             * Author : Ritwick Dey
+            * 작성한 웹문서를 확인할 수 있음 
         2. Prettier - Code formatter 설치
             * Author : Esben Petersen
+            * HTML포맷 제공
     3. html 폴더 작성 후 기본 예제 작성
         1. JAVASTUDY에 html폴더 생성
         2. 폴더 내에 Hello.html 생성
@@ -76,15 +80,7 @@ Date : 2019-10-18
        1. windows7인 경우
        2. 시작 -> 고급 보안이 포함된 windows 방화벽 -> 좌측 인바운드 규칙 -> 우측 새 규칙 -> 포트 -> 특정 로컬 포트에 `9080` 입력 -> "계속" 다음 -> 이름 지정 -> 마침
 8. Notepad++ 설치 
-
-
-
-
-
-
-
-
-* 기타 
+9. 기타 
     * 보호된 운영체제 파일 숨기기(권장) **해제**
     * 숨김 파일, 폴더 및 드라이브 표시 **선택**
     * 알려진 파일 형식의 파일 확장자 숨기기 **해제**
