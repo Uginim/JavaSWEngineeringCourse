@@ -554,6 +554,10 @@ public class Grade {
     * [Naver D2](https://d2.naver.com/helloworld/1230) - Jvm의 특징 중
 * 왜 자바의 System.out.printf() 메소드에서 서식문자 `%n`?
     * [escape statement](https://en.wikipedia.org/wiki/Escape_sequences_in_C) 로 `\n`이 이미 있는데 왜?
+    * 이유: 개행문자를 **플랫폼에 맞춰서** 출력해줌 
+        > A new line character appropriate to the platform running the application. You should always use %n, rather than \n.
+        * [참조](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html)
+    * 이유
 * p4에 "... JIT컴파일러와 Hotspot과 같은 신기술의 도입 ..."이라는 문장이 있음  
 JIT도 나중에 도입되었다는 뜻인가?
 * Hotspot은 뭘까?

@@ -63,7 +63,49 @@ Date : 2019-10-18
        2. src 우클릭 -> new -> class -> 클래스이름
           1. main method 제너레이터 체크하면 Main method가 자동으로 생성된다. 
 6. 오라클 설치 (2019-10-24에 추가됨)
-    1. oracle download -> 11g -> 맨 밑에 express edition 가운데것 다운로드
+    * 오라클 서버 
+        1. 다운로드
+            1. 오라클 홈페이지
+            2. 햄버거 메뉴
+            3. download 
+            4. 데이터베이스 문단
+            5. Database 11g Enterprise/Standard Editions 
+            6. Oracle Database Express Edition 문단 
+            7. Oracle Database 11g Release 2 Express Edition for Windows 64  다운로드
+        2. 설치
+            1. 압축풀기 
+            2. .\DISK1\setup.exe 실행
+            3. license agree -> next
+            4. browse 클릭 경로지정('D:\JAVASTUDY')
+            5. password 설정 ('admin1234')
+            6. install
+        3. 실행
+            1. 서비스 켜고 끄기 
+                * 사용 서비스
+                    1. oracleXETNSListener 
+                    2. OracleServiceXE   
+                * 실행/중지 방법
+                    1. 작업관리자 실행/중지
+                    2. 서비스관리자에서 실행/중지                    
+    * SQL Developer Tool
+        * 얘는 클라이언트 프로그램임
+        1. 다운로드
+            1. 오라클 홈페이지
+            2. 햄버거 메뉴
+            3. download 
+            4. 개발자 툴 문단
+            5. SQL Developer
+            6. JDK를 이미 설치했기 때문에
+                1. Platform 열의 "Windows 32-bit/64-bit" (410MB) 받기
+        2. 설치
+            1. 압축해제하기
+        3. 실행
+            1. jdk home 경로 지정
+            2. 새 접속
+            3. Name 지정 (`system`)
+            4. 사용자이름 (`system`)
+            5. 비밀번호 (`admin1234`)
+    
 7. Tomcat 설치 (2019-10-24에 추가됨)
     1. tomcat home -> download tomcat9 -> 밑에 windows service installer
     2. configuration
@@ -80,10 +122,14 @@ Date : 2019-10-18
        1. windows7인 경우
        2. 시작 -> 고급 보안이 포함된 windows 방화벽 -> 좌측 인바운드 규칙 -> 우측 새 규칙 -> 포트 -> 특정 로컬 포트에 `9080` 입력 -> "계속" 다음 -> 이름 지정 -> 마침
 8. Notepad++ 설치 
-9. 기타 
+9.  기타 
     * 보호된 운영체제 파일 숨기기(권장) **해제**
     * 숨김 파일, 폴더 및 드라이브 표시 **선택**
     * 알려진 파일 형식의 파일 확장자 숨기기 **해제**
+    * 윈도우 커맨드라인 켜기
+        1. `windows` key + `r`
+        2. cmd 입력
+        3. 실행
 <br/>
 <br/>
 <br/>

@@ -59,8 +59,6 @@ package com.kh.operator;
  * 2019.10.25 Java SW Engineering Course
  * 단일부호 연산자( +, - )
  * @author Hyeonuk
- * @version 1.0
- * 
  */
 public class SignOperatorExam {
 	public static void main(String[] args) {
@@ -94,8 +92,6 @@ package com.kh.operator;
  * 2019.10.25 Java SW Engineering Course
  * 증감연산자( ++, -- )
  * @author Hyeonuk
- * @version 1.0
- * 
  */
 public class IncreaseDecreaseOperator {
 	/**
@@ -147,6 +143,8 @@ public class IncreaseDecreaseOperator {
         x % 2 == 0 && x % 3 == 0    // '&&' 앞까지만 연산(쇼트서킷)
         x % 2 == 0 & x % 3 == 0     // '&' 이후까지 연산
     ```
+* 위의 `^`, `|`, `&`는 비트연산자가 아님!!
+    * 피연산자에 따라 달라짐
 ### 5. 산술연산자 ( +, -, *, /, %)
 * `%` 나머지 연산시 사용
 ### 6. 비교연산자 ( `>`, `<`, `>=`, `<=`, `==`, `!=` 같지 않다)
@@ -170,12 +168,18 @@ public class IncreaseDecreaseOperator {
             * 비교하는 자릿수의 값이 다르면 `1` 같으면 `0`
     * 단항연산
         * `~` Tilde연산
-            * 비트 반전 (`0`은 `1`로, `1`은 `0`으로 )
+            * 비트 반전 (`0`은 `1`로, `1`은 `0`으로, **1의 보수** )
 * 쉬프트 연산자
-    * `<<` 
+    * `<<`
+        * **왼쪽**으로 오른쪽피연산자 만큼 이동 
+        * 새로 생긴 칸은 0으로 채움
     * `>>`
+        * **오른쪽**으로 오른쪽피연산자 만큼 이동
+        * 새로 생긴 칸은 부호 비트로 채움
     * `>>>`
-    * 3개짜리 쉬프트연산자는 오른쪽방향만 있다! [링크](https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.19)
+        * **오른쪽**으로 오른쪽피연산자 만큼 이동
+        * 대신 무조건 `0`으로 채움
+        * 3개짜리 쉬프트연산자는 오른쪽방향만 있다! [링크](https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.19)
 ### 9. 3항연산자
 * `(조건식) ? 수식1 : 수식2;`
 * 조건식이 참이면 `수식1` 거짓이면 `수식2`
@@ -212,8 +216,8 @@ public class IncreaseDecreaseOperator {
     System.out.println("jdk"+8.0); //"jdk8.0"
     ```
 ### 11. 연산자 우선순위
+* 이항연산에서 왼쪽에서 오른쪽
 * `괄호` >> `단항(후위 제외)` >> `산술` >> `비교` >> `논리` >> `대입` >> `후위단항`
-* 우선순위가 같으면 왼쪽에서 오른쪽
 * 예시
     ```java
     int num1 = 6;
@@ -221,15 +225,8 @@ public class IncreaseDecreaseOperator {
     
     result  = num1 % 3 == 0 && ++num1 % 2 == 0;
     ```
-    * 위 수식의 계산 순서는        
-        1. `&&`의 좌측식(expression)에 `%`
-            * short-circuit때문에
-        2. `좌`측식의 `==`        
-        3. `우`측의 `++num1`
-        4. `우`측식의 `%`
-        5. `우`측식의 `==`
-        6. 가운데 `&&`
-        7. `result`변수에 대입
+* 참고해보기
+    * [자바의 연산자 및 연산자 우선순위](https://toma0912.tistory.com/66)
 ### 12. 타입자동변환
 * 타입자동변환의 조건
     * 연산을 수행 시 피연산자의 타입이 다를 때 모든 연산자의 타입을 동일하게 맞춤
