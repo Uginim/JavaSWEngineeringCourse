@@ -3,8 +3,22 @@ Date : 2019-10-18
 
 ## 수업 환경 설정 
 1. 크롬 설치   
-2. 자바 설치
-    1. Oracle -> Download -> Java -> jdk -> Java SE 8u231
+2. Java SE Development Kit 8u321
+    * 용도:
+        * Java 소스코드 컴파일
+        * Java 어플리케이션 실행
+    * 준비물
+        * 오라클 계정
+    1. 다운받기
+        1. Oracle 홈페이지 접속
+        2. Download 
+        3. Java `클릭` or Java 문단 찾기
+        4. Java (JDK) for Developers `클릭`
+        5. Java SE 8u231 에서
+            1. JDK DONWLOAD
+        6. Accept License Agreement `체크`
+        7. jdk-8u231-windows-x64.exe `클릭`
+            1. 오라클 계정으로 로그인해서 받아야함
     2. D:\\JAVASTUDY\download 경로 생성
     3. 혹은 탐색기-> 네트워크(우클릭) -> 네트워크  \\192.168.0.121\공유폴더
     4. 더블클릭 -> 실행 -> 다음 -> ... -> 다음 -> close
@@ -104,8 +118,7 @@ Date : 2019-10-18
             2. 새 접속
             3. Name 지정 (`system`)
             4. 사용자이름 (`system`)
-            5. 비밀번호 (`admin1234`)
-    
+            5. 비밀번호 (`admin1234`)    
 7. Tomcat 설치 (2019-10-24에 추가됨)
     1. tomcat home -> download tomcat9 -> 밑에 windows service installer
     2. configuration

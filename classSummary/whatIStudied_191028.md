@@ -277,7 +277,7 @@ float f2 = 1e1f;
 
 ## Oracle
 * 오라클 설치
-    * 2019-10-18일 문서로 옮김
+    * [2019-10-18일 문서 확인](whatIStudied_191018.md)
 
 * 실습
     * 실습환경 셋팅
@@ -331,7 +331,7 @@ float f2 = 1e1f;
 * 유니코드에는 아스키코드가 포함됨
 
 ## SQL Developer 설치
-2019-10-18일 문서 확인
+[2019-10-18일 문서 확인](whatIStudied_191018.md)
 
 
 ## JAVASTUDY 파일 트리 최신
@@ -360,7 +360,7 @@ float f2 = 1e1f;
 
 ## 궁금점
 * 쇼트서킷은 자바외의 언어에도 일어날까?
-    * javascript 소스 
+    * javascript 
         * 테스트 소스
             ```javascript
             var i = 0, j = 11;
@@ -371,3 +371,5 @@ float f2 = 1e1f;
             ```
             true 0
             ```
+        * 결론 
+            * 쇼트서킷 존재
