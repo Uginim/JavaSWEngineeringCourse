@@ -86,7 +86,7 @@ Date : 2019-10-18
     1. 설치 & download
         1. 구글에서 STS검색 혹은 [링크](https://spring.io/tools)
         2. Spring tools 4 for eclipse 찾고
-        3. Download STS4 Windows 64-bit 클릭 혹은 [링크](https://download.springsource.com/release/STS4/4.4.1.RELEASE/dist/e4.13/spring-tool-suite-4-4.4.1.RELEASE-e4.13.0-win32.win32.x86_64.self-extracting.jar
+        3. Download STS4 Windows 64-bit 클릭 혹은 [링크](https://download.springsource.com/release/STS4/4.4.1.RELEASE/dist/e4.13/spring-tool-suite-4-4.4.1.RELEASE-e4.13.0-win32.win32.x86_64.self-extracting.jar)
     2. workspace 설정하기
         1. JAVASTUDY폴더에 `javaedu` 폴더를 생성한다
         2. sts4 실행 후 javaedu폴더 경로 지정
@@ -303,8 +303,11 @@ public class Hello {
 <br/>
 <br/>  
 
-### 드래그된 코드 블럭 위아래로 옮기기 
-* `alt` + `arrow키`
+### 드래그된 코드 블럭 위/아래로 옮기기 
+* 위로 옮기기
+    * `alt` + `↑`
+* 아래로 옮기기
+    * `alt` + `↓`
 <br/>
 <br/>
 
