@@ -1,11 +1,10 @@
 # What I studied today.
 Date : 2019-10-22
 
-## 자바프로그램 작성
+## 자바프로그램 작성하기
 * 자바의 모든 코드는 반드시 클래스 안에 존재해야함
 * 모든 클래스가 main메서드를 가져야하는 것은 아님
 * 자바어플리캐이션 실행할 때, `java.exe` main메서드를 포함한 클래스의 이름을 적어야함.  
-
 * 하나의 소스파일에 하나의 클래스만을 정의하는 것이 **보통**
     * 둘 이상의 클래스를 정의 하는 것도 가능
     * 소스파일의 이름은 `public class`의 이름과 **일치**해야함
@@ -35,13 +34,16 @@ Date : 2019-10-22
     * 값의 범위가 작은 타입에서 큰 타입으로의 형변환은 생략가능
 * char의 범위(0~2^16,0~65535)와 short 범위()
 * 이항 연산 시 형 변환은 다른 변수에 대입되기 전에 일어남 헷갈리지말것
-* p100의 ch3/OperatorEx8.java예제가 자주하는 실수를 알려줌
-```java
-    int num1 = 2;
-    int num2 = 10;
-    double result2 = num1 / num2; // 0.0 
-    /* 0.2가 아니다! */
-```
+* p100의 `ch3/OperatorEx8.java`예제 참조해볼것
+    * 예시
+		```java
+			int num1 = 2;
+			int num2 = 10;
+			double result2 = num1 / num2; // 0.0 
+			/* 0.2가 아니다! */			
+		```
+	*위 `정수형` 변수를 그대로 나누었을 때의 계산결과가  
+	실수형에 알맞은 값이 아님
 
 <br/>
 <br/>
@@ -52,6 +54,7 @@ Date : 2019-10-22
 ## 반복문(Loop)
 ### for
 * 조건식이 비어 있어도 true로 간주함
+* `for( 초기화식 ; 조건식 ; 증가식 )`의 형식
 ### 순서도
 * 알고리즘 : 주어진 문제를 해결하기위한 작업 절차나 과정
 * 알고리즘은 자연어, 프로그램 언어, 순서도, 의사코드 등으로 표현
@@ -71,44 +74,45 @@ Date : 2019-10-22
 * 자바에서는 반복문에 이름을 붙일 수 있다.
 * `break` + `반복문이름`을 하면 **중첩된 반복문**을 한꺼번에 나갈 수 있다.
 * `continue`도 가능
-##### 예시
-```java
-/**
- * 2019.10.22 Java SW Engineering Course
- * Named Loop Practice 
- * @author Hyeonuk
- */
-public class LoopTest {
-	public static void main(String[] args) {
-		int num = 100;
-		outer: for(int i=0;i<10;i++) {
-			num-=6;
-			for(int j=0; j<10;j++) {
-				num-=2;
-				if(num<0) {					
-					System.out.println("num is less than 0");
-					break outer;// Escape outer loop
+* 예시
+	```java
+	/**
+	* 2019.10.22 Java SW Engineering Course
+	* Named Loop Practice 
+	* @author Hyeonuk
+	*/
+	public class LoopTest {
+		public static void main(String[] args) {
+			int num = 100;
+			outer: for(int i=0;i<10;i++) {
+				num-=6;
+				for(int j=0; j<10;j++) {
+					num-=2;
+					if(num<0) {					
+						System.out.println("num is less than 0");
+						break outer;// Escape outer loop
+					}
 				}
 			}
+				System.out.println("ended");;
 		}
-			System.out.println("ended");;
 	}
-}
-```
+	```
 <br/>
-****
 
-#### 반복문 예제
-```java
-class FlowEx19 {
-	public static void main(String[] args) { 
-		for(int i=1;i<=3;i++)  
-			for(int j=1;j<=3;j++) 
-				for(int k=1;k<=3;k++) 
-					System.out.println(""+i+j+k);	
-	} // main의 끝
-}
-```
+
+#### 중첩된 반복문
+* 예제 코드
+	```java
+	class FlowEx19 {
+		public static void main(String[] args) { 
+			for(int i=1;i<=3;i++)  
+				for(int j=1;j<=3;j++) 
+					for(int k=1;k<=3;k++) 
+						System.out.println(""+i+j+k);	
+		} // main의 끝
+	}
+	```
 * `System.out.println(""+i+j+k);`라인에서 `""`(빈문자열)이 들어간 이유?
     * 뒤의 i,j,k에 문자열 연산을 하기 위해서 
     * `""`가 없으면 산술연산을 하게된다.
@@ -118,7 +122,7 @@ class FlowEx19 {
 
 ## 출력 
 ### 형식화된 출력 printf()
-#### 지시자(specifier)
+#### 지시자(specifier)란?
 * 출력될 형식을 지정한다.
 * Java API에서 Formatter클래스에 지시자의 목록이 있음
     * [Formmater Class](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)
@@ -127,7 +131,8 @@ class FlowEx19 {
         * `%4s` 앞에 숫자 `4`가 들어가면 **4칸**의 공간을 확보하고 우측정렬로 채워진다
         * `-`가 붙으면 좌측정렬을 한다 `%-4s`
     * `%n`
-        * 
+        * 개행 플랫폼에 맞는 개행 문자로 치환된다.
+        * '\n'과 다름
 
 <br/>
 <br/>
