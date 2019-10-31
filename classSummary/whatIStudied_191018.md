@@ -287,24 +287,24 @@ public class Hello {
 <br/>  
 
 ### 소스파일 이름 바꾸기
-다음 방법으로 해야 알아서 소스코드도 바뀐다. 
+다음 방법으로 해야 자동으로 소스코드의 내부에 이름들도 바뀐다. 
 * 소스코드에서 우클릭 -> Refactor -> 이름 바꾸기 -> finish
 <br/>
 <br/>
 
 ### System.out.println() 자동완성
-`sysout`타이핑 후 `ctrl`+`space` 
-```java
-    // 얘가
-    sysout
-    // 아래처럼 변한다.
-    System.out.println()
-```
+* `sysout`타이핑 후 `ctrl`+`space` 
+    ```java
+        // 이 단어가
+        sysout
+        // 아래처럼 변한다.
+        System.out.println()
+    ```
 <br/>
 <br/>  
 
 ### 드래그된 코드 블럭 위아래로 옮기기 
-`alt` + `arrow키`
+* `alt` + `arrow키`
 <br/>
 <br/>
 
