@@ -360,7 +360,7 @@ float f2 = 1e1f;
 
 ## 궁금점
 * 쇼트서킷은 자바외의 언어에도 일어날까?
-    * javascript 
+    * javascript 캐이스
         * 테스트 소스
             ```javascript
             var i = 0, j = 11;

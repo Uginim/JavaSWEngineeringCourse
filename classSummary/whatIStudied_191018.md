@@ -349,10 +349,7 @@ public class Test {
 <br/>
 <br/>
 
-### 궁금증
+### 궁금한점
 * 자바 바이트코드 실행과정은 어떻게 되나? class 
 * main method는 왜 static인가?
-* express middleware는? router는?
 * 자바의 강제 타입변환은 어떤 시점에 일어날까?
-* 프로그래머스 언어강의가 있네?
-* 타입은 왜 나눠져 있는것인가?
