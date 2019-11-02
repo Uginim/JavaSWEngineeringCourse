@@ -51,10 +51,10 @@ Date : 2019-11-01
     3. `Data Modeler`
     4. `임포트 `
     5. `데이터 딕셔너리` 클릭
-    6. madang 선택 후  next
-    7. 또 madang 체크 후  next
-    8. 테이블명 4개 모두 체크 후 next
-    * 기호 
+    6. 접속 이름 중 `madang` 선택 후  next
+    7. 스키마 에서  `madang` 체크 후  next
+    8. ERD를 볼 테이블명 모두 체크 후 next    
+    * ERD의 기호 
         * P 
             * Primary key (기본키)
         * F
@@ -99,13 +99,14 @@ Date : 2019-11-01
         ```SQL
         COMMIT;
         ```
-        * 가장 최근commit이후의 질의들을 최종으로 반영
-        * 이후 COMMIT된 질의들은 ROLLBACK 불가
+        * 가장 최근`commit`이후의 질의들을 최종으로 반영
+        * 이후 `COMMIT`된 질의들은 `ROLLBACK` 불가        
     * ROLLBACK
         ```SQL
         ROLLBACK;
         ```
         * 가장 최근 `COMMIT` 이후의 질의들의 결과를 취소함
+        * **table의 생성과 삭제는 rollback할 수 없다.**
     * 레코드 삭제
         ```SQL
         DELETE FROM 부서; -- 전체 레코드 삭제
@@ -135,7 +136,7 @@ Date : 2019-11-01
         * JOIN
             * 두개의 테이블의 데이터를 연결하여 데이터를 조회함
         * 별칭 
-            * `AS`를 써서 표시될 컬럼명을 수정할 수 있다.
+            * `AS` 키워드를 써서 표시될 컬럼명을 수정할 수 있다.
     * 테이블 삭제
         ```sql
         -- 테이블 삭제
@@ -163,37 +164,66 @@ Date : 2019-11-01
             * NoSQL DB
             * 인메모리
         * SQLite
-            * 가바워서 모바일기기에 탑재
-            * 안드로이드에도 탑재되어있음
-        * PostgreSQL            
+            * 가벼움 
+            * 주로 모바일기기에 탑재
+                * 안드로이드OS
+        * PostgreSQL         
         * Hive
-    * 관계형DB 객체지향DB를 제외하면 거의다 비정형데이터DB이다  
+    * 관계형DB 객체지향DB를 제외하면 대부분 비정형DB 
         ||관계형 DB|NoSQL DB|
         |---|---|---|
         |특징|- 데이터간 연관성이 많다.<br/>- 정형화된 데이터를 저장 관리한다 |- 데이터들간의 관계성이 낮다 <br/>- 비정형화된 데이터를 저장 관리한다. <br/>- 대용량 데이터 분석을 위해 사용 <br/>- 빅데이터분야에 사용된다.|
         |종류|-Oracle<br/>-MySQL<br/>-MS-SQL<br/>-PostgreSQL|-MongoDB<br/>-Redis<br/>-Cassandra|
-* tomcat
-    * URI
-        * URL
-        * http://www.mydomain.com:80/javascript/global.php?who=me&type=human#intro
-    * port 변경하기
-    * wellcome file 변경하기
-        * vscode 팁
-            * "html:5"입력 후 `tab`
-                * html문서 골격 자동완성
-            * "!" + `tab`
-                * 위와 동일한 기능
-            * "lorem" + `tab`
-        * 문장을 알아서 넣어줌
-    * 익스텐션 덕분에 무슨글자든 일부분 치고 탭만누르면 적절한 태그로 바뀜
-    * ROOT디렉토리에 loveme.html만듬
-        * 요청자원을 직접 입력
-        * localhost:9070/loveme.html
-    * ROOT디렉토리에 home폴더 만들고 loveme.html
-        * 똑같이 요청하면 404에러 발생
-    * 다시 경로에 home추가 후 주소입력 하면 다시 뜸
-    * 새로만들기 -> welcom.html-> 연결프로그램
-    * 캐쉬 없이 새로고침
-        * `ctrl` + `shift` + `r` 혹은 `shift` + `F5`
-        * [크롬단축키](https://support.google.com/chrome/answer/157179?hl=ko)
-    * 9070에서 9080으로 원위치
+* URI
+    * [URI란?](https://ko.wikipedia.org/wiki/%ED%86%B5%ED%95%A9_%EC%9E%90%EC%9B%90_%EC%8B%9D%EB%B3%84%EC%9E%90) 
+        * 통합 자원 식별자(Uniform Resource Identifier, URI)
+        * 인터넷에 있는 자원을 나타내는 유일한 주소
+    * UR**L**
+        * 네트워크 상에서 **자원**(resource)이 어디 있는지를 알려주기 위한 규약
+        * **자원**이란 웹문서, 이미지, 자바스크립트 코드등을 뜻함
+    * URI의 구조
+        ```
+                        hierarchical part
+                ┌───────────────────┴─────────────────────┐
+                            authority               path
+                ┌───────────────┴───────────────┐┌───┴────┐
+        abc://username:password@example.com:123/path/data?key=value#fragid1
+        └┬┘   └───────┬───────┘ └────┬────┘ └┬┘           └───┬───┘ └──┬──┘
+        scheme  user information     host     port            query   fragment
+
+        urn:example:mammal:monotreme:echidna
+        └┬┘ └──────────────┬───────────────┘
+        scheme              path
+        ```  
+      
+## 11월 5일 응용SW기초기술활용평가
+* [평가대비자료](test01Preparation.md)
+  
+
+## VS Code 팁
+* html문서 골격 자동완성 하기 
+    * 방법 2가지
+        1. `html:5` 입력 후 `tab`키 누르기
+        2. `!` 입력 후 `tab` 키 누르기
+    * 이후 다음과 같은 html골격이 생성됨
+         ```html
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+        </head>
+        <body>
+            
+        </body>
+        </html>
+        ```   
+* 적을 문장이 없을 때
+    * `lorem` 입력후  `tab`키 누르기
+    * 이후 다음과 같은 문장이 생성됨
+        ```html
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat reprehenderit quibusdam iste vero, laborum ducimus nam? Quas velit, corrupti repellendus impedit ex assumenda doloremque consequuntur eveniet aut veritatis, aperiam modi?
+        ```
+    
