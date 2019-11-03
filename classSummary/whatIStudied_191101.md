@@ -9,9 +9,12 @@ Date : 2019-11-01
     * 다음 두 서비스 실행
         * OracleXETNSListener
         * OracleServiceXE
-* system 계정 = admin 계정
-* 좌측에 madang 
+* 오라클 계정
+    * system 계정 = admin 계정
+    * madang 
 * 바탕화면에 바로가기만들기
+    * sqldeveloper
+    * sts
 ## 용어 정리
 * Database 
     > 잘 정리되고 정돈된 데이터의 모음(파일)

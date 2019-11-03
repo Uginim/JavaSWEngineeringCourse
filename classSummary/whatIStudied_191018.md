@@ -28,7 +28,7 @@ Date : 2019-10-18
                 * `\192.168.0.121` 
             3. download폴더
             4. 복사
-    2. 수업용 파일 다운로드 경로 생서하기
+    2. 수업용 파일 다운로드 경로 생성하기
         * 다음 경로에 폴더 생성.  
             `D:\\JAVASTUDY\download` 
         경로 생성
@@ -90,7 +90,7 @@ Date : 2019-10-18
     2. workspace 설정하기
         1. JAVASTUDY폴더에 `javaedu` 폴더를 생성한다
         2. sts4 실행 후 javaedu폴더 경로 지정
-    2. 이클립스 설정
+    3. 이클립스 설정
         1. 인코딩 설정
             1. preferences 창 열기
                 1. 메뉴 바에서 windows 클릭 
@@ -119,7 +119,7 @@ Date : 2019-10-18
             6. 아래로 드래그 한 뒤 text font 선택
             7. 우측 `edit` 버튼 클릭
         * 설정후에는 `Apply` 버튼 클릭해 적용하는 것 잊지말기!
-    3. 프로젝트 생성하기
+    4. 프로젝트 생성하기
         1. 프로젝트 생성 
             1. 메뉴바에서 `File` 클릭
             2. New 클릭 
@@ -229,12 +229,18 @@ Date : 2019-10-18
 <br/>
 <br/>
 
-### 자바 프로그램 수행 절차  
-컴파일러(javac.exe)가 소스코드(.java)를 바이트코드(.class)로 생성한다.
+### 자바 프로그램 작성 및 수행 절차  
+![](../images/자바프로그램_실행과정.PNG)
+1. 자바 소스코드 작성(program.java)
+2. 컴파일러(javac.exe)가 소스코드(.java)를 컴파일함
+    *  결과물로 바이트코드(.class)가 생성됨.
+        * 아직 컴퓨터가 읽을 수 없다.
+3. JVM에서 생성된 바이트코드 실행
+
 <br/>
 
 ### /** 주석 */ HTML 문서화 주석처리  
-`JAVADOC hello.java`
+`javadoc hello.java`
 <br/>
 <br/>
 
@@ -281,8 +287,8 @@ public class Hello {
 * 들여쓰기 : `tab`키를 누른다. 
 * 내어쓰기 : `shift` + `tab`키를 누른다.
 * 들여쓰기 칸 수 설정법
-  * window -> preference -> General -> Editor -> Text Editor -> displayed tab width -> 숫자 바꾸기
-  * preference -> java -> Code Style -> Formatter -> edit -> Indentation -> Tab size 
+    * window -> preference -> General -> Editor -> Text Editor -> displayed tab width -> 숫자 바꾸기
+    * preference -> java -> Code Style -> Formatter -> edit -> Indentation -> Tab size 
 <br/>
 <br/>  
 
