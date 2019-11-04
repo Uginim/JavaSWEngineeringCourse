@@ -77,6 +77,7 @@ Date : 2019-11-01
         * 생성후에 새로만든 테이블이 보이지 않으면
             * 새로고침 아이콘을 클릭할 것
         * primary key는 레코드들을 유일하게 구분할 수 있는 값이어야 한다.
+        * `rollback`명령으로 되돌릴 수 없다
     * 테이블 조회
         ```sql
         -- 테이블 조회
@@ -149,6 +150,7 @@ Date : 2019-11-01
         * `DROP`명령어는 `ROLLBACK`으로 돌릴 수 없다
         * 삭제하려는 테이블을 참조하는 테이블이 있으면 아래와 같은 에러메시지를 본다
             > unique/primary keys in table referenced by foreign keys
+    * 테이블 생성과 삭제는 자동으로 `commit`되기 때문에 `rollback`명령으로 되돌릴 수 없다
 * DB종류
     * [DB Ranking](https://db-engines.com/en/ranking)
     * 주요 DB들
