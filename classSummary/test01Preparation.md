@@ -68,10 +68,10 @@ ping, ipconfig, netstat, nslookup, tracert
         ```
 2. 데이터베이스의 기본연산을 CRUD(Create, Read, Update, Delete)로 구분한다.  
     의미를 설명하고 대응되는 SQL DML 명령어를 작성하시오  
-    *답
+    * 답
         * Create : 레코드(튜플) 생성 `INSERT`
         * Read : 레코드(튜플) 조회, 검색 `SELECT`        
-        * Update : 레코드(튜플) 수정, 변경, 갱싱 `UPDATE`
+        * Update : 레코드(튜플) 수정, 변경, 갱신 `UPDATE`
         * Delete : 레코드(튜플) 삭제 `DELETE`
     * Table을 생성할 때 쓰는 `Create`는 DML이 아니라 DDL(Data Definition Language)이다.
         * DDL은 스키마를 정의할 때 쓴다.
@@ -96,9 +96,9 @@ ping, ipconfig, netstat, nslookup, tracert
             * Redis
             * Cassandra
 4. 운영체제(OS)의 기본 기능 5가지를 나열하시오.
-    1. 프로세스 관리
+    1. 프로세**스** 관리
         * 프로세스는 현재 실행중인 프로그램        
-    2. 프로세서 관리
+    2. 프로세**서** 관리
     3. 주기억장치 관리
     4. 보조기억장치(파일시스템) 관리          
     5. 입출력 관리
@@ -133,7 +133,7 @@ ping, ipconfig, netstat, nslookup, tracert
    * 시작페이지 파일명 변경
         * 설정파일 : 톰캣설치경로/conf/web.xml
         * 수정할 요소 이름 : "welcome-file-list", "welcome-file"
-            * "welcome"에 l이 하나인것에 주의
+            * "welcome"에 'l'이 하나인것에 주의
             * 요소(element)란 여는 태그와 닫는 태그로 둘러진 것들을 말함    
 9.  윈도우운영체제 네트워크 명령어  
 ping, ipconfig, netstat, nslookup, tracert  
@@ -148,10 +148,10 @@ ping, ipconfig, netstat, nslookup, tracert
     * nslookup
         * 도메인주소를 IP주소로 변환 또는 IP주소를 도메인 주소로 알려주는 명령어        
     * tracert    
-        * 출발지에서 목적지까지의 IP경로 추정 미 상태 흐름(회선점검)을 파악하는 명령어.            
+        * 출발지에서 목적지까지의 IP경로 추정 및 상태 흐름(회선점검)을 파악하는 명령어.            
     * arp
         * 네트워크 상의 IP주소와 MAC주소를 알려주는 명령어
-10.  OSI모형의 7계층을 나열하시오.
+10. OSI모형의 7계층을 나열하시오.
     1. 응용계층(Application Layer)
     2. 표현계층(Presentation Layer)
     3. 세션계층(Session Layer)
@@ -159,7 +159,7 @@ ping, ipconfig, netstat, nslookup, tracert
     5. 네트워크(Network Layer)
     6. 데이터링크계층(Data Link Layer)
     7. 물리계층(Physical Layer)
-11.  UDP와 TCP의 차이점을 비교설명하시오
+11. UDP와 TCP의 차이점을 비교설명하시오
     * TCP
         * 연결지향 프로토콜(연결이 먼저 성공되어야 통신가능), 3 way handshake 방식
         * 신뢰성 있는 데이터 전송(오류제어, 흐름제어, 통신량조정)    
@@ -198,7 +198,7 @@ ping, ipconfig, netstat, nslookup, tracert
 *답
     * Create : 레코드(튜플) 생성 `INSERT`
     * Read : 레코드(튜플) 조회, 검색 `SELECT`        
-    * Update : 레코드(튜플) 수정, 변경, 갱싱 `UPDATE`
+    * Update : 레코드(튜플) 수정, 변경, 갱신 `UPDATE`
     * Delete : 레코드(튜플) 삭제 `DELETE`
 * Table을 생성할 때 쓰는 `Create`는 DML이 아니라 DDL(Data Definition Language)이다.
     * DDL은 스키마를 정의할 때 쓴다.
@@ -228,10 +228,10 @@ ping, ipconfig, netstat, nslookup, tracert
         |특징|- 데이터간 연관성이 많다.<br/>- 정형화된 데이터를 저장 관리한다 |- 데이터들간의 관계성이 낮다 <br/>- 비정형화된 데이터를 저장 관리한다. <br/>- 대용량 데이터 분석을 위해 사용 <br/>- 빅데이터분야에 사용된다.|
         |종류|-Oracle<br/>-MySQL<br/>-MS-SQL<br/>-PostgreSQL|-MongoDB<br/>-Redis<br/>-Cassandra|
 ### 4. 운영체제(OS)의 기본 기능 5가지를 나열하시오.
-1. 프로세스 관리
+1. 프로세**스** 관리
     * 프로세스는 현재 실행중인 프로그램
     * 메모리에 적재된 프로그램
-2. 프로세서 관리
+2. 프로세**서** 관리
     * 프로세서는 CPU와 동일한 의미
 3. 주기억장치(RAM) 관리
 4. 보조기억장치(파일시스템) 관리  
@@ -276,8 +276,8 @@ ping, ipconfig, netstat, nslookup, tracert
         2. **고급시스템 설정** 클릭
         3. **고급**탭 클릭
         4. **환경변수** 버튼 클릭
-        5. 시스템변수 목록에서 
-        6. 'Path'라는 변수를 찾아서 수정
+        5. 시스템변수 목록에서 'Path'라는 변수찾기 
+        6. 'Path'변수에 JDK경로 추가
 * CLI가 실행파일의 경로를 찾는 과정 (명령창에서 명령어를 실행할 때 혹은 실행파일을 실행할 때 )
     1. 실행파일(명령어)가 경로와 함께 지정된 경우, 해당 경로의 실행파일을 실행
     2. 경로가 따로 지정되지 않았다면, 실행파일(명령어)를 현재디렉토리에서 찾아서 실행
@@ -400,7 +400,7 @@ ping, ipconfig, netstat, nslookup, tracert
         * 3자리 체계
     * 네이버는 서버 4개
 * tracert    
-    * 출발지에서 목적지까지의 IP경로 추정 미 상태 흐름(회선점검)을 파악하는 명령어.
+    * 출발지에서 목적지까지의 IP경로 추정 및 상태 흐름(회선점검)을 파악하는 명령어.
     * 예시에서 첫번째 ip는 게이트웨이었음
     * 항상 같은 경로인 것은 아님
         * 실행시 마다 달라질 수 있음
@@ -459,3 +459,10 @@ ping, ipconfig, netstat, nslookup, tracert
     * 웹브라우저 -> 웹서버
     * dns
     * arp
+* OSI 모형 7계층 암기 요령
+    * Top-down 
+        * A-P-S-T-N-D-P
+        * All-People Seem To Need Data Processing
+    * Bottom-up
+        * P-D-N-T-S-P-A
+        * Please Do Not Throw Sausage Pizza Away
