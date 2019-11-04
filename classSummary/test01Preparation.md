@@ -152,14 +152,16 @@ ping, ipconfig, netstat, nslookup, tracert
     * arp
         * 네트워크 상의 IP주소와 MAC주소를 알려주는 명령어
 10. OSI모형의 7계층을 나열하시오.
-    1. 응용계층(Application Layer)
-    2. 표현계층(Presentation Layer)
-    3. 세션계층(Session Layer)
-    4. 전송계층(Transport Layer)
-    5. 네트워크(Network Layer)
-    6. 데이터링크계층(Data Link Layer)
-    7. 물리계층(Physical Layer)
-11. UDP와 TCP의 차이점을 비교설명하시오
+    |계층|순서|
+    |---|---|
+    |응용계층(Application Layer)|맨 위|
+    |표현계층(Presentation Layer)||
+    |세션계층(Session Layer)||
+    |전송계층(Transport Layer)||
+    |네트워크(Network Layer)||
+    |데이터링크계층(Data Link Layer)||
+    |물리계층(Physical Layer)|맨 밑|
+12. UDP와 TCP의 차이점을 비교설명하시오
     * TCP
         * 연결지향 프로토콜(연결이 먼저 성공되어야 통신가능), 3 way handshake 방식
         * 신뢰성 있는 데이터 전송(오류제어, 흐름제어, 통신량조정)    
@@ -167,8 +169,8 @@ ping, ipconfig, netstat, nslookup, tracert
     * UDP
         * 비연결지향 프로토콜(연결없이 통신 가능)
         * 비신뢰성 있는 데이터 전송(패킷순서, 패킷손실 가능성 있음)
-        * 1:1통신, 1:N통신 ex) 라디오, 
-12. 7계층 중 네트워크 계층에 위치한 IP 프로토콜 기능을 작성하시오
+        * 1:1통신, 1:N통신 ex) 라디오, 오디오, 비디오 전송 
+13. 7계층 중 네트워크 계층에 위치한 IP 프로토콜 기능을 작성하시오
     * 역할 : 호스트와 라우터간의 기본 통신 프로토콜로 IP패킷을 출발지 호스트에서 목적지 호스트까지 데이터 전달, 라우팅 경로 설정.
     * 특징 : 비연결형 프로토콜(연결과정 미수행)
 <br/>
