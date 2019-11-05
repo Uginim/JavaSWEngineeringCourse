@@ -151,16 +151,16 @@ ping, ipconfig, netstat, nslookup, tracert
         * 출발지에서 목적지까지의 IP경로 추정 및 상태 흐름(회선점검)을 파악하는 명령어.            
     * arp
         * 네트워크 상의 IP주소와 MAC주소를 알려주는 명령어
-10. OSI모형의 7계층을 나열하시오.  
-|계층|순서|
-|---|---|
-|응용계층(Application Layer)|맨 위|
-|표현계층(Presentation Layer)||
-|세션계층(Session Layer)||
-|전송계층(Transport Layer)||
-|네트워크(Network Layer)||
-|데이터링크계층(Data Link Layer)||
-|물리계층(Physical Layer)|맨 밑|
+10. OSI모형의 7계층을 나열하시오.
+    * |계층|순서|
+        |---|---|
+        |응용계층(Application Layer)|맨 위|
+        |표현계층(Presentation Layer)||
+        |세션계층(Session Layer)||
+        |전송계층(Transport Layer)||
+        |네트워크(Network Layer)||
+        |데이터링크계층(Data Link Layer)||
+        |물리계층(Physical Layer)|맨 밑|
 11. UDP와 TCP의 차이점을 비교설명하시오
     * TCP
         * 연결지향 프로토콜(연결이 먼저 성공되어야 통신가능), 3 way handshake 방식
