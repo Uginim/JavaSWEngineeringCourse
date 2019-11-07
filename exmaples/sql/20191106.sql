@@ -29,3 +29,9 @@ select t1.name, t1.phone
 SELECT bookname, publisher
   FROM book
   where price >= 10000;
+SELECT DISTINCT bookname
+  FROM book;
+  
+SELECT * 
+FROM Book
+WHERE price BETWEEN 10000 AND 20000;
