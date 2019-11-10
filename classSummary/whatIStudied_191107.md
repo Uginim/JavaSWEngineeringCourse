@@ -207,7 +207,7 @@ Date : 2019-11-07
     * 소스에서 사용하는 TV class TvTest.java에 있는 Tv clas를 사용한다.
     * Tv class의 형태를 보여주기 위해 넣은것으로 추정
 * cartest 예제-
-
+    * ![](../images/Cartest예제.PNG)
 # Database
 * SQL 분류
     * DDL
