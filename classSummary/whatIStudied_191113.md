@@ -57,6 +57,170 @@ Date : 2019-11-13
     * 전제조건
         * 부모 메소드의 선언부(리턴타입, 메소드 이름, 매개변수)가 동일해야한다.
         * 접근제한자는 부모메소드와 동일하거나 범위가 넒어야한다.
+## 과제 7
+* 그림 보고 계좌 프로그램을 만들기
+* ![](../images/problems/problem7.jpg)
+* 소스코드
+    * Account.java
+        * ```java
+            /**
+             * 2019.11.13 Java SW Engineering Course
+             * @author Hyeonuk
+             */
+            public class Account {
+            	// fields
+            	private String ownerName;
+            	private int accountNumber;
+            	private int balance;
+            	private final static int LIMIT_BALANCE= 1000_0000;
+            	private static int accountCount=0;
+
+            	{
+            		accountNumber = accountCount++; 
+            	}
+            	
+            	// constructor 
+            	public Account(String ownerName) {
+            		this.ownerName=ownerName;
+            	}
+            	
+            	// methods
+            	public void deposit(int amount) {
+            		if(balance+amount>LIMIT_BALANCE) {
+            			System.out.println("예금 총액 한도 초과");
+            			return;
+            		}
+            		if(amount<=0) {
+            			System.out.println("음수 금액이나 0원은 예금할 수 없습니다.");
+            			return;
+            		}
+            		System.out.println(amount+ "원이 정상적으로 예금되었습니다.");
+            		balance+=amount;
+            	}
+            	public void withdrow(int amount) {
+            		if(amount>balance || amount<0) {
+            			System.out.println("출금할 수 없는 금액입니다.");
+            			return;
+            		}
+            		System.out.println(amount+ "원이 정상적으로 출금되었습니다.");
+            		balance-=amount;
+            	}
+            	public int getBalance() {
+            		
+            		return balance;
+            	}
+            	public String getOwnerName() {
+            		return ownerName;
+            	}
+            	public void setOwnerName(String ownerName) {
+            		this.ownerName = ownerName;
+            	}
+            	public int getAccountNumber() {
+            		return accountNumber;
+            	}
+            	public void setAccountNumber(int accountNumber) {
+            		this.accountNumber = accountNumber;
+            	}
+            	public void setBalance(int balance) {
+            		this.balance = balance;
+            	}
+            	public static int getAccountCount() {
+            		return accountCount;
+            	}
+            	@Override
+            	public String toString() {
+            		return "계좌정보 \n예금주: " + ownerName + "\n계좌번호: " + accountNumber + "\n잔액: " + balance + "";
+            	}
+            	
+            }
+            ```
+    * AccountMain.java
+        * ```java
+            import java.util.Scanner;
+            /**
+            * 2019.11.13 Java SW Engineering Course
+            * @author Hyeonuk
+            */
+            public class AccountMain {
+                final static int MAX_ACCOUNT_NUMBER = 1000;
+                public static void main(String[] args) {
+                    Scanner scanner = new Scanner (System.in);
+                    Account[] accounts = new Account[MAX_ACCOUNT_NUMBER ];		
+                    program: while(true) {
+                        System.out.println("-------------------------------------------------------------------\r\n" + 
+                                "1. 계좌개설 | 2.예금 | 3.출금 | 4.잔액 | 5. 개좌 정보 출력 | 6.종료\r\n" + 
+                                "-------------------------------------------------------------------");
+                        System.out.print(">>");
+                        String input = scanner.nextLine();
+                    
+                        int accountNum,amount ;
+                        String numberStr ;
+                        String amountStr;
+                        switch(input){
+                            case "1":
+                                System.out.println("성명을 입력해 주세요");
+                                String name = scanner.nextLine();
+                                Account account = new Account(name);
+                                accounts[Account.getAccountCount()-1] = account;
+                                System.out.println("<<개설된 계좌 정보>>");
+                                System.out.println(account);
+                                break;
+                            case "2":
+                                System.out.println("예금할 계좌 번호를 주세요");
+                                numberStr = scanner.nextLine();
+                                accountNum = Integer.parseInt(numberStr);
+                                if(accountNum>=MAX_ACCOUNT_NUMBER || accounts[accountNum]==null ) {
+                                    System.out.println("존재하지 않는 계좌번호입니다.");
+                                    break;
+                                }
+                                System.out.println("예금할 금액을 입력해 주세요");
+                                amountStr = scanner.nextLine();
+                                amount = Integer.parseInt(amountStr);
+                                accounts[accountNum].deposit(amount);
+                                break;
+                            case "3":
+                                System.out.println("출금할 계좌 번호를 주세요");
+                                numberStr = scanner.nextLine();
+                                accountNum = Integer.parseInt(numberStr);
+                                if(accountNum>=MAX_ACCOUNT_NUMBER || accounts[accountNum]==null) {
+                                    System.out.println("존재하지 않는 계좌번호입니다.");
+                                    break;
+                                }
+                                System.out.println("출금할 금액을 입력해 주세요");
+                                amountStr = scanner.nextLine();
+                                amount = Integer.parseInt(amountStr);
+                                accounts[accountNum].withdrow(amount);
+                                break;
+                            case "4":
+                                System.out.println("잔액을 확인할 계좌 번호를 주세요");
+                                numberStr = scanner.nextLine();
+                                accountNum = Integer.parseInt(numberStr);					
+                                if(accountNum>=MAX_ACCOUNT_NUMBER || accounts[accountNum]==null) {
+                                    System.out.println("존재하지 않는 계좌번호입니다.");
+                                    break;
+                                }
+                                System.out.println("잔액>> "+accounts[accountNum].getBalance()+" 원");
+                                break;
+                            case "5":
+                                System.out.println("계좌정보를 조회할 계좌 번호를 주세요");
+                                numberStr = scanner.nextLine();
+                                accountNum = Integer.parseInt(numberStr);
+                                if(accountNum>=MAX_ACCOUNT_NUMBER || accounts[accountNum]==null) {
+                                    System.out.println("존재하지 않는 계좌번호입니다.");
+                                    break;
+                                }
+                                System.out.printf("입력된 계좌번호[%04d]%n%s%n",accountNum,accounts[accountNum]);
+                                break;
+                            case "6":
+                                System.out.println("프로그램을 종료합니다.");
+                                break program;
+                            default: 
+                                System.out.println("1~6 중에서 입력해주세요!");
+                        }
+                    }
+                }
+            }
+            ```
 # Database
 ## 부속질의
 ### 상관 부속질의(correlated subquery) 
