@@ -196,14 +196,23 @@ p332
 # Database
 - order절에는 alias 지정된 별칭을 사용해 정렬 가능하지만 having절의 조건을 별칭을 이용해서 지정할 수 없다.
 ## 용어
-- Database
-    - 잘 정리되고 정돈된 데이터의 모음
-- Database Management System(DBMS) : Oracle 11g Express Edition
-    - database를 접근하여 여러 사용자가 데이터를 조작할 수 있게 도움주는 소프트웨어
-- SQL(Structed Query Language) :
-    - DBMS를 경유하여 Database를 CRUD(create,read,update,delete)할 수 있도록 제공해주는 언어
-- Query(질의)
-    - 
+* Database 
+    > 잘 정리되고 정돈된 데이터의 모음(파일)
+    * 정형화 된 데이터
+* Database Management System(DBMS) 
+    > database에 접근하여 여러 사용자가 데이터를 조작할 수 있게 도와주는 소프트웨어
+    * 예시 
+        * Oracle 11g
+        * MySQL
+        * PostgreSQL    
+* SQL(Structed Query Language) 
+    > DBMS를 경유하여 Database를 CRUD(Create, read, update, delete) 기능을 제공하는 언어
+* Query(질의)
+    > SQL언어로 DBMS에 요청하는 행위
+* SQL Developer Client Tool
+    > SQL Query를 보다 편리하게 지원해주는 툴
+* Table (표)
+    > 행(row, record, tuple), 열(column, field,attribute) 구조로 데이터가 저장되어 있음   
 - 관계 데이터 모델의 개념
     - 릴레이션
     - 릴레이션 스키마와 인스턴스
