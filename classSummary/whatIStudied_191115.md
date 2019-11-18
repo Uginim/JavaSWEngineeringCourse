@@ -1,5 +1,5 @@
 # What I studied today.
-Date : 2019-11-14
+Date : 2019-11-15
 
 # JAVA
 ## 상속 개념
