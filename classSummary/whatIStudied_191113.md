@@ -237,3 +237,6 @@ Date : 2019-11-13
   SELECT       name, address
   FROM         Customer cs
   WHERE
+
+
+[돌아가기](../README.md)

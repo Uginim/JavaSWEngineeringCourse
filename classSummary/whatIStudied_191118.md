@@ -135,6 +135,152 @@ Date : 2019-11-18
             ```java
             Child c = (Child) p;
             ```
+## 다형성 예제
+```java
+
+public class Product {
+	int price; // 제품가격
+	int bonusPoint; // 보너스점수
+	public Product(int price) {
+		this.price = price;
+		this.bonusPoint = (int)(price/10.0);
+	}
+}
+public class Audio extends Product{
+
+	public Audio() {
+		super(200);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "Audio ";
+	}
+	
+}
+public class Computer extends Product{
+
+	public Computer() {
+		super(100);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "Computer";
+	}
+	
+}
+public class Tv extends Product{
+	public Tv() {
+		super(300);
+	}
+
+	@Override
+	public String toString() {
+		return "Tv";
+	}
+	
+}
+
+public class Buyer {
+
+	final int MAX_ITEM = 100; // 카트 최대용량
+	int money = 1000; // 소지한 금액
+	int bonusPoint = 0; // 보너스
+
+	Product[] p = new Product[MAX_ITEM];
+
+	// 매개 변수의 다형성
+	void buy(Product product) {
+		// 구매자가 가진 돈보다 제품의 가격이 비싼 경우
+		if(product.price > money) {
+			System.out.println("잔액부족");
+			return;
+		}
+		// 카트에 담기
+		for (int i = 0; i < this.p.length; i++) {
+			if (this.p[i] == null) {
+				this.p[i] = product;
+				break;
+			}
+		}
+		money -= product.price;
+		bonusPoint += product.bonusPoint;
+	}
+	
+	// 구매 목록
+	void getItemList() {
+		int cnt1 = 0;
+		int cnt2 = 0;
+		int cnt3 = 0;
+		
+		for(int i=0; i < this.p.length; i++) {
+			if(p[i] instanceof Tv) {
+				cnt1++;
+			}else if (p[i] instanceof Computer) {
+				cnt2++;
+			}else if(p[i] instanceof Audio) {
+				cnt3++;
+			}
+			
+			if(p[i]!=null) {
+				System.out.println(p[i].getClass().getName());
+				System.out.println(p[i]);
+			}
+			
+		}
+		
+		
+		System.out.println("총구매 내용");
+		System.out.println("TV : " + cnt1);
+		System.out.println("Computer : " + cnt2);
+		System.out.println("Audio : " + cnt3);
+	}
+
+	@Override
+	public String toString() {
+		return "Buyer [MAX_ITEM=" + MAX_ITEM + ", money=" + money + ", bonusPoint=" + bonusPoint + "]";
+	}
+	
+	
+}
+
+public class BuyerMain {
+
+	public static void main(String[] args) {
+
+		Tv tv = new Tv();
+		Computer computer = new Computer();
+		Audio audio = new Audio();
+
+		// 필드의 다형성
+		Product p1 = new Tv();
+		Product p2 = new Computer();
+		Product p3 = new Audio();
+
+		Buyer buyer = new Buyer();
+		System.out.println("=================");
+		buyer.buy(p1);
+		buyer.buy(p2);
+		buyer.buy(p3);
+		System.out.println("=================");
+		buyer.buy(tv);
+		buyer.buy(computer);
+		buyer.buy(audio);
+		
+		System.out.println("=================");
+		buyer.buy(new Tv());
+		buyer.buy(new Computer());
+		buyer.buy(new Audio());
+		
+		buyer.getItemList();
+		System.out.println(buyer);
+	}
+
+}
+```
 # Database
 ## DB용어 모음
 * Database 
@@ -188,3 +334,7 @@ Date : 2019-11-18
 - INSERT
 - UPDATE
 - DELETE
+
+
+
+[돌아가기](../README.md)

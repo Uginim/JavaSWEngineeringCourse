@@ -472,3 +472,6 @@ ping, ipconfig, netstat, nslookup, tracert
     * Bottom-up
         * P-D-N-T-S-P-A
         * Please Do Not Throw Sausage Pizza Away
+
+
+[돌아가기](../README.md)

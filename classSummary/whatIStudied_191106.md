@@ -462,3 +462,7 @@ Date : 2019-11-06
         |패턴|LIKE|BOOKNAME LIKE '축구의 역사|
         |NULL|IS NULL, NULL|price IS NULL|
         |복합조건|AND, OR, NOT|(price <20000) AND (bookname LIKE '축구의 역사')|
+
+
+
+[돌아가기](../README.md)
