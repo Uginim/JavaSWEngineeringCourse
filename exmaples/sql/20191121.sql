@@ -92,7 +92,7 @@ INSERT INTO department VALUES('D0001','총무부',null);
 INSERT INTO department VALUES('D0002','IT부',null);
 INSERT INTO department VALUES('D0003','회계부',null);
 INSERT INTO department VALUES('D0004','인사부',null);
-INSERT INTO Employee VALUES('E0001','홍길동','010-5555-9776','남','대리','D0001');
+INSERT INTO Employee VALUES('E0001','홍길동','010-5555-9776','남','부장','D0001');
 INSERT INTO Employee VALUES('E0002','홍길서','010-1237-9784','여',null,'D0001');
 INSERT INTO Employee VALUES('E0003','홍길남','010-1237-1744','남','부장','D0002');
 INSERT INTO Employee VALUES('E0004','홍길북','010-2237-1744','남','과장','D0002');
@@ -107,7 +107,7 @@ INSERT INTO Employee VALUES('E0012','임수정','010-9337-1744','여','차장','D0002'
 INSERT INTO Employee VALUES('E0013','박한별','010-9337-2744','여','차장','D0002');
 INSERT INTO Employee VALUES('E0014','김사랑','010-9337-2744','여','부장','D0002');
 --UPDATE Employee SET  deptno ='D0004' WHERE empno='E0010';
-UPDATE department SET "manager"='E0009' WHERE deptno ='D0001';
+UPDATE department SET "manager"='E0001' WHERE deptno ='D0001';
 UPDATE department SET "manager"='E0003' WHERE deptno ='D0002';
 UPDATE department SET "manager"='E0011' WHERE deptno ='D0003';
 UPDATE department SET "manager"='E0010' WHERE deptno ='D0004';
@@ -118,6 +118,11 @@ INSERT INTO Project VALUES('P0002','당근마켓유지보수','D0002');
 INSERT INTO Works VALUES('E0003','P0001','1');
 INSERT INTO Works VALUES('E0004','P0001','8');
 INSERT INTO Works VALUES('E0012','P0001',188);
+
+
+select count(*) from employee
+where deptno = (select ep.deptno from employee ep , department dp where ep.name='홍길동'  and ep.empno=dp."manager");
+
 
 
 delete from Employee;

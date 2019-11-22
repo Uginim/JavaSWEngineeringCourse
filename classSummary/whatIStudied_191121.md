@@ -85,7 +85,81 @@ Date : 2019-11-21
 * 직접 처리
     * try ~ catch ~ finally
 * 다중 catch문
+    * catch순서는 넓은 범위의 객체가 아래 위치해야함
+    * 상위타입이 밑에 위치하도록
+* 예외가 발생될 경우
+    * try블럭 안에서 예외가 발생했을 때
+    * 예외가 발생한 부분 이후로는 실행되지 않음
+* 선언처리
+    * throws 절 이용
+        * 현재 영억에서 직접 처리하지 않고 호출하는 쪽에 양도
+* JDK7 부터는 하나의 catch 블록에 여러 개의 예외처리 가능
+    * 동일하게 처리하고 싶은 예외를 `|`로 연결
+```java
 
+public class NullPointExceptionEx {
+
+	public static void main(String[] args) {
+
+		System.setErr(System.out);
+		// 1) NullPointException
+		// 참조하는 객체가 없은 참조변수를 접근할 때.
+		String data = null;
+		try {
+			System.out.println(data.toString());
+		} catch (NullPointerException ne) {
+			System.err.println(ne.getMessage());
+			ne.printStackTrace();
+		}
+		System.out.println("====================");
+		// 2) 배열 인덱스를 초과하여 접근할 때
+		int x[] = new int[5];
+		try {
+			System.out.println(x[5]);
+		} catch (ArrayIndexOutOfBoundsException aioobe) {
+			System.err.println(aioobe.getMessage());
+			aioobe.printStackTrace();
+		}
+		System.out.println("====================");
+		String data1 = "100";
+		String data2 = "a100";
+		int value1 = Integer.parseInt(data1);
+		try {
+            // 3) 숫자 형식에 맞지 않을 때
+			int value2 = Integer.parseInt(data2);
+		} catch (NumberFormatException nfe) {
+			System.err.println(nfe.getMessage());
+			nfe.printStackTrace();
+
+		}
+		System.out.println("====================");
+		Animal animal = new Animal();
+		try {
+            // 4) 참조타입 변수의 잘못된 형변환
+			Dog dog = (Dog) animal;
+		} catch (ClassCastException cce) {
+			System.err.println(cce.getMessage());
+			cce.printStackTrace();
+			System.out.println("점검중입니다!! 관리자에게 문의하세요!!");
+//			return; // finally까지 실행 됨
+		} finally {
+			System.out.println("예외 발생 유무 없이 실행");
+		}
+		System.out.println("예외 이후에도 현재 문장 실행");
+
+	}
+
+}
+
+class Animal {
+}
+
+class Dog extends Animal {
+}
+
+class Cat extends Animal {
+}
+```
 ## 예외처리 정리
 * 예외처리(Exception Handling)
     * 목적
