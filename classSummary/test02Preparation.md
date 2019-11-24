@@ -94,22 +94,25 @@
 ### 9) API Document문서에 아래와 같이 선언부가 정의되어 있다면 course 매개변수 타입으로 올 수 있는 <u>타입을</u> 오른쪽 클래스 체계도를 참조하여 각각 나열하시오..<br>또한 <u>제너릭 타입 코딩 시 사용이점 2가지를 선언시점과 실행시점</u>으로 나우어 작성하시오.
 #### 오른쪽 그림 
 * ![](../images/Java_평가_오른쪽그림2.PNG)
-#### 1. 
+#### 1. 선언부1
 ```java
 public void register(Course<?> course)
 ```
-#### 2. 
+#### 2. 선언부2
 ```java
 public void register(Course<? extends Student> course)
 ```
-#### 3. 
+#### 3. 선언부3
 ```java
 public void register(Course<? super Worker> course)
 ```
 - 매개변수로 올 수 있는 타입 :
-    1. Person, Worker, Student, HighStudent
-    2. Student, HighStudent
-    3. Worker, Person
+    1. 선언부1 : 
+        - Person, Worker, Student, HighStudent
+    2. 선언부2 : 
+        - Student, HighStudent
+    3. 선언부3 
+        - Worker, Person
 - 제너릭 타입 코딩시 사용이점 2가지
     - 선언시점 
         - 컴파일 시점에 타입오류 방지
@@ -123,14 +126,18 @@ public void register(Course<? super Worker> course)
 |**MAP**|**키**는 **비허용**<br>**값**은 허용| 없음|HashMap, TreeMap, <br>Hashtable, Properties|
 |**LIST**|허용|**있음**|ArrayList, LinkedList, Stack, Vector|
 
+<br>
+<br>
+<br>
 
 # SQL활용(Database)
 ### 다음 릴레이션을 보고 물음에 답하시오. Employee는 사원, Department는 부서, Project는 프로젝트, Works는 사원이 프로젝트에 참여한 내용을 나타낸다. 한 사원이 여러 프로젝트에서 일하거나 한 프로젝트에 여러 사원이 일할 수 있다. hoursworked 속성은 각 사원이 각 프로젝트에서 일한 시간을 나타낸다. 밑줄 친 속성은 기본키다.
+**Employee**(<u>empno</u>, name, phoneno, address, sex, position, deptno)   
+**Department**(<u>deptno</u>, deptname, manager)   
+**Project**(<u>projno</u>, projanme, deptno)  
+**Works**(<u>empno, projno</u>, hoursworked)
+<br>
 
-> Employee(<u>empno</u>, name, phoneno, address, sex, position, deptno)   
-> Department(<u>deptno</u>, deptname, manager)   
-> Project(<u>projno</u>, projanme, deptno)  
-> Works(<u>empno, projno</u>, hoursworked)
 ### 1) **Works 테이블을 생성하는 SQL문**을 작성하시오. **데이터 타입**과 **길이**는 **number 기본타입**으로 생성한다.
 ```
 CREATE TABLE Works(
