@@ -31,7 +31,7 @@
     1. 예외발생 예상되는 실행문에 try catch finally 구문 처리
     2. 호출한 메소드로 위임해서 처리처리(메소드 선언부에 throws절 사용사용)
 - 목적 
-    - 프로그램 실행시 발생할 수 있는 예외예외(Runtime error)에 대비해서  
+    - 프로그램 실행시 발생할 수 있는 예외(Runtime error)에 대비해서  
     코드를 작성해 프로그램 종료없이 정상적으로 작동하도록 하기 위함
 
 ### 4) 자바에서 추상클래스와 인터페이스의 <u>공통점과 차이점</u>을 <u>문법 관점에서 각각 2개씩만</u> 작성하시오.
@@ -132,14 +132,14 @@ public void register(Course<? super Worker> course)
 
 # SQL활용(Database)
 ### 다음 릴레이션을 보고 물음에 답하시오. Employee는 사원, Department는 부서, Project는 프로젝트, Works는 사원이 프로젝트에 참여한 내용을 나타낸다. 한 사원이 여러 프로젝트에서 일하거나 한 프로젝트에 여러 사원이 일할 수 있다. hoursworked 속성은 각 사원이 각 프로젝트에서 일한 시간을 나타낸다. 밑줄 친 속성은 기본키다.
-**Employee**(<u>empno</u>, name, phoneno, address, sex, position, deptno)   
-**Department**(<u>deptno</u>, deptname, manager)   
-**Project**(<u>projno</u>, projanme, deptno)  
-**Works**(<u>empno, projno</u>, hoursworked)
+**Employee**(<u>*empno*</u>, name, phoneno, address, sex, position, deptno)   
+**Department**(<u>*deptno*</u>, deptname, manager)   
+**Project**(<u>*projno*</u>, projanme, deptno)  
+**Works**(<u>*empno*, *projno*</u>, hoursworked)
 <br>
 
 ### 1) **Works 테이블을 생성하는 SQL문**을 작성하시오. **데이터 타입**과 **길이**는 **number 기본타입**으로 생성한다.
-```
+```sql
 CREATE TABLE Works(
     empno NUMBER,
     porjno NUMBER,
