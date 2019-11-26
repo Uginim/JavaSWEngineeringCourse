@@ -149,8 +149,8 @@ CREATE TABLE Works(
 ```
 ### 2) 1)문항 수행 후 <u>**Works 테이블 구조**</u>와 <u>**제약조건 반영여부**</u>를 파악하기위해 <u>**데이터사전을 조회하는 SQL구문**</u>을 각각 작성하시오.
 ```SQL
-DESC Works; -- SQL구조
-SELECT * FROM user_constraints WHERE TABLE_NAME = 'WORKS'; --제약조건 반영여부
+SELECT * FROM ALL_TAB_COLUMNS WHERE TABLE_NAME = 'WORKS';-- 테이블 구조 구조
+SELECT * FROM ALL_CONSTRAINTS WHERE TABLE_NAME = 'WORKS'; --제약조건 반영여부 파악하기
 ```
 ### 3) 아래 2개의 질의에 대한 <u>**SQL문을 각각 작성**</u>하시오.
 #### 1. Employee 테이블에 **사원정보 튜플 1건을 생성**하시오.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(속성이 no로 끝나는 필드는 number타입, 나머지 속성은 varchar2타입이라고 가정함)

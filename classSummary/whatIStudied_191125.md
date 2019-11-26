@@ -266,7 +266,19 @@ public class ArrayListMain {
     - 객체의 메모리 번지 이용해 해시코드를 만들어 리턴
         - 개별 객체는 해시코드가 모두 다름
 - 논리적 동등 비교 시 hashCode()오버라이딩의 필요성
-    - 컬랙션 프레임워크의 HashSet, HashMap과 같이
+    - 컬랙션 프레임워크의 HashSet, HashMap과 같은 클래스는 두 객체가  
+    동등한 객체인지 판단할 때 아래와 같은 과정을 거침
+    - hashCode() 리턴값 
+        - 같음
+            - equals() 리턴값
+                - true
+                    - 동등객체
+                - false
+                    - 다른객체
+        - 다름
+            - 다른객체
+- 따라서 논리적 동등객체는 hashcode()가 리턴하는 값도 같아야함
+- System.identityHashCode(obj): 순수 hashCode()값을 리턴함
 ### Map 컬렉션의 특징 및 주요 메소드
 - 특징
     - 키(key)와 값(value)으로 구성된 Map.Entry 객체를 저장하는 구조
