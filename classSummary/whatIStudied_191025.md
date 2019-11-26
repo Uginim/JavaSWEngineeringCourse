@@ -474,4 +474,6 @@ public class IncreaseDecreaseOperator {
 
 
 
-[돌아가기](../README.md)
+[돌아가기](../README.md) 
+[2019-10-24](whatIStudied_191024.md)  
+[2019-10-28](whatIStudied_191028.md)  

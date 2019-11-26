@@ -220,4 +220,6 @@ p332
     - 관계 데이터 모델
 
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-11-13](whatIStudied_191113.md)  
+[2019-11-15](whatIStudied_191115.md)  

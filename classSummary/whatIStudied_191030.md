@@ -290,4 +290,6 @@ Date : 2019-10-30
 * System.arraycopy() 
 * 두 숫자를 곱한 결과가 Type의 범위를 벗어나는지는 어떻게 알지?
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-10-29](whatIStudied_191029.md)  
+[2019-10-31](whatIStudied_191031.md)  

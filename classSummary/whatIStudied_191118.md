@@ -337,4 +337,6 @@ public class BuyerMain {
 
 
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-11-15](whatIStudied_191115.md)  
+[2019-11-19](whatIStudied_191119.md) 

@@ -128,4 +128,6 @@ array[2] = new int[3];
     * `alter`역시 반영됨
 
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-11-01](whatIStudied_191101.md)  
+[2019-11-05](whatIStudied_191105.md)  

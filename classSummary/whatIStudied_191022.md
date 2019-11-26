@@ -428,3 +428,5 @@ public class Pyramid {
 
 
 [돌아가기](../README.md)
+[2019-10-21](whatIStudied_191021.md)  
+[2019-10-23](whatIStudied_191023.md)  

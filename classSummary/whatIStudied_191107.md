@@ -241,4 +241,6 @@ Date : 2019-11-07
 2번의 1-7
 
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-11-06](whatIStudied_191106.md)  
+[2019-11-08](whatIStudied_191108.md)  

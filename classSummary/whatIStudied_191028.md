@@ -403,4 +403,6 @@ float f2 = 1e1f;
             * 쇼트서킷 존재
 
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-10-25](whatIStudied_191025.md)  
+[2019-10-29](whatIStudied_191029.md)  

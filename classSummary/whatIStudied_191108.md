@@ -147,4 +147,6 @@ public String toString() {
     * WHERE절에 두 테이블의 특정필드가 도메인이 같을 경우
         `table1.field = table2.field`를 조건으로 추가
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-11-07](whatIStudied_191107.md)  
+[2019-11-11](whatIStudied_191111.md)  

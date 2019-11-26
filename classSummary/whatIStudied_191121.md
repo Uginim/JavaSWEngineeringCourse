@@ -245,4 +245,6 @@ class Cat extends Animal {
     * 데이터베이스 전반에 대한 정보 제공
 
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-11-20](whatIStudied_191120.md)  
+[2019-11-22](whatIStudied_191122.md) 

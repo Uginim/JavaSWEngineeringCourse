@@ -68,6 +68,7 @@ public class Main {
 	}
 }
 ```
+## 상속 용어
 
 8. 참조변수의 형변환
     * 자동 형변환 : 
@@ -155,4 +156,6 @@ public class SmartPhone extends Phone {
     SET     속성이름1=값1[,속성이름2=값2, ...]
     [WHERE <검색조건>];
 ## DELETE문
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-11-18](whatIStudied_191118.md)  
+[2019-11-20](whatIStudied_191120.md) 

@@ -594,4 +594,6 @@ JIT도 나중에 도입되었다는 뜻인가?
     * 산술 연산자 : **arithmetic operator**
 * [인코딩(encoding)](https://www.techopedia.com/definition/948/encoding)
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-10-18](whatIStudied_191018.md)  
+[2019-10-22](whatIStudied_191022.md)  

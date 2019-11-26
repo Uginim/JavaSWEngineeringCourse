@@ -239,4 +239,6 @@ Date : 2019-11-13
   WHERE
 
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-11-12](whatIStudied_191112.md)  
+[2019-11-14](whatIStudied_191114.md)  

@@ -465,4 +465,6 @@ Date : 2019-11-06
 
 
 
-[돌아가기](../README.md)
+[돌아가기](../README.md) 
+[2019-11-05](whatIStudied_191105.md)  
+[2019-11-07](whatIStudied_191107.md)  

@@ -349,4 +349,6 @@ public class BankExam {
 ## 메모
 * char타입의 초기값은 `' '`(공백)을 준다.
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-10-22](whatIStudied_191022.md)  
+[2019-10-24](whatIStudied_191024.md)  

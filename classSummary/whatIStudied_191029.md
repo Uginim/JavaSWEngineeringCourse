@@ -275,4 +275,6 @@ Date : 2019-10-29
     * Run configurations `클릭`
 
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-10-28](whatIStudied_191028.md)  
+[2019-10-30](whatIStudied_191030.md)  

@@ -109,4 +109,6 @@ Date : 2019-11-15
 참조 무결성 제약조건
 
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-11-14](whatIStudied_191114.md)  
+[2019-11-18](whatIStudied_191118.md) 

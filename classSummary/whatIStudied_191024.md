@@ -260,4 +260,6 @@ Servers창에서 Tomcat v9.0 Server at localhost 우클릭 -> add and remove -> 
       ```
   
 
-[돌아가기](../README.md)
+[돌아가기](../README.md)  
+[2019-10-23](whatIStudied_191023.md)  
+[2019-10-25](whatIStudied_191025.md)  
