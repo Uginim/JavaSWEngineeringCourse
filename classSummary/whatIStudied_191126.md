@@ -415,5 +415,5 @@ Date : 2019-11-26
 # 기타
 
 [돌아가기](../README.md)  
-[2019-11-22](whatIStudied_191122.md)  
-[2019-11-26](whatIStudied_191126.md) 
+[2019-11-25](whatIStudied_191125.md)  
+[2019-11-27](whatIStudied_191127.md) 
