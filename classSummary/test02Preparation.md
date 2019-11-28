@@ -78,19 +78,11 @@
       일치하지 않으면 오류를 발행시켜 개발자에게 알려준다.
 
 ### 8) <u>스레드(thread)의 생성방법 2가지(클래스와 인터페이스를 정확히 표기)</u>와 <u>synchronized 키워드 사용목적</u>을 작성하시오.
-1. Thread 클래스를 상속받아 생성
-    * ```java
-        class MyThread extends Thread {
-            public void run () {/*작업 내용*/ }
-        }
-        ```
-2. 직접 Runnable 인터페이스를 구현
-    * ```java
-        class MyThread implements Runnable {
-            public void run() { /*작업 내용*/ }
-        }
-        ```
+1. Thread 클래스를 상속(extends)받아 생성    
+2. 직접 Runnable 인터페이스를 구현(implements)후 Thread클래스 생성시 생성자 매개값으로 대입하여 생성
+    
 * synchronized 키워드 사용목적 
+    * <u>멀티 스레드 환경에서 공유객체 속성값을 변경하고자 할 때 하나의 스레드만 synchronized영역에 접근을 허가하여 공유데이터 신뢰성 유지</u>
     * 멀티 스레드가 하나의 객체를 공유해서 생기는 오류 방지하기 위함   
 ### 9) API Document문서에 아래와 같이 선언부가 정의되어 있다면 course 매개변수 타입으로 올 수 있는 <u>타입을</u> 오른쪽 클래스 체계도를 참조하여 각각 나열하시오..<br>또한 <u>제너릭 타입 코딩 시 사용이점 2가지를 선언시점과 실행시점</u>으로 나우어 작성하시오.
 #### 오른쪽 그림 
@@ -145,22 +137,32 @@ CREATE TABLE Works(
     empno NUMBER,
     porjno NUMBER,
     hoursworked NUMBER,
-    PRIMARY KEY(empno, porjno)
+    PRIMARY KEY(empno, porjno),
+    FOREIGN KEY(empno) REFERENCES employee(empno),
+    FOREIGN KEY(projno) REFERENCES project(projno)
 );
 ```
 ### 2) 1)문항 수행 후 <u>**Works 테이블 구조**</u>와 <u>**제약조건 반영여부**</u>를 파악하기위해 <u>**데이터사전을 조회하는 SQL구문**</u>을 각각 작성하시오.
+데이터 구조 조회
 ```SQL
-SELECT * FROM ALL_TAB_COLUMNS WHERE TABLE_NAME = 'WORKS';-- 테이블 구조 구조
-SELECT * FROM ALL_CONSTRAINTS WHERE TABLE_NAME = 'WORKS'; --제약조건 반영여부 파악하기
+-- 테이블 구조 조회
+SELECT * FROM ALL_TAB_COLUMNS WHERE TABLE_NAME = 'WORKS';
+--제약조건 반영여부 조회
+SELECT * FROM ALL_CONSTRAINTS WHERE TABLE_NAME = 'WORKS'; 
 ```
 ### 3) 아래 2개의 질의에 대한 <u>**SQL문을 각각 작성**</u>하시오.
 #### 1. Employee 테이블에 **사원정보 튜플 1건을 생성**하시오.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(속성이 no로 끝나는 필드는 number타입, 나머지 속성은 varchar2타입이라고 가정함)
 ```sql
-INSERT INTO Employee(empno,name,phoneno,address,sex,position,deptno) VALUES(1,'홍길동',01012345678,'울산광역시 남구','남','과장',1);
+-- 1)
+INSERT INTO Employee(empno,name,phoneno,address,sex,position,deptno) 
+    VALUES(1,'홍길동',01012345678,'울산광역시 남구','남','과장',1);
+-- 2)    
+INSERT INTO Employee
+    VALUES(1,'홍길동',01012345678,'울산광역시 남구','남','과장',1);
 ```
 #### 2. 여자 사원의 **이름**을 검색하시오
 ```sql
-SELECT name FROM Employee WHERE sex = '여';
+SELECT name FROM Employee WHERE sex = '여자';
 ```
 ### 4) <u>**트랜잭션의 정의**</u>, <u>**사용이유 2가지**</u>를 작성하고 관련 명령어인 <u>**commit, rollback, savepoint에 대해 각각 의미**</u>를 작성하시오.
 - 정의 
@@ -195,29 +197,60 @@ CREATE INDEX idx_name ON Employee(name);
     - 보안성
         - 필요한 속성만을 선별하여 보여줄 수 있음
     - 독립성 
-        - 원본 테이블 구조가 변하더라도 응용에 영향을 주지 않음
+        - 원본 테이블 구조가 변하더라도 응용(애플리케이션)에 영향을 주지 않음
 * 뷰 생성 sql문
     * ```sql
-        CREATE OR REPLACE VIEW vw_emp
-        AS SELECT ep.empno, ep.name, dp.deptname 
+        CREATE VIEW vw_emp
+        AS SELECT DISTINCT ep.empno, ep.name, dp.deptname 
             FROM Employee ep, Department dp
             where ep.deptno = dp.deptno;
         ```
 ### 8) '홍길동' 팀장(manager) 부서에서 일하는 사원의 수를 보이는 **SQL문을 작성**하시오.
 ```SQL
-SELECT COUNT(*) AS 사원수 FROM Employee
-WHERE deptno = (SELECT ep.deptno FROM employee ep , department dp WHERE ep.name='홍길동'  AND ep.empno=dp."manager");
+-- 1) official
+SELECT  COUNT(*) 
+FROM    Employee 
+WHERE   deptno in (SELECT t2.deptno 
+                    FROM employee t1
+                    WHERE t1.position ='팀장' 
+                    AND   t1.name='홍길동');
+
+-- 2) 
+SELECT  COUNT(*) 
+FROM    Employee
+WHERE   deptno IN ( SELECT  ep.deptno 
+                    FROM    employee ep , department dp 
+                    WHERE   ep.name='홍길동' AND ep.empno=dp."manager");
+
 ```
 ### 9) 사원들이 일한 시간 수를 부서별, 사원 이름별 오름차순으로 하는 **SQL문을 작성**하시오.
 ```sql
-SELECT dp.deptname 부서, ep.name 이름, SUM(wk.hoursworked) AS "일한 시간"
-FROM Employee ep, Department dp, Works wk
-WHERE dp.deptno=ep.deptno AND ep.empno=wk.empno
-GROUP BY dp.deptname, ep.name
-ORDER BY 부서 ASC ,이름 ASC;
+-- 1) official
+SELECT      t2.deptname "부서명", t1.name "사원명", SUM(t3.hoursworked) AS "일한 시간"
+FROM        Employee t1, Department t2, Works t3
+WHERE       t2.deptno = t1.deptno 
+    AND     t1.empno = t3.empno
+GROUP BY    t2.deptname, t1.name
+ORDER BY    SUM(t3.hoursworked) ASC;
+
+-- 2)
+SELECT      dp.deptname "부서명", ep.name "사원명", SUM(wk.hoursworked) AS "일한 시간"
+FROM        Employee ep, Department dp, Works wk
+WHERE       dp.deptno=ep.deptno AND ep.empno=wk.empno
+GROUP BY    dp.deptname, ep.name
+ORDER BY    "일한 시간" ASC;
 ```
 ### 10) 두 명 이상의 사원이 참여한 프로젝트의 번호, 이름, 사원의 수를 보이는 **SQL문을 작성**하시오
 ```sql
+-- 1) official
+SELECT      t2.projno, t2.projname, COUNT(t1.empno) 
+FROM        employee t1, project t2, works t3
+WHERE       t1.empno = t3.empno
+AND         t3.projno = t2.projno
+GROUP BY    t2.projno, t2.projname
+HAVING      COUNT(t1.empno) >= 2;
+
+-- 2) 
 SELECT pr.projno 프로젝트의번호, pr.projname 프로젝트이름,  COUNT(wk.empno) 사원수
 FROM Project pr, Works wk
 WHERE pr.projno = wk.projno
