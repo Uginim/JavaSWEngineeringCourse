@@ -118,3 +118,4 @@ Date : 2019-11-29
 
 [돌아가기](../README.md)  
 [2019-11-28](whatIStudied_191128.md) 
+[2019-12-02](whatIStudied_191202.md) 
