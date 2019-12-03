@@ -1,5 +1,5 @@
 # What I studied today.
-Date : 2019-11-29
+Date : 2019-12-02
 
 # 웹표준
 ## 유용한 사이트들
@@ -355,9 +355,10 @@ GRANT CONNECT,RESOURCE TO mdguest2;
     - ```sql
         GRANT SELECT ON Book TO mdguest;
         ```
-#### mdguest계정에 customer테이블에 대한 select 및 update 권한 부여 및 WITH GRANT OPTION
+#### 권한 재부여
+- mdguest계정에 customer테이블에 대한 select 및 update 권한 부여 
 - `WITH GRANT OPTION` 옵션을 주면 부여받은 권한을 다른 계정에게도 부여할 수 있음
-    다단계같은거
+    like 다단계
     1. madang 계정으로 접속
     2. 다음 명령어
         - ```sql
@@ -379,3 +380,4 @@ GRANT SELECT ON Orders TO PUBLIC;
     
 [돌아가기](../README.md)  
 [2019-11-29](whatIStudied_191129.md) 
+[2019-12-03](whatIStudied_191203.md) 
