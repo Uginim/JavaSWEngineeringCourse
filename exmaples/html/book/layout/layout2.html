@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">    
+    <title>레이아웃</title>
+    <style>      
+        *{
+            /* outline:blue solid 1px; */
+            text-align: center;
+            vertical-align: middle;
+            
+        }
+        html{
+            /* outline:red solid 1px; */
+            height:100%;
+        }
+        body {
+            /* outline:yellow solid 1px;                */
+            height:100%;
+            margin:0px;
+            /* padding:1% 0% 0% 0%; */
+            padding:0%; 
+            background-color: black;
+            clear:both;
+            font-size:2em;
+            color:ivory;
+        }
+        body * {
+            border-radius: 10px;
+            /* margin-top:1%;
+            margin-bottom:1%; */
+            /* margin:0% 1% 1% 1%; */            
+            margin:0% 1% ;
+            position: relative;
+            top:1%;
+        }
+        header,nav,article,aside,footer{
+            background-color: skyblue;            
+        }
+        section{            
+            background-color:steelblue;
+        }
+        header {
+       
+            height:9%;
+        }
+        nav {
+            
+            top:2%;
+            height:9%;            
+        }
+        .sections{
+            width:73%;
+            float:left;
+            margin:0%;                        
+            top:2%;
+            left: 1%;
+            height:69%;
+                               
+        }        
+        section{                        
+            height:49%;            
+        }
+        section * {
+            margin:0% 1%;
+        }
+        
+        footer{
+            top:3%;
+            height:9%;                       
+            clear:left;
+        }
+        #section1{
+            top:1%;
+        }
+        #section2{
+            top:2%;
+        }
+        section>header{
+            top:2%;
+            height:23%;                        
+        }
+        section article{
+            height:48%;             
+            background:none;
+            clear:both
+        }
+        section>footer{
+            height:23%;           
+        }
+        .rightside{
+            top:2%;
+            left:1%;
+            width:23%;
+            float: left;            
+            height:69%;           
+        
+        }        
+        .rightside *{            
+            margin: 0% 1%;
+        }
+        .rightside>article{            
+            top:1%;
+            height: 29%;              
+        }
+        .rightside>aside{            
+            top:2%;
+            height:69%;                      
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <!-- <div class="container"> -->
+        <div class="sections">
+            <section id="section1">section</section>
+            <section id="section2">
+                <header>header</header>
+                <article>section</article>
+                <footer>footer</footer>
+            </section>
+        </div>
+        <div class="rightside">
+            <article>article</article>
+            <aside>aside</aside>
+        </div>
+    <!-- </div> -->
+    <footer>footer</footer>
+</body>
+</html>

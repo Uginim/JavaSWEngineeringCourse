@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+hr {
+    display: none;
+}
+h3{
+    color: brown;
+    text-align: center;
+    font-size:2em;
+}
+form{
+    background:pink;
+}
+
+form span{
+    color:royalblue;
+    font-family: "고딕";
+    font-weight: bold;
+    font-size:1.2em;
+}

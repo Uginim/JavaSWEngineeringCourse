@@ -256,3 +256,4 @@ SELECT * FROM dba_role_privs WHERE grantee = 'MDGUEST';
 
 [돌아가기](../README.md)  
 [2019-12-02](whatIStudied_191202.md) 
+[2019-12-04](whatIStudied_191204.md) 
