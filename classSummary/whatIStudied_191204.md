@@ -1,5 +1,5 @@
 # What I studied today.
-Date : 2019-12-03
+Date : 2019-12-04
 
 # 웹표준
 ## 연습문제 4장 짝수문제 풀이
@@ -96,4 +96,5 @@ Date : 2019-12-03
 
 [돌아가기](../README.md)  
 [2019-12-03](whatIStudied_191203.md) 
+[2019-12-05](whatIStudied_191205.md) 
 

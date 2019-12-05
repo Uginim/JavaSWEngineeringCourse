@@ -1,0 +1,40 @@
+@charset "utf-8";
+html{
+    height: 100%;
+}
+body{    
+    height:100%;
+    margin:0px;
+}
+
+body * {
+    overflow: auto;
+}
+
+h1{   
+    margin:0px;
+    text-align: center;
+}
+
+header {    
+    height:15%;
+    background-color: yellow;
+}
+nav {
+    float:left;
+    height:75%;
+    width: 20%;
+    background-color: orange;
+}
+section {
+    float: left;
+    height: 75%;
+    width: 80%;
+    background-color: paleturquoise;
+}
+
+footer {
+    background: slateblue;    
+    clear: both;
+    height: 10%;
+}

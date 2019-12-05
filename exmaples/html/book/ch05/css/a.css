@@ -1,0 +1,14 @@
+@charset "utf-8";
+body {
+    background-color:yellow;
+}
+p {
+    text-align:center;
+}
+/* 새로 추가함 */
+p:nth-child(1){
+    color:red; font-size:3em
+}
+p:nth-child(2) > span{
+    color:green
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    input[type=button] {
+        color: blue;
+        
+    }
+    input[type=button]:hover {
+        background:yellow;
+    }
+    input[type=button]:focus{
+        background-color: yellowgreen;
+
+    }   
+    /* 
+    body>div+div>input+input{
+        background-color: yellow;
+    } 
+    */
+/* 
+    body>div+div>input:nth-child(2){
+        background-color: yellow;
+    }
+     */
+    body>div:nth-child(2)>input:nth-child(2){
+        background-color: violet;
+    }
+    img:hover{
+
+    }
+</style>
+<body>
+    <!-- <img src="img/christmas.jpg" alt=""> -->
+    <div>
+        <input type="button" value="버튼1">
+        <input type="button" value="버튼2">
+        <input type="button" value="버튼3">
+    </div>
+    <div>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </div>
+
+</body>
+</html>

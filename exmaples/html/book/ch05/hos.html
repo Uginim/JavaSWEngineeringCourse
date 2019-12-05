@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes binglebingle {
+            
+            /* 25%{transform: rotate(90deg);} */
+            /* 50%{transform: rotate(180deg);} */
+            /* 75%{transform: rotate(270deg);} */
+            /* 100%{transform: rotate(360deg);} */
+            100%{transform: rotate(900deg);} 
+        }
+        @keyframes hos {
+            0%{opacity:0;}
+            50%{opacity:0;}
+            100%{opacity:1;}
+        }
+        @keyframes fadeout {
+            0%{opacity:1.0}
+            50%{opacity:0.25;}
+            75%{opacity: 0.0;}
+            100%{opacity:0;}
+        }
+        body{
+            position: relative;
+        }
+        img{        
+            
+            /* animation-name: binglebingle;
+            animation-duration: 1s;            
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-name: fadeout;
+            animation-duration: 4s;            
+            animation-timing-function: linear;
+            animation-iteration-count: infinite; */
+        }
+        img#phone{
+            animation:linear binglebingle 1s 12, linear fadeout 12s 1;
+            position: absolute;
+            left:0%;            
+            animation-fill-mode: both;
+        }
+
+        img#hos{
+            position: absolute;
+            left:0%;
+            /* animation-name: hos;
+            animation-duration: 1s;
+            animation-delay: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite; */
+            animation:linear binglebingle 1s 12, linear hos 12s 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <img id="hos" src="img/unnamed.jpg" width="100" height="100" alt="">
+    <img id="phone" src="img/smartphone1.svg" width="100" height="100" alt="">
+    
+</body>
+</html>

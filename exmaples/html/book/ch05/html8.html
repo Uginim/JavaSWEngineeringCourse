@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>리스트로 수직 메뉴 만들기</title>
+    <style>
+        
+    ul{
+        background-color: violet;
+        color:white;        
+        list-style: none;
+        padding-left: 5px;
+        display:inline-block;
+        margin:0px;
+        
+    }
+    ul li{
+        /* display: block; */
+        padding:10px 10px 10px 0px;
+        text-transform: capitalize;
+        text-align: right;
+        display: inline-block;
+        margin-right:10px;
+    }
+    li:hover{
+        color:gray;
+    }
+    
+    ul li a {
+        color : white;
+        text-decoration: none;
+    }
+    ul li a:hover {        
+        color:gray;
+        text-decoration: underline;
+    }
+    .wrapper {
+        width: fit-content;
+        margin:0 auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">espreso</a></li>
+            <li><a href="#">cappuccino</a></li>
+            <li><a href="#">cafe latte</a></li>
+            <li><a href="#">F.A.Q</a></li>
+        </ul>
+    </div>
+</body>
+</html>
