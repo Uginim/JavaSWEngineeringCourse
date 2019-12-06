@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2 Depth Menu </title>    
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Ubuntu|Yeon+Sung&display=swap" rel="stylesheet">
+    <style>
+        body{
+        }
+        a {
+            text-decoration: none;
+            color:white;
+            /* font-family: 'Nanum Gothic', sans-serif; */
+            font-family: 'Ubuntu', 'Yeon Sung', cursive;
+
+        }
+        li {
+             /* padding:10px; */
+        }
+        ul {
+            list-style-type: none;
+            padding:0;
+        }
+        ul.navi {
+            /* outline: 1px dashed red;; */
+            height:40px;
+        }
+        ul.navi ul{
+            /* outline:3px solid gray; */
+        }
+        ul.navi > li {
+            /* outline:1px solid red; */
+            float: left;
+            width:100px;
+            padding: 10px;            
+            position:relative;
+            background-color: teal;
+        }
+
+        ul.navi ul {
+            position: absolute;
+            top:40px;     
+            left:0px;       
+            display: none;
+        }
+        ul.navi>li:hover ul{
+            display: block;
+        }
+        ul.navi ul > li {            
+            background-color: thistle;
+        }
+        ul.navi ul > li > a {            
+            background-color: gray;
+        }
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="navi">
+        <li><a href="#">menu0</a></li>
+        <li>
+            <a href="#">menu1</a>
+            <ul>
+                <li><a href="#">menu1-1</a></li>
+                <li><a href="#">menu1-2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu2</a>
+            <ul>
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu2-2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu3</a>
+            <ul>
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu3-2</a></li>
+            </ul>
+        </li>
+    </ul>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae ea neque, provident temporibus repellat quas? Nam expedita, eaque, distinctio aspernatur eum, aut quaerat necessitatibus incidunt soluta optio ducimus atque quas.
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position</title>
+    <style>
+        body{
+            position: relative;
+        }
+        .box1{            
+            width:100px;
+            height:100px;
+            background-color: red;            
+            /* float:left; */
+        }
+        .box2{
+            width:100px;
+            height:100px;
+            background-color: green;
+            /* float:left; */
+        }
+        .box12-wrapper{
+            /* outline: 1px dashed red; */
+            position: absolute;
+            /* right:0px; */
+            left:00px;
+            /* height:100px;
+            clear:both; */
+        }
+        .box3{
+            width:100px;
+            height:100px;
+            background-color: blue;            
+            position: relative;
+            top:200px; 
+            left:000px;
+            /* position: absolute;
+            bottom:0px;
+            right:0px; */
+        }
+        .box4{
+            width:100px;
+            height:100px;
+            background-color: blue;            
+            margin-top:10000px;
+            /* top:2000px; 
+            left:100px;
+            position: absolute; */
+            
+        }
+        .wrapper{
+            position: sticky;
+            top: 50px;
+            left:30px;
+
+            /* top:100px;
+            left:200px; */
+            /* bottom:0;
+            right:0; */
+            width:100px;
+            height:300px;
+            outline: 1px solid red;
+            /* clear:both; */
+        }
+    </style>
+</head>
+<body>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, fugit sunt. Ut deleniti dolorum eum ullam consequatur eaque reprehenderit! Numquam velit culpa repudiandae atque aperiam voluptates distinctio blanditiis quibusdam doloribus.
+    Labore, numquam aperiam exercitationem suscipit dolor voluptatum odit nobis consequatur tempora rem perspiciatis ut debitis illum mollitia libero accusamus earum accusantium veritatis quas nulla laboriosam fugit id reiciendis. Animi, porro!
+    Rem nulla culpa asperiores? Facere ex, facilis explicabo dolore sit, vel debitis minus expedita necessitatibus magnam fugit exercitationem animi impedit qui laboriosam sunt. Dolore odio aperiam, eveniet accusamus iste vel.
+    Accusantium ex id illo ipsum harum placeat modi deleniti sequi sint explicabo, pariatur sunt vel officia cum minima ad natus, minus nemo beatae, voluptas magnam porro facere veniam labore! Tempore.
+    <div class="wrapper">        
+        <div class="box12-wrapper">
+            <div class="box1">box1</div>
+            <div class="box2">box2</div>
+        </div>
+        <div class="box3">box3</div> 
+        <!-- float때문에 내용도 밀리고 배경 위치도 올라감 -->
+    </div>
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis praesentium, asperiores ut doloremque assumenda ipsum nulla illo nihil ipsa obcaecati sequi fugit repellat quia commodi, labore quos fuga atque. Sit!
+    Numquam odio neque officiis culpa, ullam, rerum laudantium quisquam aut molestiae esse reiciendis sequi reprehenderit quibusdam expedita itaque perspiciatis corporis deleniti corrupti, sapiente iure error. Deserunt tempore at voluptate aut!
+    Dolore inventore quisquam modi omnis perferendis provident commodi fuga, iure iusto eligendi porro eaque quod vel veritatis blanditiis neque corporis amet? Labore reiciendis et velit, consectetur nostrum nihil eius? Nulla!
+    Eaque necessitatibus ex odit excepturi fuga distinctio beatae praesentium assumenda et quidem laboriosam alias possimus perspiciatis, veniam recusandae officiis asperiores odio! Odit accusamus quo corrupti laborum distinctio mollitia odio dolorum.
+    Perferendis, obcaecati corporis repudiandae porro similique cumque. Dolorem iusto eligendi nam harum possimus architecto, amet necessitatibus neque maiores facere aut magni itaque. Natus nihil, amet sint aperiam quas illum soluta?
+    Harum facilis qui asperiores tenetur ea laudantium nam, animi architecto sapiente at rem, eaque beatae perferendis culpa totam recusandae. Perspiciatis maiores fugiat soluta, saepe atque illo consequuntur quidem corrupti magni?
+    Ab repellat culpa, alias eos ipsam modi voluptatem exercitationem dignissimos cum deleniti recusandae iure obcaecati cumque numquam enim earum aliquid dolores vel autem ut labore harum laboriosam quae sit! Facilis.
+    Voluptatum temporibus vero, sint quibusdam cumque eum! Impedit ratione nisi iusto totam voluptate adipisci beatae hic maxime, quisquam amet nulla praesentium, aut at officia eveniet dolore sit voluptatum temporibus sequi.
+    Vero temporibus natus consequatur. Consequatur ratione sint veniam aperiam, hic similique natus architecto placeat modi quam reprehenderit, quos cumque omnis, exercitationem minima rem. Expedita voluptate optio earum. Error, dolor voluptate.
+    Odio fugit nam omnis tenetur quis temporibus blanditiis voluptatibus suscipit nobis assumenda praesentium exercitationem dignissimos voluptas id, ab sint enim veritatis voluptatum. Vel quam fugiat unde. Veritatis blanditiis vero ex.
+    Obcaecati temporibus dicta itaque quis aperiam eos, vero magni! Dicta nobis maiores omnis necessitatibus delectus? Suscipit explicabo libero unde, rerum aliquam impedit vel odit deleniti necessitatibus neque quam cumque deserunt!
+    Dolore quidem quia reprehenderit suscipit incidunt ab rerum rem optio, accusamus alias laudantium nemo. Eos dolore delectus dolores veniam nisi. Enim quibusdam blanditiis ut error similique harum amet quam architecto?
+    Odio nulla voluptas, assumenda tempore consequuntur mollitia iure dolor tempora maxime delectus nobis impedit aut quod facere sapiente voluptatem esse quas autem voluptatibus tenetur expedita numquam vel ea totam. Rerum?
+    Nihil unde optio quis commodi architecto perferendis illum itaque magnam tempora ab labore, iure delectus, facilis nostrum, ipsa sunt? Obcaecati incidunt quia impedit dolore repellendus, quae totam itaque rem ex.
+    Rerum minima quas quia officiis iste omnis modi aut facilis nisi doloremque minus mollitia ea, sapiente quasi eius. Qui, accusamus hic eos iusto repellat mollitia sequi repudiandae accusantium. Accusamus, debitis.
+    Optio ea veritatis quo vero consequatur voluptatem, corrupti eligendi? Assumenda magnam explicabo tempore aut nulla inventore praesentium eos corporis? At distinctio quae debitis delectus iusto vel autem voluptate neque quos! -->
+    <div class="box4">box4</div>
+</body>
+</html>

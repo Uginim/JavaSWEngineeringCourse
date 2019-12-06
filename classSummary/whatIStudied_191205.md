@@ -99,5 +99,7 @@ input:focus[type="button"]{
 ## 왜 `position:absolute;`에서 위치를 지정하지 않으면 relative나 static요소 다음에 올까?
 
 [돌아가기](../README.md)  
-[2019-12-04](whatIStudied_191204.md) 
+[2019-12-04](whatIStudied_191204.md)  
+[2019-12-06](whatIStudied_191206.md)  
+
 

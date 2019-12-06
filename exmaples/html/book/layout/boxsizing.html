@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box sizing</title>
+    <style>
+        div{
+            box-sizing: border-box;
+        }
+        .box1{
+            width:30%;
+            height:100px;   
+            /* height:50%;  */
+            /* 상위태그들에 높이를 지정하지 않으면
+             %값의 height는 적용이안됨 */
+            background: red;
+            float:left;
+        }
+        .box2{
+            width:40%;
+            height:100px;
+            background: green;
+            float:left;
+            /* padding-right:1px;  */
+            /* box sizing은 content-box 기준으로 계산되는데 
+            거기에 추가적으로 padding이 생겨버려서 아래로 내려가게 됨
+            box-sizing을 border-box로 하면 됨
+            */
+            border: 20px solid yellow;
+        }
+        .box3{
+            width:30%;
+            height:100px;
+            background: blue;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+</body>
+</html>

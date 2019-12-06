@@ -4,72 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>test</title>
     <style>
-        html, body{
-            height:100%;
-        }
-        * {
-            padding:0px; margin:0px;            
-        }
-        div {
-            outline: 1px solid red;
-        }
         .box1{
-            width: 20%;
-            height: 100%;
-            background-color:red;
+            width:100px;
+            height: 100px;
+            background-color: red;
             float:left;
+            z-index: 20;            
         }
-        .box2{
-            width:  60%;
-            height: 100%;
-            background-color:green;
-            float:left;
+        .box2 {
+            width:100px;
+            height: 100px;
+            background-color: green;
+            position:relative;
+            /* z-index: -1; */
+            /* z-index: 1;  */
+            /* 양수일 때 순위가 안 바뀜 */
         }
-        .box3{
-            width:  20%;
-            height: 100%;
-            background-color:blue;
-            float:left;
-        }
-        /* case 1) */
-        .box4{
-            width:  100%;
-            height: 20%;
-            background-color: pink;
-            /* clear:both; */
-        }
-        /* case 2) */
-        .clearfix::after{
-            /* content:"[안내] 위 박스의 설명 문구";  */
-            /* 이거 없으면 안됨 */
-            content:"";
-            display:block; clear:both;
-        }
-        .box5{
-            width:100%;
-            height:70%;
-        }
-        .box6{
-            width:100%; height:10%;
-            background-color: black;
-        }
-        /* div {
-            display:inline-block;
-        } */
     </style>
 </head>
 <body>
-    <!-- <div class="box1">box1 <img src="img/smartphone1.svg" width="100px" height="100px" alt=""></div>
-    <div class="box2">box2 <img src="img/smartphone1.svg" width="100px" height="100px" alt=""></div>
-    <div class="box3">box3 <img src="img/smartphone1.svg" width="100px" height="100px" alt=""></div> -->
-    <div class="box6">header</div>
-    <div class="box5 clearfix">
-        <div class="box1">box1</div>
-        <div class="box2">box2</div>
-        <div class="box3">box3</div>
-    </div>
-    <div class="box4">box4</div>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
 </body>
 </html>
