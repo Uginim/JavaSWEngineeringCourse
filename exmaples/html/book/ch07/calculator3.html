@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>프로토타입 사용 Calculator</title>
+    <script>
+        function Calculator(maker, color) {
+            this.maker = maker;
+            this.color = color;
+
+            this.add = function (num1, num2) {
+                return num1 + num2;
+            };
+            this.minus = function (num1, num2) {
+                return num1 - num2;
+            };
+            this.multiply = function (num1, num2) {
+                return num1 * num2;
+            };
+            this.devide = function (num1, num2) {
+                return num1 / num2;
+            };
+        }    
+    </script>
+</head>
+
+<body>
+    <script>
+
+        var calculator = new Calculator("casio", "black");
+
+        document.write('제조사 : ' + calculator.maker + ', 색상 : ' + calculator.color+"<br>");
+        document.write('3 + 5 = ' + calculator.add(3, 5)+"<br>");
+        document.write('109 - 49 = ' + calculator.minus(109, 49)+"<br>");
+        document.write('11 x 12 = ' + calculator.multiply(11, 12)+"<br>");
+        document.write('144 / 12 = ' + calculator.devide(144, 12)+"<br>");
+    </script>
+
+</body>
+
+</html>

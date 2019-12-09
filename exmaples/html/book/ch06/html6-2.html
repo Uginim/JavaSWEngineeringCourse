@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pr(str, num) {
+            var i=0, result="";
+            for(i=0;i<num;i++)
+                result+=str;
+            document.write(result);
+        }
+    </script>
+    <script>
+        var str = prompt('반복할 문자열');
+        var cnt = parseInt(prompt("반복횟수"));
+        console.log(str, cnt);
+        if( str != null && !isNaN(cnt)) {
+            pr(str,cnt);
+        } else {
+            alert('잘못 입력하셨습니당 다시해')
+        }
+        // document.write('<br>');
+        // pr("$",7);
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>new Object 사용 계산기</title>
+    <script>
+        function add (num1, num2) {
+            return num1 + num2;
+        }
+        function minus (num1, num2) {
+            return num1 - num2;
+        }
+        function multiply(num1, num2) {
+            return num1 * num2;
+        }
+        function devide(num1, num2) {
+            return num1 / num2;
+        }
+        var calculator = new Object();
+        calculator.maker = "casio";
+        calculator.color = "black";
+        calculator.add = add;
+        calculator.minus = minus;
+        calculator.multiply = multiply;
+        calculator.devide = devide;
+
+    
+    </script>
+</head>
+
+<body>
+    <script>
+
+        document.write('제조사 : ' + calculator.maker + ', 색상 : ' + calculator.color+"<br>");
+        document.write('3 + 5 = ' + calculator.add(3, 5)+"<br>");
+        document.write('109 - 49 = ' + calculator.minus(109, 49)+"<br>");
+        document.write('11 x 12 = ' + calculator.multiply(11, 12)+"<br>");
+        document.write('144 / 12 = ' + calculator.devide(144, 12)+"<br>");
+    </script>
+
+</body>
+
+</html>

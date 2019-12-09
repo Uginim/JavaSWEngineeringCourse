@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>eval()로 수식 계산</h1>
+    <hr>
+
+    <script>
+        var exp = prompt('수식입력');
+        if (!exp || exp == null || exp=='') {
+            alert('잘못된 입력값:'+exp);
+        } else {
+            document.write(exp + " = ");
+            document.write(eval(exp));
+        }
+    </script>
+</body>
+
+</html>

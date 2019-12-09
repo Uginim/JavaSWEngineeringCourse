@@ -1,5 +1,5 @@
 # What I studied today.
-Date : 2019-12-05
+Date : 2019-12-06
 
 # 웹표준
 ## 웹 표준 단어정리
@@ -81,5 +81,5 @@ Date : 2019-12-05
 
 
 [돌아가기](../README.md)  
-[2019-12-05](whatIStudied_191205.md) 
+[2019-12-06](whatIStudied_191206.md) 
 
