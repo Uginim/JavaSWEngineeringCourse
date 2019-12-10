@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>book 객체 배열 만들기</title>
+    <script>
+        function Book(str){
+            
+            var values = str.split(',');
+            this.title = values[0];
+            this.author = values[1];
+            this.price = parseInt(values[2]);          
+            
+        }
+        cosnole.log(new Book('HTML,황기태,2000'));
+    </script>
+</head>
+<body>
+    <h1>book 객체 배열 만들기</h1>
+    <hr>
+    
+
+</body>
+</html>

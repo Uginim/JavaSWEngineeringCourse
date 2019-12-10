@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Math.random()으로 랜덤</title>    
+    <style>
+        html,body {
+            margin:0px;
+            height: 100%;
+        }
+        header {
+            margin:0px;
+            height:7%
+        }
+        header * {
+            margin:0px;
+        }
+        section {
+            margin:0px;
+            height: 93%;
+        }
+        div {
+            /* width:150px; */
+            width: 25%;
+            /* height:50px; */
+            height: 25%;
+            text-align: center;
+            display: inline-block;
+            line-height: 100%;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>16개의 랜덤한 색 만들기</h1>
+        <hr>
+    </header>
+    <script>
+        document.write('<section>');
+        function getRGB() {
+            var r,g,b,rgbStr;
+            r = Math.floor(Math.random()*256);
+            g = Math.floor(Math.random()*256);
+            b = Math.floor(Math.random()*256);
+            rgbStr = "rgb("+r+","+g+","+b+")";
+            return rgbStr;
+        }
+        var i,j,rgbStr;
+        for(i=0;i<16;i++) {
+            rgbStr = getRGB();
+            document.write("<div style='background-color:"+rgbStr+";'>"+rgbStr+"</div>")            
+            
+        }
+        document.write('</section>');
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>배열로 리스트 만들기</title>
+</head>
+<body>
+    <h3>라면을 만드는데 필요한 재료</h3>
+    <hr>
+    <script>
+        var itemlist = ["라면","계란","물","파"];
+        // 
+        var i;
+        document.write('<ul>');
+        for(i=0;i<itemlist.length;i++){
+            document.write("<li>"+itemlist[i]+"</li>");
+        }
+
+        document.write('</ul>');
+    </script>
+</body>
+</html>
