@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter08 실습문제 8</title>
+    <script>
+        var count=1;
+        function imgScale(obj){
+            count++;
+            obj.style.transform = "scale("+count+","+count+ ") translate("+count*25 +"%)";
+        }
+    </script>
+</head>
+<body>
+    <h3>클릭하면 2,3,4배로 확대하여 출력하는 웹페이지를 작성하라</h3>
+    <hr>
+    <img src="img/smartphone1.svg" alt="휴대폰" onclick="imgScale(this)">
+</body>
+</html>

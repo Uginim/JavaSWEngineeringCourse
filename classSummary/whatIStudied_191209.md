@@ -209,6 +209,6 @@ create public synonym ord for madang.orders;
 
 
 [돌아가기](../README.md)  
-[2019-12-06](whatIStudied_191206.md) 
+[2019-12-06](whatIStudied_191206.md)  
 [2019-12-10](whatIStudied_191210.md) 
 

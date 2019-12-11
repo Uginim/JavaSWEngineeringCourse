@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>이벤트 흐름</h3>
+    <hr>
+    <p id="p">이벤트가 어디서 시작하여 어디로 흘러가는지
+        <strong id ="strong">이벤트 흐름</strong>을 
+        아는 것은 매우 중요하다.
+    </p>
+    <script>
+        var strong = document.getElementById("strong");
+        strong.onclick=function(){alert("strong+이벤트 흐름")};
+        
+        var p = document.getElementById("p");
+        p.addEventListener("click",function(){alert("p+이벤트 흐름")}, true);
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter08 실습문제 10</title>
+    <script>
+        function removeAnswer(){
+            console.log(this);
+            this.parentElement.removeChild(this);
+            
+        }
+        function addAnswer(obj, text){
+            // Create a p element 
+            var p = document.createElement('p');            
+            p.innerHTML=text;
+            p.onclick = removeAnswer; // 이렇게 넣으면 this가 먹음...
+            // console.log(p.onclick,"removeAnswer(this,"+text+")");
+            var i, 
+                noAnswer=true,
+                children = obj.parentElement.children;
+
+            for(i=0;i<children.length;i++ ) {
+                if(children[i].innerText == text)
+                    noAnswer=false;
+            }
+            if(noAnswer)
+                obj.parentElement.appendChild(p);
+        }
+        function addAnswer2(obj, text) { // 선생님 작성
+            // obj의 부모요소
+            var parent = obj.parentElement;
+            // 부모요소의 마지막 자식요소가 버튼(클릭된)이 아니면 이벤트 취소
+            if(parent.lastElementChild != obj) {
+                return false;
+            }
+
+            // p요소 생성
+            var pTag = document.createElement("p");
+            // p요소의 컨텐츠 추가
+            pTag.innerHTML = text;
+            // p요소를 부모요소의 자식요소로 추가
+            parent.appendChild(pTag);
+        }
+    </script>
+</head>
+<body>
+    <h3>클릭하면 2,3,4배로 확대하여 출력하는 웹페이지를 작성하라</h3>
+    <hr>
+    <div>
+        <p>Q. 거울아 거울아 세상에서 누가 제일 예쁘니?</p>
+        <button onclick="addAnswer(this,'백설공주')">답보기</button>
+    </div>
+    <div>
+        <p>Q. 죽느냐 사느냐 어떤 것이 문제인가?</p>
+        <button onclick="addAnswer2(this,'둘다')">답보기</button>
+    </div>
+</body>
+</html>

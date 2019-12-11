@@ -255,5 +255,5 @@ SELECT * FROM dba_role_privs WHERE grantee = 'MDGUEST';
 - rollback이나 commit을 하고 다시 실행할 것
 
 [돌아가기](../README.md)  
-[2019-12-02](whatIStudied_191202.md) 
+[2019-12-02](whatIStudied_191202.md)  
 [2019-12-04](whatIStudied_191204.md) 

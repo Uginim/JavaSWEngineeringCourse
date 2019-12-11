@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script>
+        window.onload=function () {
+            function changeBackgroundYello(e) {
+                console.log(e.target.style);
+                if(e.target.style.backgroundColor =="yellow")
+                    e.target.style.backgroundColor ="";
+                else 
+                    e.target.style.backgroundColor = "yellow";
+            }
+
+            var button = document.getElementsByTagName('button')[0];
+            console.log(button);
+            button.onclick = changeBackgroundYello;
+
+            var button2 = document.getElementsByTagName('button')[1];
+            button2.addEventListener("click", changeBackgroundYello);
+
+        }
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <button>클릭!</button>
+    <button>클릭2!</button>    
+</body>
+
+</html>

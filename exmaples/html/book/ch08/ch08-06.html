@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter08 실습문제 6</title>
+    <script>
+        function chageContent(obj){
+            var str = window.prompt("HTML 텍스트 혹은 그냥 텍스트를 입력하세요");
+            if(str == null || str == "") return false ;            
+            obj.innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+    <h3>innerHTML</h3>
+    <hr>
+    <!-- <p onclick="this.innerHTML=prompt('HTML 텍스트 혹은 그냥 텍스트를 입력하세요')">이번 겨울에는 어디로 여행을 갈까요?</p> -->
+    <p onclick="chageContent(this)">이번 겨울에는 어디로 여행을 갈까요?</p>
+</body>
+</html>

@@ -95,6 +95,6 @@ Date : 2019-12-04
 
 
 [돌아가기](../README.md)  
-[2019-12-03](whatIStudied_191203.md) 
+[2019-12-03](whatIStudied_191203.md)  
 [2019-12-05](whatIStudied_191205.md) 
 

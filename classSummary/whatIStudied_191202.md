@@ -379,5 +379,5 @@ GRANT SELECT ON Orders TO PUBLIC;
 
     
 [돌아가기](../README.md)  
-[2019-11-29](whatIStudied_191129.md) 
+[2019-11-29](whatIStudied_191129.md)  
 [2019-12-03](whatIStudied_191203.md) 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter08 실습문제 4</title>
+    <script>
+        function result(obj) {
+            var expression = obj.parentElement.firstChild.textContent; // string type으로 하기위함. nodeValue를 써도 됨                        
+            expression=expression.slice(0,expression.length-1);
+            console.log(expression, eval(expression));
+            obj.innerHTML= eval(expression);
+        }
+    </script>
+</head>
+<body>
+    <p>2 + 4 =<span onclick="result(this)">답</span></p>
+    <p>4 * 20 + 64 =<span onclick="this.innerHTML=result(this)">답</span></p>
+    <p>20 / 5 - 8 * 2 =<span onclick="this.innerHTML=result(this)">답</span></p>
+
+    <!-- <p>4 * 20 + 64 =<span onclick="this.innerHTML=eval(4*20+64)">답</span></p>
+    <p>20 / 5 - 8 * 2 =<span onclick="this.innerHTML=eval(20/5-8*2)">답</span></p> -->
+</body>
+</html>
