@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load",init,false);
+        function init() {
+            var imgTag = document.getElementsByTagName('img')[0];
+            console.log(imgTag.width, imgTag.height);
+            imgTag.addEventListener("wheel",function(e) {
+                scaleImage(e,imgTag);
+            },false);
+        }
+        function scaleImage(e, imgTag){
+            // var imgTag = document.getElementsByTagName('img')[0];
+            console.log(e.wheelDelta);
+            if(e.wheelDelta > 0 ){
+                //휘을 위로 굴렸을 때
+                imgTag.width += 0.05*imgTag.width;
+                imgTag.height += 0.05*imgTag.height;
+            }else {
+                //휠을 아래로 굴렸을 때
+                imgTag.width -= 0.05*imgTag.width;
+                imgTag.height -= 0.05*imgTag.height;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>마우스 휠을 이용한 이미지 확대/축소</h3>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde porro quod totam laboriosam officia deleniti obcaecati labore qui accusamus eligendi, quibusdam sed sint incidunt ipsam, sit, ab est! Dignissimos, sint!</p>
+    <img src = "img/smartphone2.svg" alt ="이미지" width="300" height="500";
+</body>
+</html>

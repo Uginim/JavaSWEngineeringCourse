@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 객체의 target</title>
+    <script>
+        // 이곳에 자바스크립트 코드 작성
+        window.onload=function(e){
+            var lis = document.getElementsByTagName('li');            
+            var preLiTag = null;
+            for (var liTag of lis){
+                // liTag.addEventListener("click",function(e){
+                liTag.addEventListener("click",e => {
+                    console.log(e.target.style.fontSize);
+                    // resetAllLis();  
+                    e.target.style.fontSize="1.3em";
+                    if(preLiTag != null){
+                        preLiTag.style.fontSize = '1em';
+                    }
+                    preLiTag = e.target;
+                });
+            }
+        }
+        function resetAllLis(){
+            var liTags = document.getElementsByTagName('li');
+            for(var liTag of liTags){                
+                liTag.style.fontSize="1.0em";
+            }            
+        }
+    </script>
+</head>
+<body>
+    <h3>
+        아이템을 클릭하면 1.3배 크기로
+    </h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li>자전거로 대한민국 일주</li>
+        <li>책 100권 일기</li>
+        <li>철인 3종 경기 준비</li>
+        <li>자바스크립트 정복</li>
+    </ul>
+</body>
+</html>

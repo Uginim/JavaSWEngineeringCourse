@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>라디오 버튼과 이미지 출력</title>
+    <script>
+        window.addEventListener("load",init,false);
+        function init() {
+            var inputImages = getElementsByTagName();
+            // case 1) for문
+            // for(var i=0;i<inputTags.length;i++){
+            //     inputTags[i].addEventListener("click", function(e){
+            //         document.getElementsByTagName("img")[0].src = e.target.value;                    
+            //     },false);
+            // }
+            // case 2) for /of 문
+            // for(var input of inputTags){
+            //     input.addEventListener("click",function(e){                    
+            //         document.getElementsByTagName("img")[0].src = e.target.value;                    
+            //     },false);
+            // }
+            // case 3) forEach문
+            // [...inputTags].forEach(function(element){
+            //     element.addEventListener("click",function(e){
+            //         //console.log(e.target.value);
+            //         document.getElementsByTagName("img")[0].src = e.target.value;
+            //     } , false);
+            // });
+            // case 4) for/of문, 이름 있는 이벤트 리스너 작성
+            // for(var input of inputTags) {
+            //     input.addEventListener("click",changeFruitImgag,false);
+            // }
+            // function changeFruitImgag(e){
+            //     document.getElementsByTagName("img")[0].src = e.target.value;
+            // }
+            // case 4) for/of문, 이름 있는 이벤트 리스너 작성 : 이벤트 객체 이외의 매개값을 전달해주고자 할때
+            for(var input of inputTags) {
+                input.addEventListener("click",function(e){
+                    var message = input.value;
+                    changeFruitImgag(e,message);
+
+                },false);
+            }
+            function changeFruitImgag(e){
+                document.getElementsByTagName("img")[0].src = e.target.value;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3><hr>
+    <form action="">
+        <input name="fruits" value="banana" type="radio">바나나
+        <input name="fruits" value="mango" type="radio">망고
+        <input name="fruits" value="apple" type="radio" checked>사과
+        <br>
+        <img src="img/apple.svg" width="100px" height="100px"alt="">
+    </form>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            /* border:1px solid red; */
+            /* width:230px; */
+        }
+        button {
+            width:50px;
+        }
+        td{
+            /* padding:1px 10px; */
+        }
+        input[type=text]{
+            width:215px;
+        }
+    </style>
+    <script>
+        window.onload = e => {
+            var buttons = document.getElementsByTagName("button");
+            for(var button of buttons) {
+                button.addEventListener("click",e => {
+                    var lcd = document.getElementsByTagName('input')[0];
+                    // console.log(e.target.innerHTML);
+                    clickedButton = e.target.innerHTML;
+                    switch(e.target.innerHTML){
+                    case 'BACK': backword(lcd);
+                        break;
+                    case 'C': case'CE': clearLcd(lcd);
+                        break;
+                    case '=': result(lcd);
+                        break;
+                    case '/':case '*':case '-':case '+':operator(lcd,clickedButton);                        
+                        break;
+                    case 'NONE':break;
+                    break;
+                    default: addNumber(lcd,clickedButton);
+                        break;
+                    }
+                },false);
+            }
+        };
+        function backword(lcd) {
+            lcd.value = lcd.value.substr(0,lcd.value.length-1);            
+        }
+        function clearLcd(lcd){
+            lcd.value = '0';
+        }
+        function addNumber(lcd,clickedButton){
+            if(lcd.value=="0"){
+                lcd.value = clickedButton;
+            }else {
+                lcd.value += clickedButton;
+            }
+        }
+        function operator(lcd,clickedButton){
+            var lastLetter = lcd.value.substr(-1, 1);
+            if(!isNaN(parseInt(lastLetter))) {
+                lcd.value += clickedButton;
+            }
+        }
+        function result(lcd){
+            lcd.value = eval(lcd.value);
+        }
+    </script>
+</head>
+<body>
+    <h3>계산기만들기</h3>
+    <hr>
+    <form action="">
+        
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" value="0" ></td>
+            </tr>
+            <tr>
+                <td><button type="button">BACK</button></td>
+                <td><button type="button">CE</button></td>
+                <td><button type="button">C</button></td>
+                <td><button type="button">=</button></td>
+            </tr>
+            <tr>
+                <td><button type="button">7</button></td>
+                <td><button type="button">8</button></td>
+                <td><button type="button">9</button></td>
+                <td><button type="button">/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button">4</button></td>
+                <td><button type="button">5</button></td>
+                <td><button type="button">6</button></td>
+                <td><button type="button">*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button">1</button></td>
+                <td><button type="button">2</button></td>
+                <td><button type="button">3</button></td>
+                <td><button type="button">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button">0</button></td>
+                <td><button type="button">+</button></td>
+                <td><button type="button">NONE</button></td>
+                <td><button type="button">NONE</button></td>
+            </tr>
+        </table>
+
+
+    </form>
+
+</body>
+</html>

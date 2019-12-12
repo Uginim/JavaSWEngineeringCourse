@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        cursor: none;
+    }
+    #cursor{
+        transition:left .3s, top .3s;
+    }
+    </style>
+    <script>
+    window.onload = function(){
+        console.log('onload');
+        document.addEventListener("mousemove", function(e){
+            var cursor = document.getElementById("cursor");       
+            console.log(e.clientX,e.clientY);
+            cursor.style.top = e.clientY+"px";
+            cursor.style.left = e.clientX+"px";
+         },false);
+    }
+    </script>
+</head>
+<body>
+    <div id="cursor" style="position: absolute;top:-100px;left:-100px;"><img src="img/apple.svg" width="30px" height="30px" alt=""></div>
+    <h3>
+        이미지 커서 만들기
+    </h3>
+    <hr>
+    <p>마우스를 움직이면 이미지로 만든 커서가 마우스를 따라다닙니다.</p>
+</body>
+</html>
