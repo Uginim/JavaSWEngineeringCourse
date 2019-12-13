@@ -93,6 +93,9 @@ Date : 2019-12-12
     - ```sql
         CREATE TABLESPACE MD_TBS DATAFILE 'D:\madang\oradata\md_tbs_data.dbf' size 10m BLOCKSIZE 4k;
         ```
+    - ```sql 
+        select * from dba_data_files;
+        ```
 - 데이터베이스 블록사이즈는 데이터 I/O의 기본단위이다. 블록 사이즈를 크게 했을때와 작게 했을때의 시스템 성능에 미치는 장단점 1가지씩을 각각 작성하시오.
     - 블록사이즈가 클 때
         - 장점 : 
@@ -113,10 +116,10 @@ Date : 2019-12-12
     2. 리두로그(Redo Log)
     3. 컨트롤 파일(Control File)
 - 오라클 접속 정보 설정 파일중 listener.ora, tnsnames.ora 의 용도를 각각 작성하시오.
-    - listener.ora :
-        - 클라이언트에서 오라클 서버로 접속할때 필요한 프로토콜, 포트번호, 서버주소, 인스턴스 등을 설정해주는 파일로 서버에 존재함.
     - tnsnames.ora :
-        - 오라클 클라이언트에서 서버로 접속할때 필요한 프로토콜, 포트번호등을 설정하는 파일로 클라이언트에 존재함
+        - 오라클 클라이언트에서 서버로 접속할때 필요한 프로토콜, 포트번호, 서버주소, 인스턴스 등을 설정하는 파일로 클라이언트에 존재함
+    - listener.ora :
+        - 클라이언트에서 오라클 서버로 접속할때 필요한 프로토콜, 포트번호 등을 설정해주는 파일로 서버에 존재함.
     - `%ORACLE_HOME%/network/admin/listener.ora`
     - `%ORACLE_HOMT%/network/admin/tnsname.ora`
 

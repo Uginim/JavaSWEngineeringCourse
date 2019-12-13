@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var sum = 0;
+
+        function f() {
+            sum ++;
+            console.log('sum=',sum);
+            // id = setTimeout("f()",2);
+            // if(sum == 10) clearTimeout(id);
+            if(sum == 10) clearInterval(id);
+        }
+        var id = setInterval("f()",20000);
+        // var id = setTimeout("f()",2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

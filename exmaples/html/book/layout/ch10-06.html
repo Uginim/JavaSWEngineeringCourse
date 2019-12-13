@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>setInterval()</title>
+    <style>
+         #clock {
+            border:1px solid gray;
+            width:120px;
+            background-color: azure;    
+        }
+    </style>
+    <script>
+        function getCurrTime(){
+            var currTime = new Date();
+            clock.innerHTML=  currTime.toLocaleTimeString(); // os 시간   
+        }
+        window.addEventListener('load',(e)=>{
+            var clock = document.getElementById('clock');
+            var timer = null;            
+            var currTime = new Date();
+            clock.innerHTML=  currTime.toLocaleTimeString();
+            var toggle= false;
+            clock.addEventListener('click',(e)=>{
+                getCurrTime();
+                var clock = e.target;
+                if(timer == null) {
+                    timer = setInterval("getCurrTime(clock)",1000);
+                    clock.style.color="black";
+                } else {
+                    clearInterval(timer);
+                    timer = null;
+                    clock.style.color="lightgray";
+                }
+               
+            },false);
+        },false);
+    
+    </script>
+</head>
+<body>
+    <h3>div 태그에 시계 만들기</h3>
+    <p>시계를 클릭하면 시계가 멈추고 다시 클릭하면 가기 시작한다.</p>
+    <hr>
+    <div id="clock">
+        오후 9:50:33
+    </div>
+</body>
+</html>

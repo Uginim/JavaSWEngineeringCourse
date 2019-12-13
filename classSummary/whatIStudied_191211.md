@@ -278,10 +278,14 @@ Date : 2019-12-11
 - 답 : 1번
 - `addEventListener()`에서 첫번째 인자값은 "onclick"이 아니라 "click"이 들어가야함
 #### 4번
-##### (1) `document.getElementById("div1")` 
-##### (2) `addEventListen("click",f)` 
-##### (3) `onclick=f` 
-##### (4) `onclick=function(){obj.style.backgroundColor="onchid";}` 
+##### (1) 
+`document.getElementById("div1")` 
+##### (2) 
+`addEventListen("click",f)` 
+##### (3) 
+`onclick=f` 
+##### (4) 
+`onclick=function(){obj.style.backgroundColor="onchid";}` 
 #### 5번
 - 답 : 1번
 - 이벤트의 시작과 종료는 window 객체
