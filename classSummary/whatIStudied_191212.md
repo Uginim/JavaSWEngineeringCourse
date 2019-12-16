@@ -62,6 +62,8 @@ Date : 2019-12-12
         - `del_lf_rows`
             - 인덱스 생성 후 삭제된 레코드 수
         - ```sql
+            alter index 인덱스이름 rebuild;
+            ```
 - 아래 절차에 따라 역할 생성 및 권한을 부여하는 SQL문을 작성하시오.
     1. 'programmer'라는 역할 생성
         - ```sql
