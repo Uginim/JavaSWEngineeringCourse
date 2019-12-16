@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{outline: 1px solid red;}
+        div.container{
+            outline:1px solid blue;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+
+
+            
+            /* align-content  
+                컨테이너가 높이가 있고 flex-wrap속성값이 wrap이면서 2줄 이상일 때 사용 */
+            height: 300px; width: 250px; 
+            flex-flow: row wrap;
+            
+            /* 기본값 : 
+                - stretch:
+                    플렉스 아이템을 늘려서 간격 없이 배치
+                    (아이템의 크기가 container의 크기에 맞춰서 늘어나거나 줄어듬)
+                    자신의 크기가 있을경우 자신의 크기에 맞춤  */                    
+            align-content: stretch;
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+            /* space-evenly는 없음 */
+        }
+        .item {            
+            /* width: 50px; height: 50px; margin: 5px; */
+            height: 50px; 
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item box1">box1</div>
+        <div class="item box2">box2</div>
+        <div class="item box3">box3</div>
+        <div class="item box4">box4</div>
+        <div class="item box5">box5</div>
+        <div class="item box6">box6</div>
+    </div>
+</body>
+</html>

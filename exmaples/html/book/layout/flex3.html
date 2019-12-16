@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{outline:1px solid red;}
+    div.container{
+        outline: 1px solid blue;
+        display: flex;
+        flex-wrap: row nowrap;
+
+        /* 기본값: 주축 시작점에 정렬 */
+        justify-content: flex-start;
+
+        /* 주축 끝점에 정렬 */
+        justify-content: flex-end;
+
+        /* 주축의 중간에 정렬 */
+        justify-content: center;
+
+        /* 양끝단 항목을 시작점과 끝점에 맞춰놓고 동일한 간격으로 배치 */
+        justify-content: space-between;
+
+        /* 아이템을 중심으로 좌우(양쪽) 간격을 동일하게 정렬 */
+        justify-content: space-around;
+
+        /* 벽사이 포함 아이템간 모든 간격을 동일하게 정렬 */
+        justify-content: space-evenly;
+    }
+    div.item {width:50px; height: 50px;margin: 5px;}
+    .container > .item.box1{
+        order:4;
+    }
+    .container > .item.box2{
+        order:2;
+    }
+    .container > .item.box3{
+        order:1;
+    }
+    .container > .item.box4{
+        order:3;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item box1">box1</div>
+        <div class="item box2">box2</div>
+        <div class="item box3">box3</div>
+        <div class="item box4">box4</div>
+    </div>
+</body>
+</html>

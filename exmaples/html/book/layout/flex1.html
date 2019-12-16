@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            outline: 1px solid red;
+        }
+
+        div.container {
+            outline: 1px solid blue;
+            display: flex;
+            /* 공간이 있던 없던 한 라인 다 배치 */
+            /* 인라인으로 배치 */
+            /* display: inline-flex;  */
+        }
+
+        div.container.opt1 {
+            flex-direction: row;
+        }
+
+        div.container.opt2 {
+            flex-direction: row-reverse;
+        }
+
+        div.container.opt3 {
+            flex-direction: column;
+        }
+
+        div.container.opt4 {
+            flex-direction: column-reverse;
+        }
+
+        .opt3,
+        .opt4 {
+            height: 400px;
+        }
+
+        div.item {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            /* float: left; */
+        }
+
+        /* .clearfix{        
+        clear:both;
+    } */
+    </style>
+</head>
+
+<body>
+    <div class="container opt1">
+        <div class="item box1">box1</div>
+        <div class="item box2">box2</div>
+        <div class="item box3">box3</div>
+        <div class="item box4">box4</div>
+        <!-- <div class="clearfix"></div> -->
+    </div>
+    <div class="container opt2">
+        <div class="item box1">box1</div>
+        <div class="item box2">box2</div>
+        <div class="item box3">box3</div>
+        <div class="item box4">box4</div>
+        <!-- <div class="clearfix"></div> -->
+    </div>
+    <div class="container opt3">
+        <div class="item box1">box1</div>
+        <div class="item box2">box2</div>
+        <div class="item box3">box3</div>
+        <div class="item box4">box4</div>
+        <!-- <div class="clearfix"></div> -->
+    </div>
+    <div class="container opt4">
+        <div class="item box1">box1</div>
+        <div class="item box2">box2</div>
+        <div class="item box3">box3</div>
+        <div class="item box4">box4</div>
+        <!-- <div class="clearfix"></div> -->
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis nihil earum blanditiis id,
+        provident, vitae neque dolores, eaque cum quibusdam. Cupiditate nemo, blanditiis et officiis adipisci maxime
+        nisi autem.</p>
+</body>
+
+</html>

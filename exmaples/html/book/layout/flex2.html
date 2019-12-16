@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {outline: 1px solid red;}
+        .container{
+            outline: 1px solid blue;
+            /* display: inline-block; */
+            display: flex;
+            width:200px;
+
+            /* 아래는 기본값 */
+            flex-direction: row;            
+            /* flex-wrap: nowrap; */
+
+            /* 부모영역 width(축방향)보다 아이템 영역이 크면 줄바꿈 */
+            /* flex-wrap: wrap;  */
+
+            /* wrap과 동일하지만 순서가 바뀜 */
+            /* flex-wrap: wrap-reverse; */
+
+            /* flex-flow : flex-direction, flex-wrap의 단축속성 */
+            flex-flow:row nowrap; 
+
+
+        }
+        .item{
+            width:50px; height:50px; margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item box1">box1</div>
+        <div class="item box2">box2</div>
+        <div class="item box3">box3</div>
+        <div class="item box4">box4</div>
+        <div class="item box5">box5</div>
+        <div class="item box6">box6</div>
+    </div>
+</body>
+</html>
