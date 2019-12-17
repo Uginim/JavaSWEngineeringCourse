@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,html{
+            margin:0;
+            height: 100%;
+        }
+        div{outline: 1px solid red;}
+        div.container{
+            outline:1px solid blue; 
+            height:100%;
+        }
+        .container.wrapAll{
+            display: flex;
+        }
+        .item.box1 {
+            flex:1 0 100px;
+        }
+        .container.wrap2-3{
+            flex:3;
+            display: flex;
+            flex-direction:column;  
+            /* height: 500px; */
+            height:100%;
+        }
+        .container.wrap2-3 > .box2{
+            /* height: 200px; */
+            flex:0 0 100px;
+        }
+        .container.wrap2-3 > .box3{
+            /* height: 300px   ; */
+            flex:0 0 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container wrapAll">
+        <div class="item box1">box1</div>
+        <div class="container wrap2-3">
+            <div class="item box2">box2</div>
+            <div class="item box3">box3</div>
+        </div>
+    </div>
+</body>
+</html>

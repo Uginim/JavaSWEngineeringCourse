@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    table {
+      /* border:1px solid red; */
+      width:230px;
+    }
+    button {
+      width:50px;
+      padding:5px 0;
+    }
+    input[type=text]{
+      width:215px;
+    }
+  </style>
+  <script>
+    window.addEventListener("load",init,false);
+    function init() {
+      var buttons = document.getElementsByTagName("button");
+      var lcd = document.getElementById("lcd");
+      lcd.value = 0;
+      lcd.style.textAlign = 'right';
+
+      for(var button of buttons){
+        button.addEventListener("click",function(e){
+          e.preventDefault();//기본 이벤트 실행 취소
+          console.log(e.target.innerHTML);
+          var clickedButton = e.target.innerHTML;
+          switch(clickedButton){
+            case "BACK": backword(lcd);  //마지막문자 지우기
+              break;
+            case "CE":
+            case "C" :  clearLcd(lcd);   //입력창 '0' 초기화 
+              break;
+            case "=" :  result(lcd);     //입력창 계산식 수행결과
+              break;
+            case "+":  case "-":  case "*":  
+            case "/":   operator(lcd,clickedButton);   //연산자를 입력창에 출력
+              break;
+            case "NONE": break;
+            default :  addNumber(lcd,clickedButton);   //숫자를 입력창에 출력
+              break;  
+          }
+        },false);
+      }
+    }
+    function backword(lcd) {
+      lcd.value = lcd.value.substr(0, lcd.value.length-1);
+    }
+    function clearLcd(lcd){
+      lcd.value = 0;
+    }
+    function addNumber(lcd,clickedButton){
+      if(lcd.value == "0"){
+        lcd.value = clickedButton;
+      }else {
+        lcd.value += clickedButton;
+      }
+    }
+    function operator(lcd,clickedButton){
+      //lcd.value = clickedButton;
+      var lastLetter = lcd.value.substring(lcd.value.length-1,1);
+      console.log(lastLetter);
+      if(!isNaN(parseInt(lastLetter))) {
+        lcd.value += clickedButton;
+      }      
+    }
+    function result(lcd){
+      lcd.value = eval(lcd.value);
+    }
+  
+  </script>
+</head>
+<body>
+  <h3>계산기 만들기</h3>
+  <hr>
+  <form>
+    <table>
+      <tr>
+        <td colspan="4"><input type="text" name="" id="lcd"></td>
+      </tr>
+      <tr>
+        <td><button>BACK</button></td>
+        <td><button>CE</button></td>
+        <td><button>C</button></td>
+        <td><button>=</button></td>
+      </tr>
+      <tr>
+        <td><button>7</button></td>
+        <td><button>8</button></td>
+        <td><button>9</button></td>
+        <td><button>/</button></td>
+      </tr>
+      <tr>
+        <td><button>4</button></td>
+        <td><button>5</button></td>
+        <td><button>6</button></td>
+        <td><button>*</button></td>
+      </tr>
+      <tr>
+        <td><button>1</button></td>
+        <td><button>2</button></td>
+        <td><button>3</button></td>
+        <td><button>-</button></td>
+      </tr>
+      <tr>
+        <td><button>0</button></td>
+        <td><button>+</button></td>
+        <td><button>NONE</button></td>
+        <td><button>NONE</button></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

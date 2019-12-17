@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{outline:1px solid red;}
+        div.container{
+            outline:1px solid blue;
+            display: flex;
+        }
+        .opt1>.item.box1{
+            margin:5px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 200px;
+        }
+        .opt2>.item.box1{
+            margin:5px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 100px;
+            order:3;
+        }
+        .opt2>.item.box2{
+            margin:5px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100px;
+            order:-2;
+        }
+        .opt2>.item.box3{
+            margin:5px;
+            
+            /* flex-grow: 2;
+            flex-shrink: 1;
+            flex-basis: 100px; */
+            flex:2; /* 단축속성 flex-grow:2; flex-shrink:1;flex-basis:0% */
+            order:1;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container opt1">
+        <div class="item box1">box1</div>
+    </div> -->
+    <div class="container opt2">
+        <div class="item box1">box1</div>
+        <div class="item box2">box2</div>
+        <div class="item box3">box3</div>
+    </div>
+</body>
+</html>

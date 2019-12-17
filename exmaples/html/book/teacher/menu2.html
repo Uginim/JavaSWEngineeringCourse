@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>2단 메뉴</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Yeon+Sung&display=swap&subset=korean" rel="stylesheet">  
+  <style>
+    a {
+      text-decoration: none;
+      color: white;
+      font-family: 'Ubuntu','Yeon Sung', cursive, sans-serif;
+    }
+    li {
+      /* padding:10px; */
+    }
+    ul {
+      list-style-type: none;
+      padding:0;
+    }
+    ul.navi {
+      /* outline:1px dashed red; */
+      height:40px;
+    }
+    ul.navi ul {
+      /* outline:3px solid gray; */
+      /* margin-top:10px; */
+      position:absolute;
+      top:40px;
+      /* left:20px; */
+      z-index: 1;
+    }
+
+    ul.navi > li{
+      /* outline:1px solid red; */
+      float:left;
+      width:100px;
+      padding:10px;
+      position:relative;
+      background-color: teal;
+  
+    }
+
+    ul.navi  ul {
+      display:none;
+    }
+
+    ul.navi > li:hover ul {
+      display : block;
+    }
+
+    ul.navi ul > li {
+      background-color: thistle;
+    }
+    ul.navi ul > li > a{
+      background-color: gray;
+    }
+
+    body {
+      font-family: 'Ubuntu', sans-serif;
+    }
+  
+  </style>
+</head>
+<body>
+  <ul class="navi">
+    <li><a href="#">menu0</a></li>
+    <li>
+      <a href="#">menu1</a>
+      <ul>
+        <li><a href="#">menue1-1</a></li>
+        <li><a href="#">menue1-2</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">menu2</a>
+      <ul>
+        <li><a href="#">menue2-1</a></li>
+        <li><a href="#">menue2-2</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">menue3</a>
+      <ul>
+        <li><a href="#">menue3-1</a></li>
+        <li><a href="#">menue3-2</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo corporis eum autem similique soluta id sint vitae, debitis, in reprehenderit tempore sequi eius a tempora, facilis ipsa optio. Mollitia, corporis!
+</body>
+</html>

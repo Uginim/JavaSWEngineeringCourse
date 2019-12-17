@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+ 
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        outline:blue solid 1px;
+        justify-content: space-evenly;
+        height: 500px;
+    }
+    .container>.item{
+        outline: solid red 1px;                
+        width:49%;
+    }
+    .container>.item.box1, .container>.item.box2{
+        height:240px;
+        /* flex:48%; */
+    }
+    .container>.item.box3{
+        height:490px;
+        /* flex:99%; */
+    } 
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="item box1">box1</div>
+        <div class="item box2">box2</div>
+        <div class="item box3">box3</div>
+    </div>
+</body>
+</html>

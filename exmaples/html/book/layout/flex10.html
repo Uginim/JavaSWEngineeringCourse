@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>    
+    body>div{
+        outline: 1px solid blue;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #header>.item:first-child{
+        flex:0 0 40px;
+    }
+    #header>.item:last-child{
+        flex:8 0 100px;
+    }
+    body>div:nth-child(3){
+        height:300px;
+        display: flex;
+    }
+    body>div:nth-child(5){
+        height:150px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    #image{
+        height:200px;
+        line-height: 200px;
+        vertical-align: middle;
+    }
+
+    .item{
+        outline: solid red 1px;
+        flex:1;
+        height:100%;
+        
+    }
+    </style></head>
+
+<body>
+    <div class="container" id="header">
+        <div class="item">로고</div>
+        <div class="item">GNB</div>
+    </div> 
+    <div id="image">이미지</div>
+    <div class="container" id="">
+        <div class="item">본문1</div>
+        <div class="item">본문2</div>
+    </div>
+    <div>본문3</div>
+    <div class="container">
+        <div class="item">본문4</div>
+        <div class="item">본문5</div>
+        <div class="item">본문6</div>
+    </div>
+    <div>footer</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            outline: 1px solid red;
+        }
+        div.container {
+            outline: 1px solid blue;
+            display: flex;
+            /* height: 300px;  */
+            height: 70px; 
+            width: 170px;
+            
+            /* 위에 붙어있음 */
+            align-items:flex-start; 
+            /* 밑에 붙어있음 */
+            align-items: flex-end;
+            /* 가운데 */
+            align-items: center;
+            /* 컨테이너의 height높이만큼 늘임, 기본값 */
+            /*  1) 아이템의 높이가 없을 때 부모의 높이에 맞춘다.
+                2) 부모의 높이가 없는 경우에는 아이템중 가장 높이값이 큰 아이템에 맞춘다.*/
+            align-items: stretch;
+
+            align-items: baseline;
+
+        }
+        div.container .item {
+            width: 50px; 
+            /* height: 50px;  */
+            margin:5px;
+        }
+        div.container .item.box3{
+            height:100px;
+            margin-top: 10px ;
+        }
+        div.container .item.box2 { margin-top:20px;}
+        div.container .item.box4{
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item box1">box1</div>
+        <div class="item box2">box2</div>
+        <div class="item box3">box3</div>
+        <div class="item box4">box4</div>
+    </div>
+</body>
+</html>

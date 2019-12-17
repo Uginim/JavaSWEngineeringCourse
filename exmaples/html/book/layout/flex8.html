@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+/*     
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        outline:blue solid 1px;
+    }
+    .container>.item{
+        outline: solid red 1px;
+        height:100px;
+        line-height: 100px;
+        vertical-align: middle;
+        margin:5px 0.5%;
+        text-align: center;
+    }
+    .container>.item.box1, .container>.item.box2{
+        flex:49%;
+    }
+    .container>.item.box3{
+        flex:100%;
+    } */
+    div{outline:1px solid red;}
+    div.container{
+        outline: 1px solid blue;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item {
+        flex:1;
+        height:100px;
+    }
+    .item.box3,.item.box4{
+        flex:100%;
+    }
+    .item.box1,.item.box2{
+        height:300px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item box4">box4</div>
+        <div class="item box1">box1</div>
+        <div class="item box2">box2</div>
+        <div class="item box3">box3</div>
+    </div>
+</body>
+</html>
