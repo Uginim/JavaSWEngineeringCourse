@@ -1,0 +1,58 @@
+@charset "utf-8";
+ /* div{outline:red solid 1px;} */
+        /* .container{
+            outline: 1px solid blue;
+        } */
+        * {box-sizing: border-box;}
+        .container{            
+            /* width:100%; */
+            display:flex;
+            justify-content: center;
+            margin-top:100px;
+        }
+        .login-wrapper{
+            width:250px
+        }
+        .login-content > div{
+            margin:10px 0;
+        }
+        .login-content input{
+            width:100%;
+        }
+        .login-content input[type="submit"] {
+            width : 100%;
+            background-color: #03c75A;
+            color: white;
+            font-weight: 900;;
+        }
+        .login-title{
+            text-align: center;
+        }
+        #id, #pw, #loginBtn{
+            padding:5px;
+            border-radius: 5px;
+        }
+        #loginForm {
+            border-bottom: 1px solid gray;
+            padding:10px;
+        }
+        #find_info{
+            margin-top:10px;
+            font-size: 0.8rem;
+            color:gray;
+            text-align: center;
+        }
+        #find_info> a{
+            text-decoration: none;
+            color:gray;
+        }
+        #find_info > a:hover {
+            text-decoration: underline;
+        }
+
+        /* 오류 메시지 */
+        .errmsg{
+            color:red;
+            font-size:0.7rem;
+            font-weight:bold;
+        }

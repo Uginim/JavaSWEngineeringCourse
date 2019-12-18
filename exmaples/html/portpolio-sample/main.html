@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div{outline:1px solid red;}
+    div.container{
+      outline:1px solid blue;
+    }
+    div.container.box1, div.container.box2,
+    div.container.box3, div.container.box4,
+    div.container.box5{
+      display:flex;
+      direction: columns; 
+    }
+    div.container.box1 > .box1{
+      flex:0 0 50px;
+    }
+    div.container.box1 > .box2{
+      flex:1;
+    }
+    div.container.box3{height:200px;}
+    div.container.box3 > .box1,
+    div.container.box3 > .box2{
+      flex:1;
+    }
+    div.container.box5 > .box1,
+    div.container.box5 > .box2,
+    div.container.box5 > .box3{
+      flex:1;
+      height:100px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    div.container.box1 > .box1,
+    div.container.box1 > .box2{
+      display: flex;
+      justify-content: center;
+      align-items: center;      
+    }
+    div.container.box2{
+      display:flex;
+      height:200px;
+    }
+    div.container.box2>img{
+      width:100%; height:200px;
+      background-image: url("img/banner.jpg");
+    }
+    div.container.box3 > .box1,
+    div.container.box3 > .box2{
+      display: flex;
+      justify-content: center;
+      align-items: center;      
+    }    
+    div.container.box2,
+    div.container.box4,
+    div.container.box6{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    div.container.box6{
+      height:100px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container wrapperAll">
+    <div class="container box1">
+      <div class="item box1">로고</div>
+      <div class="item box2">GNB</div>
+    </div>
+    <div class="container box2">
+      <img src="img/banner.jpg" alt="">
+    </div>
+    <div class="container box3">
+      <div class="item box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quae iusto voluptates quas in, inventore molestiae illum non tempora temporibus modi velit nihil reprehenderit eveniet accusantium vel sequi est officia?</p></div>      
+      <div class="item box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil provident consequuntur reprehenderit cumque fuga dignissimos saepe sit, itaque quia voluptates nostrum dolorum inventore dolor id, hic placeat unde adipisci a!</div>      
+    </div>
+    <div class="container box4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quo odit vero obcaecati, hic nulla labore illum qui ipsam itaque voluptatibus similique beatae doloribus non praesentium expedita voluptatem explicabo delectus.
+    Reprehenderit explicabo pariatur neque asperiores, consequatur quidem dolores animi, veniam officiis beatae aspernatur facere perspiciatis fuga accusantium, praesentium rem natus autem nam eius illo laborum. Fuga tempore inventore minima quia!
+    Reiciendis itaque tempore libero sed, consequatur pariatur unde delectus maxime quis nemo, dolores iusto numquam sequi omnis cum nobis dolorum sint voluptatum commodi. At rem optio iste voluptate reprehenderit possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, cum mollitia officiis voluptate numquam dolore earum id soluta dolorem, suscipit molestias quasi aliquam tenetur impedit assumenda doloribus non tempore ad.</p></div>
+    <div class="container box5">
+      <div class="item box1">본문4</div>
+      <div class="item box2">본문5</div>
+      <div class="item box3">본문6</div>
+    </div>
+    <div class="container box6">footer</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>border</title>
+    <style>
+       
+        div {
+            width:200px;
+            height:100px;
+            display:inline-block;
+            margin:15px;
+            border-width:5px;
+        }
+        .box1 { border-style:solid; }  /* 실성 */
+        .box2 { border-style:dotted; } /* 점선 */
+        .box3 { border-style:dashed; } /* 선으로 된 점선 */
+        .box4 { border-style:none; } /* 선으로 된 점선 */
+        .box5 { border-style:double; } /* 선으로 된 점선 */
+        .box6 { border-style:groove; } /* 선으로 된 점선 */
+        .box7 { border-style:inset; } /* 선으로 된 점선 */
+        .box8 { border-style:outset; } /* 선으로 된 점선 */
+        .box9 { border-style:ridge; } /* 선으로 된 점선 */
+        div.border-color-test{
+            width:200px;
+            height:100px;
+            display: inline-block;
+            margin:15px;
+            border-style:dashed;
+            border-width:2px;
+        }
+        div.border-color-test.box1 {
+            border-color:red;
+        }
+        div.border-color-test.box2 {
+            border-color:blue red black yellow;
+        }
+        .all-in-one-1{
+            /* border: 1px 10px 30px 60px dashed blue; */
+            border:60px double blue;
+        }
+        .round {
+            border:2px solid red;
+            border-radius:20px;
+        }
+        .round1{
+            border:2px solid blue;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+        }
+        .round2{
+            background:#0c78c8;
+            border-radius:20px 70px;        
+        }        
+        #bg {
+            background:url(images/pic1.jpg) no-repeat;
+            background-size: cover;
+        }
+        /* ellipse */
+        div.ellipse {
+            width:200px;
+            height:100px;
+            display:inline-block;
+            background:#ffd800;
+            border:2px solid;
+        }
+        div.ellipse.round-ellipse1 { border-top-left-radius:100px 50px;}
+        div.ellipse.round-ellipse2 { border-bottom-right-radius:50% 30%;}
+        div.ellipse.round-ellipse3 { border-top-right-radius:50px;}
+        /* shadow */
+        div.shadow {
+            width:200px;
+            height: 100px;
+            display:inline-block;
+            margin:15px;
+            border:2px solid;
+            border-radius:20px;
+        }
+        .box1-shadow{box-shadow: 2px -2px 5px 0px black;}
+        .box2-shadow{box-shadow: 5px 5px 15px 5px gray;}
+    </style>
+</head>
+<body>
+    <div class="box1">solid</div>
+    <div class="box2">dotted</div>
+    <div class="box3">dashed</div>
+    <div class="box4">none</div>
+    <div class="box5">double</div>
+    <div class="box6">groove</div>
+    <div class="box7">inset</div>
+    <div class="box8">outset</div>
+    <div class="box9">ridge</div>
+
+    <div class="border-color-test box1">border-color 1</div>
+    <div class="border-color-test box2">border-color 2</div>
+
+    <div class="all-in-one-1">all in one</div>
+
+    <!-- radius -->
+    <div class="round"></div>
+    <div class="round1"></div>
+    <div class="round2"></div>
+    <div class="round" id="bg"></div>
+
+    <!-- ellipse -->
+    <div class="ellipse round-ellipse1"></div>
+    <div class="ellipse round-ellipse2"></div>
+    <div class="ellipse round-ellipse3"></div>
+
+    <!-- shadow -->
+    <div class="box1-shadow"></div>
+    <div class="box2-shadow"></div>
+</body>
+</html> 

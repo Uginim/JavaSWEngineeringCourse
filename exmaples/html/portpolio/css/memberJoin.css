@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* * {
+    outline:1px solid red;
+} */
+div {
+    box-sizing: border-box;
+}
+form{
+    margin-top:100px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width:300px;
+    height: 600px;
+}
+.content div {
+    flex:1 1 300px;
+}
+.join-title {
+    text-align: center;
+}
+input, button, select {
+    width:100%;
+}
+input[type="radio"] {
+    width:auto;
+}
+
+.errmsg{
+    color: red;
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+#joinBtn{
+    background-color: #03C75A;
+    color: white;
+    font-weight: 900;
+    border:1px solid #03C75A;
+    padding:5px;
+}
