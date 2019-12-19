@@ -10,6 +10,7 @@ header {
 nav {
     /* outline: solid aqua 1px; */
 }
+/* animation */
 @keyframes sidebar{
     from{
         left: -70%;
@@ -18,6 +19,15 @@ nav {
         left:0%;
     }
 }
+
+/* too smallest device */
+@media screen and (max-width:320px){
+    h1,h2,h3{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
 svg {
     fill: grey;
 }
@@ -42,6 +52,9 @@ nav{
     height: 100%;
 }
 header {    
+    top:0px;
+    position: fixed;
+    width:100%;
     height: 55px;
     display: flex;;
     justify-content: space-between;
@@ -58,7 +71,7 @@ header input{
     display: none;
 }
 header input:checked+nav{
-    position: absolute;
+    position: fixed;
     background: rgba(0,0,0,0.2);
     left:0px;
     /* top:50px; */
@@ -72,7 +85,9 @@ header input:checked+nav>ul{
     width:70%;
 }
 header>label>input:checked+nav>ul {
-    animation: sidebar 0.25s linear 1 ;
+    /* animation: sidebar 0.25s linear 1 ; */
+    
+    transition: display 4s;
     margin:0px;
     display: flex;
     flex-direction: column;
@@ -138,6 +153,7 @@ article.sign-in div{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 article.sign-in div, article.sign-in button{
     box-sizing: border-box;
@@ -145,7 +161,7 @@ article.sign-in div, article.sign-in button{
     padding:0.3em 15px;
     width: 300px;
     height: 2.2em;    
-    border-radius: 3%;
+    border-radius: 0.5em;
 }
 article.sign-in input{
     border:none;
@@ -153,12 +169,15 @@ article.sign-in input{
     width:100%;
 }
 article.sign-in input[type="password"]{
-    flex:9.5;
+    flex:9;
 }
 article.sign-in input[type="password"]+img{
-    flex:0.5;
-    width:1.9em;
-    height: 1.0em;
+    /* flex:0 0 1.8em; */
+    width:1.8em;
+    height:1.8em;
+    /* width:30px;
+    height: 30px; */
+    
 }
 
 article.sign-in button{
@@ -209,4 +228,10 @@ footer a{
 }
 .per-month::after{
     content: "/월";
+}
+
+@media screen and (min-width:768px){
+    header input:checked + nav>ul {
+        width:30%;
+    }
 }
