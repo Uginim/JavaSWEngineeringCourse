@@ -41,6 +41,6 @@ Date : 2019-12-19
 <br><br>
 
 [돌아가기](../README.md)  
-[2019-12-17](whatIStudied_191218.md)  
+[2019-12-18](whatIStudied_191218.md)  
 [2019-12-19](whatIStudied_191220.md) 
 
