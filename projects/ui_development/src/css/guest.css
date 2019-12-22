@@ -148,6 +148,7 @@ article.sign-in{
     justify-content: space-around;
 
 }
+
 article.sign-in div{
     border: solid 1px gray;
     display: flex;
@@ -164,10 +165,30 @@ article.sign-in div, article.sign-in button{
     border-radius: 0.5em;
     text-shadow: 0 0 2px #008484;
 }
+article.sign-in div.terms-of-use{
+    border: none;
+    display: flex;
+    justify-content: center;    
+}
+
+article.sign-in button.google-oauth{
+    
+    font-size:1em;
+    font-weight: 400;
+    letter-spacing: 0em;
+    background-color: lightslategray;
+}
+article.sign-in div.terms-of-use span{
+    color:gray;
+    text-shadow: none;
+}
 article.sign-in input{
     border:none;
     height: 1.4em;
     width:100%;
+}
+article.sign-in div.terms-of-use input{
+    width: auto;
 }
 article.sign-in input[type="password"]{
     flex:9;
