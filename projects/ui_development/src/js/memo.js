@@ -49,4 +49,8 @@ function init() {
         mainContent.classList.remove('active');
         mainHeader.classList.remove('active');
     });
+    var logoutbtn = document.getElementById('logoutbtn');
+    logoutbtn.addEventListener('click',(e)=>{
+        location.href="../guest";
+    });
 }

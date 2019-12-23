@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>회 원 가 입</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/signup.css"/>
+  <script src="../js/signup.js"></script>
+</head>
+<body>
+  <header>
+    <img src="../images/temp_.svg" class="logo" alt="logo">
+    <h2>CleverNote</h3>
+  </header> 
+  <form>
+    <div class="container">
+      <div class="content">
+        <h3>CleverNote 회원 가입 정보 입력</h3>
+        <hr>        
+        <div class="policy">
+          <button>Clever Note 약관확인</button><button>개인정보 처리방침 확인</button>
+        </div>
+        <hr>        
+        <button type="button" class="google-oauth">Google로 회원가입</button>
+        <p style="text-align:center"> Or</p>
+        <div class="form-item">
+          <label for="id">Username</label>
+          <div class="input-boundary"><input type="text" name="id" id="id"><i class="far fa-envelope fa-lg"></i></div>
+          <button class="duplication-check">중복확인</button>
+          <span class="errmsg" id="id_errmsg"></span>
+          
+        </div>
+        <div class="form-item">
+          <label for="pw">비밀번호</label>
+          <div class="input-boundary"><input type="password" name="pw" id="pw"><i class="fas fa-lock fa-lg"></i></div>
+          <span class="errmsg" id="pw_errmsg"></span>        
+        </div>
+        <div class="form-item">
+          <label for="pwChk">비밀번호 재확인</label>
+          <div class="input-boundary"><input type="password" id="pwChk"><i class="fas fa-lock fa-lg"></i></div>
+          <span class="errmsg" id="pwChk_errmsg"></span>        
+        </div>
+        <div class="form-item">
+          <label for="tel">전화번호</label>
+          <div class="input-boundary"><input type="tel" name="tel" id="tel"><i class="fas fa-mobile-alt fa-lg"></i></div>
+          <span class="errmsg" id="tel_errmsg"></span>            
+        </div>
+        <div class="form-item">
+          <label for="region">지역</label>
+          <div class="input-boundary">
+            <select name="region" id="region">
+              <option value="">== 선 택 ==</option>
+              <option value="서울">서울</option>
+              <option value="경기">경기</option>
+              <option value="대구">대구</option>
+              <option value="부산">부산</option>
+              <option value="울산">울산</option>
+            </select>
+          </div>
+          <span class="errmsg" id="region_errmsg"></span>          
+        </div>
+        <div class="form-item">
+          <label for="men">성별</label>
+          <div class="input-boundary">
+            <input type="radio" name="gender" id="men"><label for="men">남</label>
+            <input type="radio" name="gender" id="women"><label for="women">여</label>
+          </div>
+          <span class="errmsg" id="gender_errmsg"></span>            
+        </div>
+        <button type="submit" id="joinBtn">가 입 하 기</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
