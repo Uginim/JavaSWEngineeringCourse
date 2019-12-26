@@ -40,7 +40,7 @@ alter trigger AfterInsertBook disable;
     - 출처 - [Deferred Segment Creation feature not enabled (ORA-00439)](https://stackoverflow.com/questions/37941314/deferred-segment-creation-feature-not-enabled-ora-00439)
 # 단위평가
 - 12월 30일 2시 
-- 26일 27일 단위평가 관련 학습
+- 26일 27일 단위평가 관련 학습T
 <br><br><hr>
 
 [돌아가기](../README.md)  
