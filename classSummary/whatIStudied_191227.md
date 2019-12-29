@@ -39,6 +39,17 @@ Date : 2019-12-27
 		r_errmsg := SQLERRM;
 		DBMS_OUTPUT.PUT_LINE(r_errcode || '-' || r_errmsg );
 	END;
+
+		
+	SET SERVEROUTPUT ON;
+	DECLARE 
+	l_sqlcode number;
+	l_sqlerrmsg varchar2(255);
+	BEGIN
+	BookInsertOrUpdate(17, '데이터베이스3', '한빛',40000, l_sqlcode, l_sqlerrmsg);
+	DBMS_OUTPUT.PUT_LINE('오류 :' || l_sqlcode || '-' || l_sqlerrmsg);
+	END;
+
 	``` 
 
 #### 2번
@@ -64,6 +75,8 @@ BEGIN
 --  WHEN OTHERS THEN
 END;
 ```
+
+
 #### 3번
 22chapter 8번문제 참조
 ```sql
@@ -74,22 +87,51 @@ CREATE SEQUENCE ordersLog_seq
 	MINVALUE 1
 	NOCYCLE
 	NOCACHE;
-CREATE TABLE ORDERSLOG
-   (	
-   seq number,
-   logdate date,
-  ORDERID NUMBER(2,0), 
-	CUSTID NUMBER(2,0), 
-	BOOKID NUMBER(2,0), 
-	SALEPRICE NUMBER(8,0), 
-	ORDERDATE DATE, 
-	PRIMARY KEY (seq)
-  );
+CREATE TABLE ORDERSLOG(	
+seq number,
+logdate date,
+ORDERID NUMBER(2,0), 
+CUSTID NUMBER(2,0), 
+BOOKID NUMBER(2,0), 
+SALEPRICE NUMBER(8,0), 
+ORDERDATE DATE, 
+PRIMARY KEY (seq)
+);
+
+create or replace trigger ordersLog
+AFTER UPDATE OR DELETE
+ON ORDERS FOR EACH ROW
+DECLARE
+BEGIN  
+  INSERT INTO ordersLog
+  values(ordersLog_seq.nextval,sysdate,
+      :old.orderid, 
+      :old.custid, 
+      :old.bookid, 
+      :old.saleprice, 
+      :old.orderdate);
+EXCEPTION
+  WHEN OTHERS THEN
+    dbms_output.put_line(SQLCODE || '-' || SQLERRM);
+END;
 ```
 #### 4번문제
-551~552중 함수 하나를 씀
+- 551~552중 함수 하나를 씀
+```sql
+select t2.publisher "출판사", sum(t1.saleprice) "총매출액",
+     rank() over (order by sum(t1.saleprice)desc) "순위"
+from orders t1, book t2
+where t1.bookid=t2.bookid
+group by t2.publisher;
+```
 #### 5번문제
+```sql
+select custid, name, grade(custid) as "등급" from customer;
+```
 #### 6번 문제
+```sql
+REVOKE SELECT ON madang.Orders FROM user1;
+```
 ## SQL Developer에서 PL/SQL(프로시저, 함수)등을 GUI상에서 실행 가능(입력 및 출력 변수 설정 가능)
 ## sql developer 테이블 복사하기
 - navigation에서 table 우클릭
