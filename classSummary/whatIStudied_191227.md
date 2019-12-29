@@ -40,7 +40,7 @@ Date : 2019-12-27
 		DBMS_OUTPUT.PUT_LINE(r_errcode || '-' || r_errmsg );
 	END;
 
-		
+	-- 답 확인하기
 	SET SERVEROUTPUT ON;
 	DECLARE 
 	l_sqlcode number;
@@ -53,7 +53,7 @@ Date : 2019-12-27
 	``` 
 
 #### 2번
-272p 이익계산
+- 272p 이익계산 참조
 ```sql
 CREATE OR REPLACE FUNCTION Grade(
   p_custid IN customer.custid%TYPE
@@ -154,7 +154,7 @@ alter user hr identified by hr1234;
 <br><br><hr>
 
 [돌아가기](../README.md)  
-[2019-12-24](whatIStudied_191223.md)  
-[2019-12-27](whatIStudied_191226.md) 
+[2019-12-24](whatIStudied_191226.md)  
+[2019-12-27](whatIStudied_191230.md) 
 
 
