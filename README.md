@@ -60,6 +60,8 @@
 * [2019-12-23](classSummary/whatIStudied_191223.md)
 * [2019-12-24](classSummary/whatIStudied_191224.md)
 * [2019-12-26](classSummary/whatIStudied_191226.md)
+* [2019-12-27](classSummary/whatIStudied_191227.md)
+* [2019-12-30](classSummary/whatIStudied_191230.md)
 
 ## 능력단위평가 대비
 * [191105 응용SW기초기술활용 평가](classSummary/test01Preparation.md)
