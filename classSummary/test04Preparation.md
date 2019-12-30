@@ -63,7 +63,9 @@ CREATE TABLESPACE MD_TBS DATAFILE 'D:\madang\oradata\md_tbs_data.dbf' size 10m B
 ```
 - 데이터파일의 이용현황 조회
 ```sql
-SELECT * FROM user_tablespaces;
+-- SELECT * FROM user_tablespaces;
+SELECT  * FROM dba_data_files;
+
 ```
 ## 5. 아래 내용을 참고하여 계정생성 및 권한을 부여하는 명령문을 각각 작성하시오. 
 
