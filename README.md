@@ -67,3 +67,4 @@
 * [191105 응용SW기초기술활용 평가](classSummary/test01Preparation.md)
 * [191128 프로그래밍언어활용 & 191129 SQL활용](classSummary/test02Preparation.md)
 * [191213 데이터 베이스 구현](classSummary/test04Preparation.md)
+* [191230 SQL 응용](classSummary/test05Preparation.md)
