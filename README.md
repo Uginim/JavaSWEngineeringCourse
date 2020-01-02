@@ -8,7 +8,8 @@
 * [Java 용어 정리](classSummary/terminology_java.md)
 * [Database 용어 정리](classSummary/terminology_Database.md)
 ## 일자별 요약 
-### 10월
+### 2019년
+#### 10월
 * [2019-10-18](classSummary/whatIStudied_191018.md)
 * [2019-10-21](classSummary/whatIStudied_191021.md)
 * [2019-10-22](classSummary/whatIStudied_191022.md)
@@ -19,7 +20,7 @@
 * [2019-10-29](classSummary/whatIStudied_191029.md)
 * [2019-10-30](classSummary/whatIStudied_191030.md)
 * [2019-10-31](classSummary/whatIStudied_191031.md)
-### 11월
+#### 11월
 * [2019-11-01](classSummary/whatIStudied_191101.md)
 * [2019-11-04](classSummary/whatIStudied_191104.md)
 * [2019-11-05](classSummary/whatIStudied_191105.md)
@@ -41,7 +42,7 @@
 * [2019-11-27](classSummary/whatIStudied_191127.md)
 * [2019-11-28](classSummary/whatIStudied_191128.md)
 * [2019-11-29](classSummary/whatIStudied_191129.md)
-### 12월
+#### 12월
 * [2019-12-02](classSummary/whatIStudied_191202.md)
 * [2019-12-03](classSummary/whatIStudied_191203.md)
 * [2019-12-04](classSummary/whatIStudied_191204.md)
@@ -62,6 +63,8 @@
 * [2019-12-26](classSummary/whatIStudied_191226.md)
 * [2019-12-27](classSummary/whatIStudied_191227.md)
 * [2019-12-30](classSummary/whatIStudied_191230.md)
+### 1월
+* [2020-01-02](classSummary/whatIStudied_200102.md)
 
 ## 능력단위평가 대비
 * [191105 응용SW기초기술활용 평가](classSummary/test01Preparation.md)
