@@ -154,7 +154,7 @@ alter user hr identified by hr1234;
 <br><br><hr>
 
 [돌아가기](../README.md)  
-[2019-12-24](whatIStudied_191226.md)  
-[2019-12-27](whatIStudied_191230.md) 
+[2019-12-26](whatIStudied_191226.md)  
+[2019-12-30](whatIStudied_191230.md) 
 
 

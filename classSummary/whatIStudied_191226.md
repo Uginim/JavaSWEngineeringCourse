@@ -83,7 +83,7 @@ SET SERVEROUTPUT OFF
 <br><br><hr>
 
 [돌아가기](../README.md)  
-[2019-12-24](whatIStudied_191223.md)  
-[2019-12-27](whatIStudied_191226.md) 
+[2019-12-24](whatIStudied_191224.md)  
+[2019-12-27](whatIStudied_191227.md) 
 
 

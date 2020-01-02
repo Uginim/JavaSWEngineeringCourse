@@ -1,5 +1,5 @@
 # What I studied today.
-Date : 2019-12-30
+Date : 2019-12-31
 
 # JSP2.3 & Servlet 3.1
 ## sts에서 server 관련 툴 및 설정
@@ -201,7 +201,7 @@ Date : 2019-12-30
 <br><br><hr>
 
 [돌아가기](../README.md)  
-[2019-12-24](whatIStudied_191230.md)  
-[2019-12-27](whatIStudied_200102.md) 
+[2019-12-30](whatIStudied_191230.md)  
+[2020-01-02](whatIStudied_200102.md) 
 
 
