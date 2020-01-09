@@ -64,7 +64,7 @@ Date : 2020-01-07
 <br><br><hr>
 
 [돌아가기](../README.md)  
-[2020-01-03](whatIStudied_200103.md)  
-[2020-01-07](whatIStudied_200107.md)  
+[2020-01-06](whatIStudied_200106.md)  
+[2020-01-08](whatIStudied_200108.md)  
 
 
