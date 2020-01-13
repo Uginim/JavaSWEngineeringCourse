@@ -35,20 +35,33 @@ Date : 2020-01-10
 ## Maven
 - https://mvnrepository.com/
 ## 과제
-1. myweb => maven 프로젝트 전환
-2. pom.xml
+1. dynamic web project 생성
+2. 화면구현 import
+3. 메이븐 프로젝트 전환
+    - myweb => maven 프로젝트 전환
+4. pom.xml
     - ojdbc8 드라이버
     - jstl 1.2
     - dbcp2
-3. context.xml 추가
+5. 풀링 리소스 등록
     - WebContent/META-INF/context.xml
-    - 풀링 리소스 등록
-4. Web.xml에 resource-ref 추가
+    - context.xml 추가
+6. 풀링 리소스 참조
     - WebContent/WEB-INF/web.xml
-    - 풀링 리소스 참조
-5. com.kh.common.Dbcon
-6. com.kh.db.PoolTest.java
-7. 회원테이블 생성
+    - Web.xml에 resource-ref 추가
+7. 커넥션 반입 / 반출
+    - com.kh.common.Dbcon
+8. 풀링 테스트
+    - com.kh.db.PoolTest.java
+9. db계정 생성 
+    - myweb/myweb
+    - ```sql
+        create user myweb identified by myweb;
+        grant connect, resource, plustrace, alter session to myweb;
+        ```
+10. 회원테이블 생성
+11. 회원가입 서블릿 작성
+12. postman 으로 회원가입 테스트
 
 
 [돌아가기](../README.md)  
