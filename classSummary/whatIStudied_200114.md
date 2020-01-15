@@ -68,6 +68,20 @@ Date : 2020-01-14
 - 단점
   - 개발 초기에는 부하(인력/시간)가 비교적 높다.
   - 아키텍처에 대한 수준 높은 이해를 요구한다.
+## 개발 요구사항
+|기능|요청URL|파라미터|요청방식|사용자화면|서비스|DAO|화면이동|
+|---|---|---|---|---|---|---|---|
+|회원가입|	/member/joinForm.do|	|GET|	/member/JoinForm.jsp|	|||		
+|회원가입처리|	/member/join.do|	MemberDTO|	POST|	|	|MemberSVCImpl|	MemberDAOImpl|	/member/loginForm.do|
+|회원목록|	/admin/memberList.do|		|GET|	|/admin/memberList.jsp|	MemberSVCImpl|	MemberDAOImpl|	|
+|회원수정|	/member/modifyForm.do|		|GET|	/member/modifyForm.jsp| | | |			
+|회원수정처리|	/member/modify.do|	id|	POST||		|MemberSVCImpl|	MemberDAOImpl|	/|
+|회원탈퇴|	/member/outForm.do|		|GET|	/member/outForm.jsp|	|	|	|
+|회원탈퇴처리|	/member/out.do|	id|	POST|		|MemberSVCImpl|	MemberDAOImpl|	/|
+|회원조회|	/member/select.do|	id|	GET|	/member/selectForm.jsp|	MemberSVCImpl|	MemberDAOImpl|	|
+|로그인|	/member/loginForm.do|		|GET|	/member/loginForm.jsp|	|	|	|
+|로그인처리|	/member/login.do|	id,pw|	POST|		|MemberSVCImpl|	MemberDAOImpl|	/|
+|로그아웃|	/member/logout.do	|id|	GET|	|	|	|	/|
 
 [돌아가기](../README.md)  
 [2020-01-13](whatIStudied_200113.md)  
