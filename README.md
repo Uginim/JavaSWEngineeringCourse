@@ -74,6 +74,8 @@
 * [2020-01-13](classSummary/whatIStudied_200113.md)
 * [2020-01-14](classSummary/whatIStudied_200114.md)
 * [2020-01-15](classSummary/whatIStudied_200115.md)
+* [2020-01-16](classSummary/whatIStudied_200116.md)
+* [2020-01-17](classSummary/whatIStudied_200117.md)
 
 ## 능력단위평가 대비
 * [191105 응용SW기초기술활용 평가](classSummary/test01Preparation.md)
