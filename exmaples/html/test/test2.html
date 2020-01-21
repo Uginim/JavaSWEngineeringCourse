@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            outline: 1px solid gray;
+        }
+        /* div:nth-child(1){
+            background: yellow;
+        } */
+        .name1.name2.name3{
+            background: yellow;
+        }
+        .name1 .name2{
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="name1 name2 name3">
+        테스트0
+    </div>
+    <div class="name1 name2">
+        테스트
+    </div>
+    <div class="name1">
+        테스트2
+        <div class="name2">
+            테스트
+        </div>
+    </div>
+    <div class="name2">
+        테스트3
+    </div>
+</body>
+
+</html>

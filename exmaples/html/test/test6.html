@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function init(e){
+            var addBtn = document.querySelector('input[type="button"][value="추가"]');
+            var textInput = document.querySelector('input#bucket');
+            var bucketList = document.querySelector('ol');
+
+            // 
+            addBtn.addEventListener('click', event => {
+                // 생성
+                var newBucketItem = document.createElement('li');
+                // 값 넣기
+                newBucketItem.innerText = textInput.value;
+                // 색 추가
+                newBucketItem.style.background=randomRGBStr();
+                // 삭제
+                newBucketItem.addEventListener('click',event=>{                    
+                    event.currentTarget.remove();
+                });
+                // 리스트에 추가
+                bucketList.appendChild(newBucketItem);
+                // 인풋 정리
+                textInput.value ="";
+            });
+
+
+            // 키보드 이벤트
+            textInput.addEventListener("keydown", event => {
+   
+                if (event.keyCode === 13) {
+                    if(event.shiftKey ){
+
+                    }else {
+                        addBtn.click();
+                    }
+                }
+            });
+
+        }
+        window.addEventListener("load",init);
+        function randomByteHex(){
+            var hexStr = Math.floor(Math.random()*256).toString(16);
+            if (hexStr.length==1)
+                return '0'+hexStr;
+            return hexStr;
+        }
+        function randomRGBStr(){
+            return '#' + randomByteHex() + randomByteHex() + randomByteHex();
+        }
+    </script>
+</head>
+<body>
+    <h3>버킷리스트</h3>
+    <ol>
+
+    </ol>
+    <input type="text" id="bucket">
+    <input type="button" value="추가">
+</body>
+</html>
