@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트 리스너 연습</title>
+    <script>
+        window.addEventListener("load",init,false);
+        function init() {
+            document.getElementsByTagName("ul")[0].addEventListener("click",function(e){
+                if(e.currentTarget === e.target.parentElement)
+                    e.target.remove();
+            },false);      
+            document.getElementsByClassName("container")[0].addEventListener("click",function(e){
+                e.stopPropagation();
+                alert('공사중!!');
+            },true);
+            // document.getElementsByClassName("container")[0].addEventListener("mousedown",function(e){
+            document.getElementsByTagName("html")[0].addEventListener("mousedown",function(e){
+                if(e.button === 2){
+                    alert('스크랩 금지');
+                    e.stopPropagation();                    
+                }
+                
+            },true);
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+</body>
+</html>

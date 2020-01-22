@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트 리스너 연습</title>
+    <script>
+        window.addEventListener("load",init,false);
+        function init() {
+            document.getElementsByTagName('ul')[0].addEventListener("click",function(){
+                console.log("ul클릭됨! 캡처링");
+            },true)
+            document.getElementsByTagName('ul')[0].addEventListener("click",function(){
+                console.log("ul클릭됨! 버블링");
+            },false)
+            document.getElementById('li1').addEventListener("click",function(){
+                console.log("li1클릭됨! 캡처링");
+            },true)
+            document.getElementById('li1').addEventListener("click",function(){
+                console.log("li1클릭됨! 버블링");
+            },false)
+
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li id="li1">1</li>
+        <li id="li2">2</li>
+        <li id="li3">3</li>
+    </ul>
+</body>
+</html>

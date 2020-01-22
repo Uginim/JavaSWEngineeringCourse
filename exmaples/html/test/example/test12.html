@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .blue{background-color:rgba(0,0,255,0.2);}
+    .green{background-color:rgba(0,255,0,0.2);}
+  </style>
+  <script>
+  window.addEventListener("load",init,false);
+  function init(){
+    addBtn.addEventListener("click",function(){
+      const tagName = "li";
+      const attributes = {"data-xxx":"1","class":"blue"}
+      const contents = bucket.value;
+      let addItem = creElt(tagName,attributes,contents);
+      console.log(addItem);
+      buckets.appendChild(addItem);
+    },false);
+  }
+  //요소생성 함수
+  //사용예)
+  //1) creElt("li", null, "등산하기");
+  //2) creElt("li", null, creElt("b",null,"등산하기2"));  
+  //2) creElt("li", null, creElt("b",null,"등산하기2"), creElt("button",null,"수정"));
+  function creElt(tagName, attributes){
+    //태그생성
+    const node = document.createElement(tagName);
+    //속성추가
+    if(attributes){
+      for(let attribute in attributes){
+        node.setAttribute(attribute,attributes[attribute]);
+      }
+    }
+    //하위노드추가
+    for(let i=2; i<arguments.length; i++){
+      let child = arguments[i];
+      if(typeof child == "string") {
+        child = document.createTextNode(child);
+      }
+      node.appendChild(child);
+    }
+    return node;
+  }
+
+  </script>
+</head>
+<body>
+  <ul id='buckets'>
+  </ul>
+  <input type="text" id="bucket">
+  <button id='addBtn'>추가</button>
+</body>
+</html>

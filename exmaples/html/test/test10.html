@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>위시리스트 만들기</title>
+    <style>
+        ul>li.color:nth-child(odd){
+            background-color: blue;
+        }
+        ul>li.color:nth-child(even){
+            background-color: yellow;
+        }
+        .odd{
+            background-color: blue;
+        }
+        .even{
+            background-color: yellow;
+        }
+        li>button{
+            height: 1.5em;
+            float: right;
+        }
+        li>span{
+            float:left;
+        }
+    </style>
+    <script>
+        function init(e){
+            var addBtn = document.querySelector('input[type="button"][value="추가"]');
+            var textInput = document.querySelector('input#bucket');
+            var bucketList = document.querySelector('ul');
+            console.log("ul",bucketList);
+            // 
+            addBtn.addEventListener('click', event => {
+                // 생성
+                var newBucketItem = document.createElement('li');
+                var bucket = document.createElement('span');
+                // 값 넣기
+                // newBucketItem.innerText = textInput.value;
+                bucket.innerText = textInput.value;
+                // newBucketItem.classList.add("color");
+                // 리스트에 추가
+                bucketList.appendChild(newBucketItem);
+                // 인풋 정리
+                textInput.value ="";
+                // 어쩔 수 없이 짝홀 수동
+                listRefresh(bucketList);
+
+                //추가됨
+                newBucketItem.appendChild(bucket);
+                var delButton = document.createElement('button');
+                delButton.innerText='삭제';
+                var modiButton = document.createElement('button');
+                modiButton.innerText='수정';
+                newBucketItem.appendChild(delButton);
+                newBucketItem.appendChild(modiButton);
+            });
+            // 삭제
+            bucketList.addEventListener('click',event=>{      
+                /*
+                if(window.confirm('삭제할래?')){
+                    if(event.currentTarget === event.target.parentElement)
+                        event.target.remove();
+                    // 어쩔 수 없이 짝홀 수동
+                    listRefresh(event.currentTarget);
+                }
+                */
+                if(event.target.innerText === '삭제'){
+                    event.target.parentElement.remove();
+                    listRefresh(event.currentTarget)
+                }else if(event.target.innerText === '수정'){
+                    var item = event.target.parentElement;
+                    var newInput = document.createElement('input');
+                    newInput.setAttribute('type','text');
+                    newInput.value=item.children[0].innerText;
+                    item.children[1].innerText = '저장';
+                    item.children[2].innerText = '취소';
+                    item.insertBefore(newInput,item.children[1]);
+                    item.children[0].style.display="none";
+                }else if(event.target.innerText === '저장'){
+                    var item = event.target.parentElement;
+                    item.children[0].style.display="";
+                    item.children[0].innerText = item.children[1].value;
+                    item.children[1].remove();
+                    item.children[1].innerText = '삭제';
+                    item.children[2].innerText = '수정';
+                }else if(event.target.innerText === '취소'){
+                    var item = event.target.parentElement;
+                    item.children[0].style.display="";
+                    item.children[1].remove();
+                    item.children[1].innerText = '삭제';
+                    item.children[2].innerText = '수정';
+                }
+
+            },false);
+
+            // 키보드 이벤트
+            textInput.addEventListener("keydown", event => {   
+                if (event.keyCode === 13) {
+                    if(!event.shiftKey ){
+                        // addBtn.click(); // 가능
+                        addBtn.dispatchEvent(new Event('click'));
+                    }
+                }
+            });
+
+        }
+        function listRefresh(list){            
+            var items = list.children;
+            var i;
+            for(i=0;i<items.length;i++){
+                if(i%2===0){
+                    items[i].classList.remove('even');
+                    items[i].classList.add('odd');
+                }else{
+                    items[i].classList.remove('odd');
+                    items[i].classList.add('even');
+                }
+            }
+        }
+        window.addEventListener("load",init);
+    </script>
+</head>
+<body>
+    <h3>버킷리스트</h3>
+    <ul> </ul>
+    <input type="text" id="bucket">
+    <input type="button" value="추가">
+</body>
+</html>
