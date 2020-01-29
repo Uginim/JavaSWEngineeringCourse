@@ -377,12 +377,7 @@ db.url=jdbc:log4jdbc:oracle:thin@127.0.0.1:xe
 db.username=[username]
 db.password=[password]
 ```
-## JUnit
-### 사용 패키지
-```java
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-```
+
 <br><br><hr>
 [돌아가기](../README.md)  
 [2020-01-23](whatIStudied_200123.md)  
