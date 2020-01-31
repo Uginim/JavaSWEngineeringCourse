@@ -20,7 +20,9 @@ Date : 2020-01-28
     - 스프링 프레임워크의 소스는 모드 라이브러리로 분리시켜 놓음으로써 필요한 라이브러리만 가져다 쓸 수 있습니다. 그리고 많은 외부 라이브러리들도 이미 스프링 프레임워크와 연동되고 있습니다.
 - Model2 방식의 MVC Framework를 지원
 ## Spring MVC Architecture
-![MVC](../images/Spring/RequestLifecycle.png)
+<!-- ![MVC](../images/Spring/RequestLifecycle.png) -->
+![MVC](../images/Spring/Spring_MVC_Architecture.jpg)
+
 ## 스프링 프로젝트 생성하기
 - new -> spring legacy project
 - pom.xml

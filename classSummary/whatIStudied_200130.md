@@ -1,5 +1,5 @@
 # What I studied today.
-Date : 2020-01-29
+Date : 2020-01-30
 
 # Spring
 ## Context 분리와 전략
@@ -41,7 +41,7 @@ Date : 2020-01-29
 <br><br><hr>
 
 [돌아가기](../README.md)  
-[2020-01-28](whatIStudied_200123.md)  
-[2020-01-30](whatIStudied_200129.md)  
+[2020-01-28](whatIStudied_200128.md)  
+[2020-01-30](whatIStudied_200130.md)  
 
 
