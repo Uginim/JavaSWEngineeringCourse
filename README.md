@@ -84,6 +84,9 @@
 * [2020-01-29](classSummary/whatIStudied_200129.md)
 * [2020-01-30](classSummary/whatIStudied_200130.md)
 * [2020-01-31](classSummary/whatIStudied_200131.md)
+### 2월
+* [2020-02-03](classSummary/whatIStudied_200203.md)
+
 
 ## 능력단위평가 대비
 * [191105 응용SW기초기술활용 평가](classSummary/test01Preparation.md)
