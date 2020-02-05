@@ -14,7 +14,8 @@ Date : 2020-02-05
 - slf4j가 나온 이후 수많은 오픈소스가 채택 중	
 - 가장 최근에 나온것이 slf4j(인터페이스), Logback(구현체)
 	- 이것으로 통일함
-
+## logback 설정하기
+- [참고](https://taetaetae.github.io/2017/02/19/logback/)
 # 발생 가능한 문제
 ## `@RequestBody`로 VO생성 시 VO의 속성 타입이 java.sql.Date type일 때 파싱후 쿼리가 제대로 동작하지 않는 현상
 - 원인 spring에서 parsing을 제대로 못함
@@ -22,8 +23,11 @@ Date : 2020-02-05
 ## EL표현식 사용시 대소문자가 섞인 property를 사용할 경우 property를 찾지못함
 - 상황
     - cDate 라는 proeprty를 못읽어옴
+- 원인
+    - 모름
+- 임시 조치
     - EL표현식에서 property 명을 `CDate`로 바꿔야 표현 됨
-
+    - 다른 처방으로 해결된 [경우](https://reomoca.tistory.com/category/jstl)도 있음 
 # 팀 프로젝트 발표 일정
 |날짜|일정|발표자|
 |---|---|---|
