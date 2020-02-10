@@ -88,6 +88,8 @@
 * [2020-02-03](classSummary/whatIStudied_200203.md)
 * [2020-02-04](classSummary/whatIStudied_200204.md)
 * [2020-02-05](classSummary/whatIStudied_200205.md)
+* [2020-02-06](classSummary/whatIStudied_200206.md)
+* [2020-02-07](classSummary/whatIStudied_200207.md)
 
 
 ## 능력단위평가 대비
