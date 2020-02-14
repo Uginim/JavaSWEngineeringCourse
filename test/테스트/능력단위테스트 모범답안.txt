@@ -1,0 +1,75 @@
+1 
+파일명 : database.properties
+원인 :접속하고자하는 데이터베이스 서버의 SID와 비밀번호가 불일치
+변경전
+db.driverClass=oracle.jdbc.driver.OracleDriver
+db.url=jdbc:oracle:thin:@127.0.0.1:1521:orcl
+db.username=springtest
+db.password=springtest
+변경후
+db.driverClass=oracle.jdbc.driver.OracleDriver
+db.url=jdbc:oracle:thin:@127.0.0.1:1521:xe
+db.username=springtest
+db.password=springtest1234
+2. 
+파일명 : MemberDAO-mapper.xml
+원인 : update쿼리 region컬럼값 누락 및 gender컬럼값에 region값지정
+변경전
+
+	update member
+	   set  tel = #{tel},
+	        nickname = #{nickname},
+		gender = #{region},
+		birth = #{birth},
+		udate = systimestamp
+	 where id = #{id}
+
+변경후
+	update member
+	   set  tel = #{tel},
+	        nickname = #{nickname},
+		gender = #{gender},
+		region = #{region},
+		birth = #{birth},
+		udate = systimestamp
+	 where id = #{id}
+
+3.
+파일명:MemberSVCImpl.java
+원인: MemberDAOImpl구현클래스를 사용하기 위해 @Inject필요
+      @Inject는 선언된 변수의 동일타입 빈을 주입받는다.복수개의 동일타입의 빈이
+      있을경우 특정 빈을 지정할 필요가 있고 이때 @Qualifier를 사용해야한다.
+변경전
+MemberDAO memberDAO;
+
+변경후
+@Inject
+@Qualifier("memberDAOImplXML")
+MemberDAO memberDAO;
+
+4.
+파일명:joinForm.jsp
+원인 : -클라이언트에서 실행되는 html파일에서 href,src,action속성에는 
+        컨텍스트 루트가 자동으로 추가되지 않으므로 추가해주어야함.
+       -spring form테그에서 modelAttribute속성값과 컨트롤러 모델객체의 속성 이름 불일치	
+       -아이디 입력필드 readOnly속성으로 입력불가
+변경전 :
+  <form:form id="joinFrm" action="/member/join" 
+             modelAttribute="memberVO" method="post">
+  <form:input type="text" path="id" readOnly="true" />
+변경후:
+  <form:form id="joinFrm" action="${pageContext.request.contextPath }/member/join" 
+             modelAttribute="mvo" method="post">
+  <form:input type="text" path="id"/>
+5. 
+파일명 : MemberController.java
+원인 : view경로 오류
+변경전
+if(cnt == 1) {
+	return "member/loginForm";
+}else {
+	return "redirect:/";
+}
+변경후
+return "redirect:/";
+
