@@ -122,6 +122,37 @@ Date : 2020-02-19
 		return new ResponseEntity<byte[]>(boardFileVO.getFdata(),headers, HttpStatus.OK);
 	}
 	```
+## mabatis transaction
+- spring의 DataSourceTransactionManager를 사용하면 java코드에서 트랜잭션 사용가능하다
+- [참조](https://mybatis.org/spring/ko/transactions.html)
+### context설정
+```xml
+	<!-- 트랜잭션 설정 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+```
+### 활용
+- Transaction 단위로 사용할 method에 `@Transactional` 어노테이션을 붙인다.
+```java
+	// 게시글 작성
+	@Transactional
+	@Override
+	public int write(BoardVO boardVO) {
+		long bnum = 0;
+		// 1) 게시글 작성
+		int cnt = boardDAO.write(boardVO);
+		
+		// 2) bnum 가져오기
+		bnum = boardVO.getBnum(); // mapper에 selectKey태그로 '새로 생성된 key'값을 가져옴 
+		
+		// 3) 첨부파일 있는 경우
+		if(boardVO.getFiles() != null && boardVO.getFiles().size() > 0) {			
+			fileWrite(boardVO.getFiles(),bnum);
+		}
+		return cnt;
+	}
+```
 
 # 팀프로젝트 진행상황
 1. 금주 피드백 반영안됨
