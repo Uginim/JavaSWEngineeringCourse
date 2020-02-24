@@ -1,5 +1,5 @@
 # What I studied today.
-Date : 2020-02-20
+Date : 2020-02-21
 
 
 # spring
@@ -13,6 +13,8 @@ try {
     e.printStackTrace();
 }
 
+## spring Transactional 과  javax Transactional 중 뭘 사용해야할까?
+- [spring Transactional? javax Transactional?](http://wonwoo.ml/index.php/post/776)
 headers.setContentDispositionFormData("attachment", filename);
 ```
 

@@ -90,7 +90,17 @@
 * [2020-02-05](classSummary/whatIStudied_200205.md)
 * [2020-02-06](classSummary/whatIStudied_200206.md)
 * [2020-02-07](classSummary/whatIStudied_200207.md)
-* [2020-02-10](classSummary/whatIStudied_200207.md)
+* [2020-02-10](classSummary/whatIStudied_200210.md)
+* [2020-02-11](classSummary/whatIStudied_200211.md)
+* [2020-02-12](classSummary/whatIStudied_200212.md)
+* [2020-02-13](classSummary/whatIStudied_200213.md)
+* [2020-02-14](classSummary/whatIStudied_200214.md)
+* [2020-02-17](classSummary/whatIStudied_200217.md)
+* [2020-02-18](classSummary/whatIStudied_200218.md)
+* [2020-02-19](classSummary/whatIStudied_200219.md)
+* [2020-02-20](classSummary/whatIStudied_200220.md)
+* [2020-02-21](classSummary/whatIStudied_200221.md)
+* [2020-02-24](classSummary/whatIStudied_200224.md)
 
 
 ## 능력단위평가 대비
