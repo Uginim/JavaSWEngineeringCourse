@@ -1,0 +1,35 @@
+CREATE OR REPLACE PROCEDURE BOARD_SAMPLE_DATA_PROC 
+(
+  RECORDCNT IN number DEFAULT 959 
+) AS 
+BEGIN
+  for i in 1..recordcnt loop
+    insert into board(
+      bnum,
+      bcategory,
+      btitle,
+      bid,
+      bnickname,
+--      bcdate,
+--      budate,
+--      bhit,
+      bcontent,
+      bgroup
+--      bstep,
+--      bindent
+    )values(
+      board_bnum_seq.nextval,
+      '1005',
+      '제목-' || i,  
+      'test@test.com',
+      '관리자',
+      '반갑습니다-' || i,
+      board_bnum_seq.currval     
+    );
+  end loop;
+  commit;
+END BOARD_SAMPLE_DATA_PROC;
+
+
+
+
