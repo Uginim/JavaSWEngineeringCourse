@@ -36,7 +36,10 @@ Date : 2020-02-27
     ```
 - 이후 다음 경로에서 css 뜨는 지 확인
     - `/webjars/bootstrap/4.4.1-1/css/bootstrap.css`
-- 
+
+# 기타
+- 게시글 사진유무
+
 <br><br><hr>
 
 [돌아가기](../README.md)  
