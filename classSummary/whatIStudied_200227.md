@@ -43,8 +43,8 @@ Date : 2020-02-27
 <br><br><hr>
 
 [돌아가기](../README.md)  
-[2020-02-24](whatIStudied_200224.md)  
 [2020-02-26](whatIStudied_200226.md)  
+[2020-02-28](whatIStudied_200228.md)  
 
 
 
