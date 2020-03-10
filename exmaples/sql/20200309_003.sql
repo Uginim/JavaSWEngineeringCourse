@@ -1,0 +1,18 @@
+INSERT INTO rboard ( rnum, 
+bnum, 
+rid, 
+rnickname, 
+rcontent, 
+rgroup, 
+rstep, 
+rindent, 
+prnum ) VALUES (
+		rboard_rnum_seq.nextval, 
+    1124, 
+    'test@naver.com', 
+    'gggggg', 
+    '³»¿ë', 
+    rboard_rnum_seq.currval, 
+    0 + 1, 
+    0 + 1, 
+    3 )
