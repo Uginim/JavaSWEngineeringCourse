@@ -1,38 +1,33 @@
-
-<div>
-    <div class="row">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-    </div>
-    <div class="row">
-
-    </div>
-    <div class="row">
-        
-    </div>
-</div>
-<div class="replyList">
-    <div data-rnum="">
-        <div></div>
-        <div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-        </div>
-    </div>
-    <div data-rnum="">
-        <div></div>
-        <div>
-            <div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            </div>
-        </div>
-    </div>
-</div>
+str+='<div class="row comment-area mb-5">';
+str+='    <div class="col-1 ">';
+str+='        <div class="row h-100">';
+str+='            <img class="rounded img-fluid" src="<c:url value="/resources/img/temp_.svg"/>" alt="..." />';
+str+='        </div>';
+str+='    </div>';
+str+='    <div class="col w-100">';
+str+='        <div class="row ">';
+str+='            <div class="col-2 writer text-left"><span class="h5 content">uginim</span><span>님</span></div>';
+str+='            <div class="col-2 time text-left"><label for="">2020-03-11 00:00</label><span class="content"></span></div>';
+str+='            <div class="col-3 ml-auto pl-auto text-right">';
+str+='            <div class="btn-group" >';
+str+='                <button class="btn btn-light btn-sm reply ">답글</button>';
+str+='                <button class="btn btn-light btn-sm modify ">수정</button>';
+str+='                <button class="btn btn-light btn-sm cancel d-none">취소</button>';
+str+='                <button class="btn btn-light btn-sm delete">삭제</button>';
+str+='            </div>';
+str+='            </div>';
+str+='        </div>';
+str+='            <dl class="row">';
+str+='                <dt class="col-sm-1 comment-content">댓글</dt>';
+str+='                <dd class="col-sm-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In laboriosam a esse dolores eos animi facilis fugiat modi dolorem eaque ratione voluptatem laudantium aspernatur repellat veritatis repellendus ea doloribus amet.</dd>';
+str+='            </dl>		';
+str+='        <div class="row">											';
+str+='                <div class="col-3 ml-auto text-right">';
+str+='                    <div class="btn-group" >';
+str+='                        <button class="btn btn-secondary btn-sm like" >좋아요&nbsp;<span class="badge btn-light">'+item.good+'</span></button>';
+str+='                        <button class="btn btn-secondary btn-sm dislike" >싫어요&nbsp;<span class="badge btn-light">'+item.bad+'</span></button>';
+str+='                    </div>';
+str+='                </div>			';
+str+='        </div>';
+str+='    </div>';
+str+='</div>	';

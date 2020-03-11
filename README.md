@@ -106,6 +106,8 @@
 * [2020-02-27](classSummary/whatIStudied_200227.md)
 * [2020-02-28](classSummary/whatIStudied_200228.md)
 * [2020-03-09](classSummary/whatIStudied_200309.md)
+* [2020-03-10](classSummary/whatIStudied_200310.md)
+* [2020-03-11](classSummary/whatIStudied_200311.md)
 
 
 ## 능력단위평가 대비
