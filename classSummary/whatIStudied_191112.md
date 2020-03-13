@@ -220,7 +220,7 @@ Date : 2019-11-12
 
 ## 부속 질의
 * 부속질의(subquery)
-    * select 문의 where 절에 또 달느 테이블 결과를 이용하기 위해 다시 select문을 괄호로 묶은 것
+    * select 문의 where 절에 또 다른 테이블 결과를 이용하기 위해 다시 select문을 괄호로 묶은 것
     * 질의가 중첩되어 있다는 의미에서 중첩질의(nested query)라고도 함
 * 상관 부속질의(correlated cubquery) 
     * 상위 부속질의의 튜플을 이용하여 하위 부속질의를 계산
