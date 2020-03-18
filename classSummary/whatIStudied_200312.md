@@ -42,8 +42,8 @@ Date : 2020-03-12
 - 동영상
 
 [돌아가기](../README.md)  
-[2020-02-28](whatIStudied_200228.md)  
-[2020-03-06](whatIStudied_200306.md)  
+[2020-03-11](whatIStudied_200311.md)  
+[2020-03-13](whatIStudied_200313.md)  
 
 
 
