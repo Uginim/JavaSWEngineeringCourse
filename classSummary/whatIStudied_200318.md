@@ -35,7 +35,33 @@ Date : 2020-03-18
     - ppt
         - 목차 앞에 위치
         - 마스터 모드에서만 편집가능함
-        - 
+
+# 형상 관리
+## Git/Github
+### 원격저장소에 저장하기
+- 개념 구분
+    - local repository
+    - remote repository 
+    - change
+        - 파일의 변경사항
+    - stage
+        - 변경사항을 인덱스(임시저장소)에 저장
+    - commit 
+        - 변경사항을 저장함
+    - push
+        - 원격저장소로 업로드
+    - fetch
+        - 원격저장소로부터 다운받음
+    - pull
+        - merge + fetch
+- Working Tree
+    - import project
+### 이클립스에서 연동하기
+- tema -&gt; Share Project
+    - 로컬의 레포지토리를 선택
+
+
+
 [돌아가기](../README.md)  
 [2020-03-17](whatIStudied_200317.md)  
 [2020-03-19](whatIStudied_200319.md)  
