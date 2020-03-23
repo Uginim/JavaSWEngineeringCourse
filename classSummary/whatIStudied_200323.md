@@ -1,11 +1,10 @@
 # What I studied today.
 Date : 2020-03-23
 
-# 프로젝트 
+# 소프트웨어 공학
 ## Risk
 - unknown risk
 - known risk
-
 
 
 
